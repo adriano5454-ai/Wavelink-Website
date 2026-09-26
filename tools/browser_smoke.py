@@ -214,7 +214,7 @@ def main() -> int:
             page.evaluate("Object.defineProperty(window, 'isSecureContext', {value:true, configurable:true}); Object.defineProperty(navigator, 'clipboard', {value:{writeText:async text=>{window.__copied=text;}}, configurable:true});")
             page.locator('[data-copy-email]').click()
             assert page.locator('#copy-status').inner_text() == 'Email address copied.'
-            assert page.evaluate('window.__copied') == 'adriano5454@gmail.com'
+            assert page.evaluate('window.__copied') == 'comercial@mywavelink.com'
             page.evaluate("Object.defineProperty(navigator, 'clipboard', {value:{writeText:async()=>{throw new Error('Denied');}}, configurable:true});")
             page.locator('[data-copy-email]').click()
             assert 'select and copy' in page.locator('#copy-status').inner_text()
@@ -233,7 +233,7 @@ def main() -> int:
         if server:
             server.shutdown()
             server.server_close()
-    report = {'release': 'website-2.3.0', 'passed': not errors, 'browser': f'Chromium {version}',
+    report = {'release': 'website-2.3.1', 'passed': not errors, 'browser': f'Chromium {version}',
               'mode': 'in-memory local assets, shipped JS injected after DOM parse' if args.in_memory else 'local HTTP',
               'results': results, 'errors': errors,
               'not_tested': ['live GitHub/Render deployment', 'public website or demo availability', 'physical mobile devices', 'Safari and Firefox', 'native OS clipboard permissions', 'formal WCAG conformance']}

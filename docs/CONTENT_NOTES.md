@@ -1,4 +1,4 @@
-# Content and illustration boundaries — website 2.3.0
+# Content and illustration boundaries — website 2.3.1
 
 ## Latest positioning correction
 
@@ -6,7 +6,7 @@ The user asked to show the whole context: Wavelink is much more than inventory. 
 
 The current hierarchy is **whole operation → six visible capability groups → product overview and optional detailed views → teams → security and deployment**. The website’s role is not to replicate every application screen or hide the product behind a generic workflow illustration.
 
-Prepared from `Wavelink_Website_2.2.0_GitHub.zip`, SHA-256 `99fc207ff82a14fef7978f273667cb353a9052b9faba24354c1d39e23c3c2d1c`. All 31 parent manifest entries were verified before editing. Public URL, separate demo destination, email, local artwork and static-host settings are preserved.
+Prepared from `Wavelink_Website_2.3.0_GitHub.zip`, SHA-256 `2fa0f07be43c3b60f310bf3843d7385932bbd5530ff7e90e8f30710ca540afba`. All 32 parent manifest entries were verified before editing. The sole contact address is now **comercial@mywavelink.com**, as provided by Adriano. Public URL, separate demo destination, full-platform positioning, local artwork and static-host settings are preserved. A working company contact mailbox does not change the planned status of company-email sign-in in the application.
 
 ## Breadth and progressive disclosure
 

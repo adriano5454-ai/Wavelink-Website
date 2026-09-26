@@ -14,5 +14,7 @@
     "Safari and Firefox",
     "native OS clipboard permissions",
     "formal WCAG conformance"
-  ]
+  ],
+  "retained_from_parent_release": "website-2.3.0",
+  "current_release_note": "Historical parent test only. This file is not a 2.3.1 HTTP-browser test result."
 }

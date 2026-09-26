@@ -1,3 +1,11 @@
+# Website 2.3.1 — 26 September 2026 UTC
+
+Contact-only update requested by Adriano. All website contact references now use **comercial@mywavelink.com**: walkthrough links and company enquiry links (preserving subject text), the visible contact card, the copy-email control, homepage footer, privacy-page contacts and repository documentation/test expectations.
+
+Preserves the complete 2.3.0 platform story, all existing modules and product views, planned-security wording, public/demo destinations, artwork and static deployment configuration. Asset cache tags are updated to 2.3.1. Contact-address regression checks are added to the existing static validation tool.
+
+Built from the exact 2.3.0 archive (`2fa0f07be43c3b60f310bf3843d7385932bbd5530ff7e90e8f30710ca540afba`); all 32 parent manifest entries verified before editing. No GitHub push, deployment, mailbox provisioning, DNS change, email delivery test or application/authentication change.
+
 # Website 2.3.0 — 26 September 2026 UTC
 
 **Whole-platform positioning, with inventory and manifests kept prominent.**

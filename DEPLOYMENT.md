@@ -35,7 +35,7 @@ The root-domain to `www` redirect is a hosting/DNS concern. The website files do
 
 ## Caching and file paths
 
-Keep the full `site/assets` folder. HTML loads CSS and JS with `?v=2.3.0`; increase this value in HTML whenever those assets are changed for a future release. The shared stylesheet and script work without a bundler.
+Keep the full `site/assets` folder. HTML loads CSS and JS with `?v=2.3.1`; increase this value in HTML whenever those assets are changed for a future release. The shared stylesheet and script work without a bundler.
 
 `404.html` uses root-relative asset paths so a host can serve it for deep missing URLs. The package includes the page but does not configure provider-specific rewrite rules. Check the deployed site's missing-page behaviour; do not add a catch-all SPA rewrite to `index.html` for this static site.
 

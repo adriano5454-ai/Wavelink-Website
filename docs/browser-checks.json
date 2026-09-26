@@ -1,5 +1,5 @@
 {
-  "release": "website-2.3.0",
+  "release": "website-2.3.1",
   "passed": true,
   "browser": "Chromium 144.0.7559.96",
   "mode": "in-memory local assets, shipped JS injected after DOM parse",

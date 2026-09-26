@@ -1,4 +1,6 @@
-# Update the existing Wavelink website
+# Update Wavelink website to 2.3.1
+
+**Contact update:** all website email links and displayed addresses now use **comercial@mywavelink.com**. The 2.3.0 design and complete-platform content are retained.
 
 **This package is for `Wavelink-Website` only.** It must not replace the repository that runs `demo.mywavelink.com`.
 
@@ -44,11 +46,11 @@ repository root
         └── index.html
 ```
 
-Commit with a message such as **`Update Wavelink website 2.3.0 — the whole connected operation`**. Follow your normal pull-request process when branch protection is enabled. GitHub's exact control labels may vary; preserving these file paths is the important part.
+Commit with a message such as **`Update Wavelink website 2.3.1 — business email`**. Follow your normal pull-request process when branch protection is enabled. GitHub's exact control labels may vary; preserving these file paths is the important part.
 
 ### GitHub Desktop alternative
 
-Open your existing website repository in GitHub Desktop and open its local folder. Copy the extracted package's contents into that folder and allow matching files to be replaced. Do not remove its `.git` directory. Review the changes, commit, and push to the existing remote. No repository reset or force-push is needed.
+In GitHub Desktop, select **Wavelink-Website** under **Current repository**, then use **Repository → Show in Explorer** to open its local folder. Check the current branch and fetch/pull any outstanding changes before editing. Copy the extracted package's contents into that folder and allow matching files to be replaced. Do not remove its `.git` directory. Review the changes, enter the summary **Update website contact email**, commit to your website branch, and select **Push origin**. No repository reset or force-push is needed.
 
 ## 4. Keep the existing website deployment settings
 
@@ -75,11 +77,11 @@ After the host reports the website commit as deployed:
 2. Check all **six permanent capability cards** under **More than individual tools. A connected operation.** Inventory and Manifests must still have separate, visible cards. Each detail link should select the matching product view. Try all **seven product tabs**; **Overview** should be selected on a fresh page load. Expand **Explore all platform capabilities** to see fourteen entries, then close it again.
 3. Open the page on your phone, check the menu and expand an FAQ answer. Select **Open demo** and confirm it opens `https://demo.mywavelink.com/` separately.
 4. Read the **Security & company access** section. Two-step verification and company-email sign-in must visibly say **Planned**; this website update does not enable either feature.
-5. Test the walkthrough email link and open **Privacy & website information** in the footer. Check the social-preview asset at `/assets/wavelink-social.jpg`.
+5. Test **Request a walkthrough**: your email application must address the draft to **comercial@mywavelink.com**. Check the company/security enquiry link, visible contact card, **Copy email** button, footer and **Privacy & website information** page. Every website contact must use that same address. Check that the long address wraps cleanly on a phone. No message is sent unless you send it yourself.
 
 A mail link opens the visitor's configured email application; it is not an embedded contact form. Clipboard permissions vary; when copying is blocked the visible email address remains available for manual copying.
 
-The complete ZIP replaces website 2.2.0, 2.1.0 or 2.0.0 and also works as a full replacement for the earlier original website. No staged patch installation is necessary. It contains all artwork, assets, pages and source files.
+The complete ZIP replaces website 2.3.0, 2.2.0, 2.1.0 or 2.0.0 and also works as a full replacement for the earlier original website. No staged patch installation is necessary. It contains all artwork, assets, pages and source files.
 
 ## Restore the previous site
 

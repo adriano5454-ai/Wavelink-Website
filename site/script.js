@@ -1,4 +1,4 @@
-/* Wavelink website 2.3.0. Static, dependency-free progressive enhancement.
+/* Wavelink website 2.3.1. Static, dependency-free progressive enhancement.
  * No API calls, analytics, account state or storage. Previews are local illustrations.
  */
 (() => {

@@ -1,8 +1,8 @@
-# Wavelink website 2.3.0
+# Wavelink website 2.3.1
 
 **Your whole operation. Working as one.**
 
-Complete static marketing website for **Wavelink by AJ Offshore Solutions**. This release restores the full-platform story: equipment, logistics, maintenance, people, safety and daily work. Inventory and manifests remain named, permanent first-row capabilities; they no longer define the entire product.
+Complete static marketing website for **Wavelink by AJ Offshore Solutions**. This contact-only release updates every website email reference to **comercial@mywavelink.com** and preserves the 2.3.0 full-platform story: equipment, logistics, maintenance, people, safety and daily work. Inventory and manifests remain named, permanent first-row capabilities; they no longer define the entire product.
 
 ## Publish this package
 
@@ -18,7 +18,11 @@ Wavelink-Website/
 └── PREVIEW_WEBSITE.bat   Optional Windows local-preview launcher
 ```
 
-## What changed
+## What changed in 2.3.1
+
+All walkthrough and company-contact links, visible contact addresses, copy-email data, privacy-page contact details, documentation and automated contact checks now use **comercial@mywavelink.com**. Existing email subjects are preserved. No mailbox, DNS, hosting, demo or application authentication setting is changed.
+
+## Full-platform design retained from 2.3.0
 
 - The opening presents a complete operations platform rather than an inventory-only system.
 - A six-area illustration immediately names equipment/logistics, maintenance/readiness, people/continuity, safe working, daily operations and company control.
@@ -36,7 +40,7 @@ Wavelink-Website/
 | --- | --- |
 | Public canonical URL | `https://www.mywavelink.com/` |
 | Separate demo | `https://demo.mywavelink.com/` |
-| Contact | `adriano5454@gmail.com` |
+| Contact | `comercial@mywavelink.com` |
 | Publish directory | `site` |
 | Build command | `echo "Static site ready"` |
 | Framework/server dependency | None |
@@ -57,7 +61,7 @@ The optional browser test needs the Python `playwright` package and Chromium in 
 
 ## Source and status
 
-Prepared 26 September 2026 UTC from **Wavelink_Website_2.2.0_GitHub.zip**, SHA-256 `99fc207ff82a14fef7978f273667cb353a9052b9faba24354c1d39e23c3c2d1c`. All **31** parent manifest records were verified against the extracted bytes before editing. This is website versioning, separate from Wavelink application versions.
+Prepared 26 September 2026 UTC from **Wavelink_Website_2.3.0_GitHub.zip**, SHA-256 `2fa0f07be43c3b60f310bf3843d7385932bbd5530ff7e90e8f30710ca540afba`. All **32** parent manifest records were verified against the extracted bytes before editing. This is website versioning, separate from Wavelink application versions.
 
 No application code was supplied or audited in this revision. Product coverage follows the established project scope and previous website, with exact module/workflow availability to be confirmed in a company walkthrough. No GitHub push, deployment, DNS update or authentication change was made.
 

@@ -1,16 +1,17 @@
 {
-  "release": "website-2.3.0",
+  "release": "website-2.3.1",
   "passed": true,
   "checks": [
     "404.html: headings, language, metadata, IDs, links, assets, controls and image attributes checked",
     "index.html: headings, language, metadata, IDs, links, assets, controls and image attributes checked",
     "privacy.html: headings, language, metadata, IDs, links, assets, controls and image attributes checked",
+    "Contact: 8 mailto links and 1 copy-email value use comercial@mywavelink.com; repository text checked for other addresses",
     "Whole-platform messaging, overview default, permanent inventory/manifests and six-area breadth, collaboration and planned-security labels checked",
     "Demo URL, illustration targets, reduced motion, and no network/storage code checked",
     "Sitemap, robots file and social-share asset checked",
-    "Total published site payload: 557,043 bytes (all files, not a single page load)"
+    "Total published site payload: 557,082 bytes (all files, not a single page load)"
   ],
   "errors": [],
-  "site_bytes": 557043,
+  "site_bytes": 557082,
   "network_requests_made": false
 }

@@ -1,221 +1,223 @@
 {
-  "release": "website-2.3.0",
+  "release": "website-2.3.1",
   "prepared_date_utc": "2026-09-26",
-  "source_archive": "Wavelink_Website_2.2.0_GitHub.zip",
-  "source_archive_sha256": "99fc207ff82a14fef7978f273667cb353a9052b9faba24354c1d39e23c3c2d1c",
-  "source_files": 32,
-  "parent_manifest_entries_verified": 31,
+  "source_archive": "Wavelink_Website_2.3.0_GitHub.zip",
+  "source_archive_sha256": "2fa0f07be43c3b60f310bf3843d7385932bbd5530ff7e90e8f30710ca540afba",
+  "source_files": 33,
+  "parent_manifest_entries_verified": 32,
   "public_website": "https://www.mywavelink.com/",
   "demo_destination": "https://demo.mywavelink.com/",
+  "contact_email": "comercial@mywavelink.com",
   "publish_directory": "site",
   "application_changed": false,
   "remote_repository_changed": false,
   "deployed": false,
   "security_implementation_included": false,
+  "email_delivery_tested": false,
   "manifest_excludes_itself": true,
   "positioning": "The whole connected offshore operation; inventory and manifests remain permanent core capabilities.",
   "visible_capability_groups": 6,
   "product_preview_tabs": 7,
   "default_preview": "overview",
   "expanded_capability_entries": 14,
-  "validation_scope": "Static/source checks, Node syntax, Python loopback HTTP byte comparison, Chromium in-memory rendering/interaction at ten widths. Browser HTTP navigation blocked by environment. No deployment verification.",
+  "update_scope": "Contact address, release/cache version, related documentation and verification. Published site otherwise byte-identical after these substitutions.",
+  "validation_scope": "Static/contact/source checks, Node syntax, Python loopback HTTP byte comparison, Chromium in-memory rendering and interaction at ten widths; no browser HTTP/deployment or email-delivery verification.",
   "summary": {
-    "unchanged": 11,
-    "changed": 20,
-    "new": 1
+    "unchanged": 12,
+    "changed": 20
   },
   "files": [
     {
       "path": ".gitignore",
       "bytes": 87,
       "sha256": "bdc73dd6b5cb432f81d5a7d3f7bcf876c291b6e157d88bd63566800d96171218",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "DEPLOYMENT.md",
       "bytes": 3770,
-      "sha256": "85df15acd7709edf38d01bb1bf765666b6de52a3af86721cd5a2685fb6b71b32",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "17d736c449fd387b4a14f389f2fa45cd84dbfd029105c778dd0118356155200f",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "PREVIEW_WEBSITE.bat",
       "bytes": 392,
       "sha256": "fc3b1449b23f55cfb9455f3d95c4cea81ecfb965c8c42478979b37117349553c",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "README.md",
-      "bytes": 4633,
-      "sha256": "dcb974be08aee16e062ef6b07410bfd5286af2f964121b08ef186887f3fce212",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 5103,
+      "sha256": "f5a2639b1c083e624971d40fcf4452a6fd92a34ddb33cf3612f59b604783d3b7",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "UPDATE_GITHUB.md",
-      "bytes": 5431,
-      "sha256": "4ed20c26968d3665fcf9cb80f55bec36314b2f600cc6c0dd1cd6b9b1d960b8cb",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 6047,
+      "sha256": "0ce37a747c094135ee07aab4260ec899000deaa078706e4f97dc7260532b5d53",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/CHANGELOG.md",
-      "bytes": 5729,
-      "sha256": "34b413cbac3fb9c110772af1763ad2f7403cc16c3d508e7d7b64cdec5cb539ba",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 6680,
+      "sha256": "d62907a1a3c31eb3ce3371de123ddd040f09d8aacaad046688c41eed7d525dd9",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/CONTENT_NOTES.md",
-      "bytes": 5361,
-      "sha256": "52fd7186b6681eb5441dabf55ef7240f4ace1f8a1587543ba444b85156913f85",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 5581,
+      "sha256": "e575b682fc6732c91f6255b49d50e8bad8f1b7526d67ea1a9cf1a0f731d8aca2",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/POSITIONING_CHECKPOINT.md",
-      "bytes": 1801,
-      "sha256": "a2d973b046a1b7c38990b6af9ef48d69b5832809650ea48b2f8373f7a23aa305",
-      "parent_2_2_0_comparison": "new"
+      "bytes": 1880,
+      "sha256": "1aa6dd110a8879dd943f24ec8bdefa81d5c660b9ec981c9a3853e01883babd07",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/SECURITY_ROADMAP.md",
       "bytes": 4343,
-      "sha256": "c1a6ba5feddb2110f4b3517815ba87b051bfa60f4b64130475b130e15e5bb62e",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "29f0c36611750dabe82106caf8795369b1cf28b9d5c9ab99205420c271c2bf24",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 3572,
-      "sha256": "6d05bac0843becaf52fae7d65f1ba4ee0dc8879fb2382a3d768a0f45f3d440ca",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 4260,
+      "sha256": "3cf6c1872103fc01b0384ecbc0886b49832cd7f3d450ff57046bdcfa1a45af2d",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/browser-checks.json",
       "bytes": 11027,
-      "sha256": "b369f44284dd6ba06b1a349ad30472fa4c3d141c16ab72f54ad17f6b4e02ea1f",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "a04e37fb17b77623622c18f8104208774bcbd17d5cdf2fd4590566fc7dae2180",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/browser-http-attempt.json",
-      "bytes": 576,
-      "sha256": "de3179aea41f2b770d7367dd68fd865939144781083549c6413b19dc900568c1",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 736,
+      "sha256": "6438ecb4dcb92aa8ab314c35383f79d0f18cc3dd5a9e18b5e3322040a9becdca",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/http-checks.json",
       "bytes": 2988,
-      "sha256": "ae9b837bdd824c4d52d9804930b95ff8d41788e183e5731487a06301139b9c2b",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "0021e2ecbd01bcd245e3959f777cfb2260efca748058bad42f3087122a3c3c55",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "docs/static-checks.json",
-      "bytes": 854,
-      "sha256": "1e7900c326f2e4e4c46098887d03f797c807bb71ce1a4507b2d5e3038df925ed",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 982,
+      "sha256": "26295d051c0fd9face927233ac126a7e036830a1b61ae36859c78b2ef4a8f9c9",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "site/404.html",
       "bytes": 1474,
-      "sha256": "7b680686c095b7d1016b1528027d0f52b67d5125fd162327944cdd5ed1d43c94",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "c96ad4ad7055116dfadc6b67ef74d09af02cd5322102d55291c97ad78b7ff711",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
       "bytes": 6254,
       "sha256": "a0fda0225c5a1b95fa484088b81a998ed401afdde1cc8ddc5902f89d7d894335",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/assets/favicon-32.png",
       "bytes": 1089,
       "sha256": "7d869fd5098300e26c76ce01d368e2903971c122d45ab86b30e3d645a7fd7086",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/assets/favicon.svg",
       "bytes": 286,
       "sha256": "f21fcb776f6c895ce0deb57dba18f4efed55dc561979e37222fa352e5a459524",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/assets/offshore-operations-small.webp",
       "bytes": 43958,
       "sha256": "1471a1cceb1099c0f7816591798a2ba747166882a289e56c339bd2e27e6772e4",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/assets/offshore-operations.webp",
       "bytes": 210368,
       "sha256": "958120047c90cab6b3742ac9999c4ee114e9accf9e29f03d9555b2f33cafaf7d",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/assets/wavelink-mark.svg",
       "bytes": 524,
       "sha256": "ae60983cd7bddf101591cc82568ce48f378587ccd8fab1f00f2aae8f0b319dee",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/assets/wavelink-social.jpg",
       "bytes": 103369,
       "sha256": "a9d6f307230c9fc653be58db83f5dc6205310e3cb8f0fb7bec450965f8da50bb",
-      "parent_2_2_0_comparison": "changed"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/index.html",
-      "bytes": 104726,
-      "sha256": "12d472721030f6c9f7ba7be867f973e1e4575cc7d71062dcbd1a504dd3efe588",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 104753,
+      "sha256": "5de8c99f24cb5e3e025d0a77bd6438bea88379ff1fba4b6f75232fdfcb140d85",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "site/privacy.html",
-      "bytes": 5099,
-      "sha256": "5a6fca4f4fd8dde5e6b154d0d2d5152046295d5993d1c5131239730f193618a4",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 5111,
+      "sha256": "180299b68e19b0b7bde556617e98d6ca794ecc2d8e233694f3a2a0290473a163",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "site/robots.txt",
       "bytes": 72,
       "sha256": "4eae06fedc1c3d79cb2cefef892dac9fb800d7f4dc98d5d8c3eb5011831a883d",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/script.js",
       "bytes": 6202,
-      "sha256": "5868b220130fa6763d2bcb5f6c90b8fc8e11707213c43450bf5b589ca792a1b3",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "2f529a6aa116fb5c4a2bbeba39da759b98f70762601a177f6f67552c6e8872c8",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "site/sitemap.xml",
       "bytes": 226,
       "sha256": "d916b53a05880760eeca2ad8b484410cd713a59a46ef510e43ec1cee636e46d0",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     },
     {
       "path": "site/styles.css",
       "bytes": 73396,
-      "sha256": "ff82b51cd69cc54b44acb8669bd4571f758185a27b634332e4be0c66e28109b0",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "514fd3d5314776d309072ea9bc75a3d2c8bd56431be35113cdc06d46047ffb18",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "tools/browser_smoke.py",
-      "bytes": 14533,
-      "sha256": "0bbfe470571abd34cbc8851ccd151b8f656038ff48579d8e3b71431294e7968f",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 14536,
+      "sha256": "b4b618d8f3e265eb9df114294f1ed21422afab66e4a700b7e01b5f932d2a8287",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "tools/check_http.py",
       "bytes": 2598,
-      "sha256": "463d545f4d3983b734e259cc6ccdc712280a203480126991a5023b50200d8c54",
-      "parent_2_2_0_comparison": "changed"
+      "sha256": "633bc3461e6b1c12c933837d66eb297e06211a1ea51fa990c5abca9a4a89b24e",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "tools/check_site.py",
-      "bytes": 10285,
-      "sha256": "b09e46dfb50bf6cd390c771220365c60180189d64343f66abed59b3dd57e4074",
-      "parent_2_2_0_comparison": "changed"
+      "bytes": 11816,
+      "sha256": "3507527a5080a3586eff53d69051459d8b888b2d5d5d66d5762384c15b12f207",
+      "parent_2_3_0_comparison": "changed"
     },
     {
       "path": "tools/preview.py",
       "bytes": 1232,
       "sha256": "2fd301c9bc0ebcb6eb1cc8a6f60a2ad00205354973b74cad4ee79fceb73b6731",
-      "parent_2_2_0_comparison": "unchanged"
+      "parent_2_3_0_comparison": "unchanged"
     }
   ]
 }

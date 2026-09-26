@@ -1,6 +1,8 @@
 # Wavelink website positioning checkpoint
 
-Release 2.3.0 — 26 September 2026 UTC.
+Positioning established in release 2.3.0 — 26 September 2026 UTC.
+
+Preserved unchanged in contact-only release 2.3.1.
 
 ## The product story to preserve
 

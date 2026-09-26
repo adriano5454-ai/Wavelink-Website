@@ -1,6 +1,6 @@
 # Security and company access — website messaging checkpoint
 
-Website release **2.3.0**, prepared 26 September 2026 (UTC).
+Website release **2.3.1**, prepared 26 September 2026 (UTC).
 
 ## What the user requested
 

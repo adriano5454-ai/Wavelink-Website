@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
 DEMO = 'https://demo.mywavelink.com/'
 PUBLIC = 'https://www.mywavelink.com'
+CONTACT_EMAIL = 'comercial@mywavelink.com'
 
 
 class PageParser(HTMLParser):
@@ -111,6 +112,34 @@ def main() -> int:
                         errors.append(f'{where}: broken anchor {value}.')
         checks.append(f'{label}: headings, language, metadata, IDs, links, assets, controls and image attributes checked')
 
+    email_links = 0
+    copy_values = 0
+    for path, doc in documents.items():
+        for tag, attrs, line in doc.tags:
+            href = attrs.get('href') or ''
+            if href.lower().startswith('mailto:'):
+                email_links += 1
+                recipient = unquote(urlsplit(href).path)
+                if recipient != CONTACT_EMAIL:
+                    errors.append(f'{path.name}:{line}: unexpected contact recipient {recipient}.')
+            if 'data-copy-email' in attrs:
+                copy_values += 1
+                if attrs['data-copy-email'] != CONTACT_EMAIL:
+                    errors.append(f'{path.name}:{line}: copy-email target is incorrect.')
+    for path in ROOT.rglob('*'):
+        if not path.is_file() or '.git' in path.parts or '__pycache__' in path.parts:
+            continue
+        try:
+            text = path.read_text(encoding='utf-8')
+        except UnicodeDecodeError:
+            continue
+        for address in re.findall(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', text):
+            if address != CONTACT_EMAIL:
+                errors.append(f'{path.relative_to(ROOT)}: unexpected email address {address}.')
+    if email_links < 1 or copy_values != 1:
+        errors.append(f'Expected contact links and one copy-email control; found {email_links} / {copy_values}.')
+    checks.append(f'Contact: {email_links} mailto links and {copy_values} copy-email value use {CONTACT_EMAIL}; repository text checked for other addresses')
+
     home = (SITE / 'index.html').read_text(encoding='utf-8')
     if f'href="{PUBLIC}/"' not in home:
         errors.append('Canonical home URL is not the expected public website.')
@@ -164,7 +193,7 @@ def main() -> int:
     if site_bytes > 1_000_000:
         errors.append(f'Site assets exceed the 1 MB review budget: {site_bytes:,} bytes.')
     checks.append(f'Total published site payload: {site_bytes:,} bytes (all files, not a single page load)')
-    report = {'release': 'website-2.3.0', 'passed': not errors, 'checks': checks, 'errors': errors, 'site_bytes': site_bytes, 'network_requests_made': False}
+    report = {'release': 'website-2.3.1', 'passed': not errors, 'checks': checks, 'errors': errors, 'site_bytes': site_bytes, 'network_requests_made': False}
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)
         args.json.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
