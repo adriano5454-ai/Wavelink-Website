@@ -1,0 +1,18 @@
+{
+  "release": "website-2.3.0",
+  "passed": false,
+  "browser": "Chromium 144.0.7559.96",
+  "mode": "local HTTP",
+  "results": [],
+  "errors": [
+    "Error: Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:34259/index.html\nCall log:\n  - navigating to \"http://127.0.0.1:34259/index.html\", waiting until \"networkidle\"\n"
+  ],
+  "not_tested": [
+    "live GitHub/Render deployment",
+    "public website or demo availability",
+    "physical mobile devices",
+    "Safari and Firefox",
+    "native OS clipboard permissions",
+    "formal WCAG conformance"
+  ]
+}

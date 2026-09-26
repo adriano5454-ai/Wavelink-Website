@@ -1,52 +1,64 @@
-# Wavelink website
+# Wavelink website 2.3.0
 
-The public landing page for Wavelink by AJ Offshore Solutions. This is a standalone static website for `www.mywavelink.com`. Its demo buttons open the existing application at `https://demo.mywavelink.com/`.
+**Your whole operation. Working as one.**
 
-## Repository layout
+Complete static marketing website for **Wavelink by AJ Offshore Solutions**. This release restores the full-platform story: equipment, logistics, maintenance, people, safety and daily work. Inventory and manifests remain named, permanent first-row capabilities; they no longer define the entire product.
+
+## Publish this package
+
+Follow [UPDATE_GITHUB.md](UPDATE_GITHUB.md). Upload the contents of this folder to the existing **Wavelink-Website** repository, replacing matching paths. Publish **`site`** using the existing static-site setup. Do not replace the separate demo application's repository.
 
 ```text
 Wavelink-Website/
-├── site/
-│   ├── assets/
-│   │   ├── favicon.svg
-│   │   ├── offshore-operations.webp
-│   │   └── wavelink-mark.svg
-│   ├── index.html
-│   ├── robots.txt
-│   ├── script.js
-│   ├── sitemap.xml
-│   └── styles.css
-├── .gitignore
-├── DEPLOYMENT.md
-└── README.md
+├── site/                 Public website and locally bundled images
+├── docs/                 Content boundaries, security roadmap and test reports
+├── tools/                Optional local preview / validation scripts
+├── UPDATE_GITHUB.md      Upload guide
+├── DEPLOYMENT.md         Existing static-host requirements
+└── PREVIEW_WEBSITE.bat   Optional Windows local-preview launcher
 ```
 
-There is no package manager, framework, API key, database, or build dependency. The Render publish directory is **`site`**.
+## What changed
 
-## Preview locally
+- The opening presents a complete operations platform rather than an inventory-only system.
+- A six-area illustration immediately names equipment/logistics, maintenance/readiness, people/continuity, safe working, daily operations and company control.
+- Six permanent capability cards give visitors the breadth before they interact: Inventory; Manifests; Maintenance & certificates; Handovers & tasks; Safety & team checks; Fleet, logs & planning.
+- A shared foundation covers users, departments, permissions, project data and deployment.
+- The product explorer now opens on **Overview**, followed by six detailed views. Inventory and Manifests still have separate tabs.
+- Four fictional records illustrate the wider context: a manifest, equipment readiness, a team check and a saved handover. This is not a live dashboard or an automatic workflow.
+- Fourteen expanded capability entries include tasks, fault reports and HSE / QSHE, without displaying every description by default.
+- Collaboration, FAQ, contact and social-preview wording now represent the whole operation.
+- Two-step verification and company-email sign-in retain explicit **Planned** labels. Universal vessel isolation, certifications, SSO and production security are not implied.
 
-You can open `site/index.html` in a browser. For a server-style preview, from the repository folder run:
+## Preserved configuration
 
-```powershell
-py -m http.server 8000 -d site
+| Item | Value |
+| --- | --- |
+| Public canonical URL | `https://www.mywavelink.com/` |
+| Separate demo | `https://demo.mywavelink.com/` |
+| Contact | `adriano5454@gmail.com` |
+| Publish directory | `site` |
+| Build command | `echo "Static site ready"` |
+| Framework/server dependency | None |
+
+No npm build, application server, database, API key or secret is needed. Python and Playwright are optional local-review tools, not deployed website dependencies.
+
+## Local review
+
+Open `site/index.html` directly, or run `python tools/preview.py` / `PREVIEW_WEBSITE.bat` when Python is installed. The website uses system fonts and local assets. Tabs use manual keyboard activation: arrow keys/Home/End move focus; Enter/Space select. Without JavaScript, the six-area overview, default product view, full capability directory, navigation and FAQs remain available.
+
+```text
+python tools/check_site.py
+python tools/check_http.py
+python tools/browser_smoke.py
 ```
 
-Then open `http://localhost:8000/`. Stop the server with `Ctrl+C`. The Python command is optional for publishing.
+The optional browser test needs the Python `playwright` package and Chromium in the reviewer’s environment. An already installed browser can be selected with `--browser /path/to/chromium`. The static site itself needs none of these tools. Restricted environments can use `--in-memory`; that mode tests rendering and interaction, not browser navigation. See [docs/VALIDATION.md](docs/VALIDATION.md) for the exact tests performed here and their limits.
 
-## Edit the page
+## Source and status
 
-- Text and links: `site/index.html`
-- Colours, layout, responsive behaviour: `site/styles.css`
-- Mobile navigation: `site/script.js`
-- Mark and favicon: `site/assets/*.svg`
-- Offshore image: `site/assets/offshore-operations.webp`
+Prepared 26 September 2026 UTC from **Wavelink_Website_2.2.0_GitHub.zip**, SHA-256 `99fc207ff82a14fef7978f273667cb353a9052b9faba24354c1d39e23c3c2d1c`. All **31** parent manifest records were verified against the extracted bytes before editing. This is website versioning, separate from Wavelink application versions.
 
-All demo buttons point to `https://demo.mywavelink.com/`. The walkthrough email uses `adriano5454@gmail.com`; change this in `site/index.html` if you set up a business mailbox.
+No application code was supplied or audited in this revision. Product coverage follows the established project scope and previous website, with exact module/workflow availability to be confirmed in a company walkthrough. No GitHub push, deployment, DNS update or authentication change was made.
 
-The interface illustration uses fictional data and is labeled as illustrative on the page. The offshore image was generated for this website. It is not a photograph of a client vessel. No customer names, client records, demo credentials, tracking scripts, or third-party fonts are included.
-
-## Publish
-
-Follow [DEPLOYMENT.md](DEPLOYMENT.md) for the complete GitHub, Render and DNS setup. Keep the demo repository, demo Render Web Service, and `demo` DNS record separate.
-
-Copyright © 2026 AJ Offshore Solutions. All rights reserved.
+Read [docs/CONTENT_NOTES.md](docs/CONTENT_NOTES.md) and [docs/SECURITY_ROADMAP.md](docs/SECURITY_ROADMAP.md) before extending marketing claims or changing roadmap labels.

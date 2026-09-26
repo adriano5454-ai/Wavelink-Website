@@ -1,0 +1,310 @@
+{
+  "release": "website-2.3.0",
+  "passed": true,
+  "browser": "Chromium 144.0.7559.96",
+  "mode": "in-memory local assets, shipped JS injected after DOM parse",
+  "results": [
+    {
+      "viewport_width": 320,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 580.5,
+        "inventory": 654.40625,
+        "manifests": 633.921875,
+        "handovers": 625.421875,
+        "checks": 567.046875,
+        "readiness": 469.578125,
+        "logs": 442.609375
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 390,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 539.796875,
+        "inventory": 643.78125,
+        "manifests": 628.5,
+        "handovers": 571.390625,
+        "checks": 458.328125,
+        "readiness": 471.140625,
+        "logs": 455.25
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 600,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 539.796875,
+        "inventory": 619.9375,
+        "manifests": 628.5,
+        "handovers": 559,
+        "checks": 458.328125,
+        "readiness": 428.453125,
+        "logs": 455.25
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 768,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 493,
+        "readiness": 493,
+        "logs": 493
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 959,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 493,
+        "readiness": 493,
+        "logs": 493
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 960,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 487,
+        "readiness": 487,
+        "logs": 487.6875
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 1024,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 487,
+        "readiness": 487,
+        "logs": 487.6875
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 1280,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 487,
+        "readiness": 487,
+        "logs": 487.6875
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 1440,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 487,
+        "readiness": 487,
+        "logs": 487.6875
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "viewport_width": 1920,
+      "passed": true,
+      "product_window_heights": {
+        "overview": 578.375,
+        "inventory": 573.109375,
+        "manifests": 563.09375,
+        "handovers": 506.15625,
+        "checks": 487,
+        "readiness": 487,
+        "logs": 487.6875
+      },
+      "checks": [
+        "six permanent capability areas, including Inventory and Manifests, before the product tabs",
+        "all six overview links select and focus the matching product view",
+        "7 panels with platform Overview default, separate Inventory and Manifests",
+        "no horizontal overflow in every panel, expanded directory and each FAQ",
+        "14-capability disclosure",
+        "manual keyboard focus/activation with wraparound",
+        "all 8 FAQs",
+        "mobile/desktop navigation",
+        "explicit planned-security labels",
+        "no credential fields or embedded application",
+        "reduced motion",
+        "no JavaScript runtime errors"
+      ]
+    },
+    {
+      "test": "JavaScript-disabled mobile",
+      "passed": true,
+      "checks": [
+        "navigation available",
+        "overview preview and all six permanent capability areas available",
+        "all 14 capabilities accessible through native disclosure",
+        "native FAQ works",
+        "no overflow"
+      ]
+    },
+    {
+      "test": "Clipboard success/failure handlers with stubs",
+      "passed": true
+    },
+    {
+      "test": "privacy.html mobile rendering",
+      "passed": true
+    },
+    {
+      "test": "404.html mobile rendering",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "not_tested": [
+    "live GitHub/Render deployment",
+    "public website or demo availability",
+    "physical mobile devices",
+    "Safari and Firefox",
+    "native OS clipboard permissions",
+    "formal WCAG conformance"
+  ]
+}
