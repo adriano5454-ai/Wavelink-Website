@@ -20,13 +20,18 @@
     },
     {
       "path": "README.md",
-      "size": 3015,
-      "sha256": "c529a7ac91c238b2ea771b13d9f6f5e926880f3c3100b3fc6f7b6a5f4cedf9da"
+      "size": 3091,
+      "sha256": "08c315edf8f16a5eb3ff4fc59d15cc6fe6483b1e9d9a3c91748caa51999f4528"
+    },
+    {
+      "path": "RESTORE_FULL_WEBSITE.md",
+      "size": 3489,
+      "sha256": "d97cc3fa1fc2e79627699b216a2a934d4fff7cf7587b2c0a585f62060b5b6ac7"
     },
     {
       "path": "UPDATE_GITHUB.md",
-      "size": 1239,
-      "sha256": "759047b086e1d014b3d4f26acf350259e6773590dfe520a197142c76a7f68673"
+      "size": 1064,
+      "sha256": "cee57ece853a85e40c08b14101d3cac4204dbe8c108fb1a430746372fff4662c"
     },
     {
       "path": "docs/CHANGELOG.md",
@@ -169,5 +174,22 @@
       "sha256": "2fd301c9bc0ebcb6eb1cc8a6f60a2ad00205354973b74cad4ee79fceb73b6731"
     }
   ],
-  "website_parent_blob_count": 33
+  "website_parent_blob_count": 33,
+  "package_type": "complete-clean-website-repository",
+  "public_site_unchanged_from": "Wavelink_Website_3.0.0_GitHub.zip",
+  "remote_contamination_checked_commit": "6dc2544cd620badd34d3c1f8282495d08e93b224",
+  "remote_paths_absent_from_clean_repo": [
+    "DELIVERY_CHECKS.json",
+    "DEPLOYMENT_FILES.json",
+    "Dockerfile",
+    "START_HERE.html",
+    "deploy/apply_ui96.py",
+    "docs/CONTINUATION_CHECKPOINT.md",
+    "docs/DEVELOPMENT_TODO.md",
+    "docs/UI96_REVIEW_REPORT.json",
+    "docs/UI96_SOURCE_PROVENANCE.json",
+    "docs/WORKSPACE_UI96.md",
+    "tests/README.md",
+    "tests/test_ui96_build.py"
+  ]
 }
