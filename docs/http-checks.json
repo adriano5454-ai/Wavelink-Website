@@ -1,5 +1,5 @@
 {
-  "release": "website-2.3.1",
+  "release": "website-3.0.0",
   "passed": true,
   "scope": "local loopback only; byte-for-byte responses",
   "external_network_requests": false,
@@ -7,8 +7,8 @@
     {
       "path": "404.html",
       "status": 200,
-      "bytes": 1474,
-      "sha256": "c96ad4ad7055116dfadc6b67ef74d09af02cd5322102d55291c97ad78b7ff711",
+      "bytes": 958,
+      "sha256": "047ced295e456b1b1a4a6a6e7888d9230b1957218f38674bfb574259bba9ba5a",
       "byte_match": true
     },
     {
@@ -56,22 +56,22 @@
     {
       "path": "assets/wavelink-social.jpg",
       "status": 200,
-      "bytes": 103369,
-      "sha256": "a9d6f307230c9fc653be58db83f5dc6205310e3cb8f0fb7bec450965f8da50bb",
+      "bytes": 128904,
+      "sha256": "0cfbae096f42255f1fa509698c372ef423b8d8534e3f8eba2f20456f869e9879",
       "byte_match": true
     },
     {
       "path": "index.html",
       "status": 200,
-      "bytes": 104753,
-      "sha256": "5de8c99f24cb5e3e025d0a77bd6438bea88379ff1fba4b6f75232fdfcb140d85",
+      "bytes": 55495,
+      "sha256": "ceaaee635dd55b59c6a564ff3edd08df8d9770412b633b9cdb514ac6eeabd6f0",
       "byte_match": true
     },
     {
       "path": "privacy.html",
       "status": 200,
-      "bytes": 5111,
-      "sha256": "180299b68e19b0b7bde556617e98d6ca794ecc2d8e233694f3a2a0290473a163",
+      "bytes": 5669,
+      "sha256": "cf7ca182cae2980c7d9dea148269689461889835afdf8f489889225334a39628",
       "byte_match": true
     },
     {
@@ -84,22 +84,22 @@
     {
       "path": "script.js",
       "status": 200,
-      "bytes": 6202,
-      "sha256": "2f529a6aa116fb5c4a2bbeba39da759b98f70762601a177f6f67552c6e8872c8",
+      "bytes": 4633,
+      "sha256": "dc8b4b2c4660c3b516a359a485e34521bcd46897d5312b4df51a5e1489e6a2be",
       "byte_match": true
     },
     {
       "path": "sitemap.xml",
       "status": 200,
-      "bytes": 226,
-      "sha256": "d916b53a05880760eeca2ad8b484410cd713a59a46ef510e43ec1cee636e46d0",
+      "bytes": 275,
+      "sha256": "7e8809baad8b095a2c66314117651bd075fe2bd54b0337ba36e71762e3001f60",
       "byte_match": true
     },
     {
       "path": "styles.css",
       "status": 200,
-      "bytes": 73396,
-      "sha256": "514fd3d5314776d309072ea9bc75a3d2c8bd56431be35113cdc06d46047ffb18",
+      "bytes": 43435,
+      "sha256": "f6225d0390f9b5d379195fae08560ccd97007cc4554ae123385214349e4b1b34",
       "byte_match": true
     }
   ],

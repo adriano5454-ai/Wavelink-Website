@@ -1,23 +1,13 @@
-# Wavelink website positioning checkpoint
+# Current website checkpoint — 3.0.0
 
-Positioning established in release 2.3.0 — 26 September 2026 UTC.
+**4 October 2026.** Website parent `ea8ec477d6c4f699e09d34b293c315a2f1a5b5d8`; all 33 supplied blobs match. Application content reference `dd8eff975a594e41b10bf5e589577bcf4e954cee` / UI95. Website and program versioning remain separate.
 
-Preserved unchanged in contact-only release 2.3.1.
+The page presents the complete offshore operations platform: a calm maritime opening, seven explorer categories, 18 expanded capability areas, equipment/record continuity, document/worksheet imports, teamwork and company setup. Equipment and manifests remain prominent. Capabilities stay discoverable without flooding the first screen.
 
-## The product story to preserve
+Current copy includes Original Files, profiles/Team/badges, global search, My actions, optional email summaries, QR signing and the implemented company email/MFA/session controls. Preserve exact source/revision, guest, recognition, mail and local/hosted boundaries in CONTENT_NOTES and SECURITY_ROADMAP.
 
-**Wavelink is a connected offshore operations platform for equipment, people and daily work.** It connects vessel crews, shore teams, supervisors and operations leads around their responsibilities and records.
+Brand/publisher: Wavelink by AJ Offshore Solutions. Canonical: www.mywavelink.com. Demo: demo.mywavelink.com. Sales: comercial@mywavelink.com. Support: support@mywavelink.com. English remains the site language. Static publish directory remains site.
 
-Inventory and manifests are core selling points, not the whole product. They must remain explicitly visible without a click. Handovers, tasks, maintenance, certificates, checks, toolbox talks, safety records, fleet and logs must not be treated as unrelated extras.
+Product examples are fictional illustrations. Local website QA is separate from application, physical-device and live hosting acceptance. No program files, records or deployment settings are edited by this website release.
 
-## Avoid another pendulum swing
-
-Do not respond to emphasis on a module by making every headline, collaboration example, product view and call to action about that one module. Preserve the full-platform headline, six-area overview and shared foundation while improving the requested capability in context.
-
-The opening establishes the product category and business purpose. The six-area grid shows scope. The product views provide optional detail. Team sections explain why different roles use it together. Security and deployment explain the company evaluation, with precise status labels.
-
-## Publishing boundaries
-
-Planned protection must remain planned until implementation and deployment are verified. Company-email access is not the same as SSO. Recorded locations are not GPS tracking. Shared context is not automatic synchronisation. Product illustrations are not app screenshots. Use the actual demo for the actual interface.
-
-Before the next release, check the default page at desktop and phone widths: can a visitor understand the complete product without clicking every tab? Are Inventory and Manifests still named and prominent? Are status labels still visible? Are company claims supported?
+GitHub delivery status: read access verified; branch creation was rejected with 403 (Resource not accessible by integration). No remote commit, PR or deployment was made. Use the complete package with the existing GitHub Desktop workflow.

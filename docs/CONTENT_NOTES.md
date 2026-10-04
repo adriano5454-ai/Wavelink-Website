@@ -1,56 +1,37 @@
-# Content and illustration boundaries — website 2.3.1
+# Content evidence — website 3.0.0
 
-## Latest positioning correction
+Website parent: `adriano5454-ai/Wavelink-Website`, main `ea8ec477d6c4f699e09d34b293c315a2f1a5b5d8`. All 33 supplied website blobs match GitHub. Application reference: `adriano5454-ai/wavelink`, main `dd8eff975a594e41b10bf5e589577bcf4e954cee`, current UI95.
 
-The user asked to show the whole context: Wavelink is much more than inventory. This overrides the previous release’s decision to make inventory/manifests the entire headline. Preserve their importance without obscuring the other modules.
+Release documentation was read at that exact application commit. This is a content audit against implementation/release evidence, not a fresh application runtime or production-security test.
 
-The current hierarchy is **whole operation → six visible capability groups → product overview and optional detailed views → teams → security and deployment**. The website’s role is not to replicate every application screen or hide the product behind a generic workflow illustration.
+| Website coverage | Application evidence read |
+| --- | --- |
+| Inventory, nested boxes, stock/QR verification | WORKSPACE_UI53, UI70; current README |
+| Manifests, receiving, placement, sites and custody | WORKSPACE_UI62, UI70; current README UI77–79 sections |
+| Maintenance and certificates | WORKSPACE_UI36, UI70, UI80; current README UI79/92 sections |
+| Tasks and operational logs | WORKSPACE_UI45, UI80, UI82; current README UI77 sections |
+| Checklists, builders and reusable definitions | WORKSPACE_UI45, UI61, UI80 |
+| Toolbox talks and acknowledgements | WORKSPACE_UI34, UI35, UI59, UI95 |
+| Daily/hitch handovers, revisions and shifts | WORKSPACE_UI27, UI33, UI59, UI80; current README |
+| QR guests and exact revision signature evidence | WORKSPACE_UI34, UI35, UI59 |
+| Fault/HSE/QSHE modules and attention | WORKSPACE_UI62, UI82, UI93; existing platform scope |
+| Profiles, Team and contribution badges | WORKSPACE_UI66; current README UI85–94 sections |
+| Search and personal actions | WORKSPACE_UI82, UI93 |
+| Original Files, folders, revisions and usage | WORKSPACE_UI61; current README UI84/92 sections |
+| Document imports and separate worksheet selection | WORKSPACE_UI95 |
+| Invitations and department/role access | COMPANY_MEMBERSHIP, WORKSPACE_UI65 |
+| Verified company email, MFA, recovery and sessions | WORKSPACE_UI83 |
+| Optional email summaries, category preferences and quiet hours | WORKSPACE_UI93 |
+| Backup/transfers and local/hosted operation | Current README, COMPANY_MEMBERSHIP, UI61/65/66/83/93; preserved deployment model |
 
-Prepared from `Wavelink_Website_2.3.0_GitHub.zip`, SHA-256 `2fa0f07be43c3b60f310bf3843d7385932bbd5530ff7e90e8f30710ca540afba`. All 32 parent manifest entries were verified before editing. The sole contact address is now **comercial@mywavelink.com**, as provided by Adriano. Public URL, separate demo destination, full-platform positioning, local artwork and static-host settings are preserved. A working company contact mailbox does not change the planned status of company-email sign-in in the application.
+## Presentation boundaries
 
-## Breadth and progressive disclosure
+Use the supplied Wavelink brand and offshore image. Fictional product records are readable illustrations, not application screenshots, customer data or a live dashboard. There are no customer logos, testimonials, fabricated metrics, prices or certification badges.
 
-The hero names six interconnected areas. The following permanent grid includes:
+Document imports are editable extraction/mapping proposals. Visible Excel sheets are recognised separately, and one is selected per import. OCR requires configured programs and readable scans. Unknown layouts or handwriting are not promised. Source bytes are temporary and not automatically uploaded to Original Files. Import is not automatic publication, historical-record migration or signature reconstruction.
 
-1. Inventory & assets, including boxes, QR verification and low-stock information.
-2. Manifests & logistics, including dispatch, receipt and distinct placement.
-3. Maintenance & certificates, with reported faults in the wider context.
-4. Handovers & tasks, with responsibilities and shift continuity.
-5. Safety & team checks, including checklists, toolbox talks and HSE / QSHE.
-6. Fleet, logs & planning, including vessels, departments and calendar.
+QR invitations cover saved toolbox talks and exact published handovers, rather than every record type. Temporary visitors require explicit permission, have document-specific limited access and self-declared identity. Recognition badges are cosmetic, not professional qualifications or authority.
 
-A shared foundation names people, permissions, project data tools and deployment. The default product view is **Overview**, not Inventory. Six further tabs retain focused previews, and a native disclosure provides fourteen capability entries. This keeps the initial page readable without making breadth depend entirely on hidden tabs.
+Email alerts are optional and initially off per user. They require the configured company service and verified recipients. This update does not test inbox delivery. Hosted access needs a connection; local devices need a connection to their hub. Automatic synchronisation between independent local and hosted installs is not promised.
 
-## Implementation evidence boundary
-
-No application source repository was supplied or audited in this website revision. Marketing coverage follows the established project scope and previous website; tests verify the website, not the application. Current project context includes general Tasks, Fault Reports and HSE / QSHE in the product scope, correcting the earlier website’s stale verification-only task description. Exact availability and workflow configuration must be checked in the intended application release.
-
-No automatic fault-to-maintenance-to-task chain, recurring task engine, universal checklist/task linking, simultaneous editing, live presence, procurement system, compliance certification or automatic connected/disconnected sync is promised. Record associations in illustrations explain context, not a tested end-to-end application integration. Approval and review behaviours can differ by module.
-
-Access copy now qualifies vessel-specific controls as available where supported; do not imply that every module is universally vessel-isolated. Hosting and local deployment remain choices, not automatic synchronisation between separate installations.
-
-## Fictional views
-
-Names, people, projects, equipment and records are fictional and are not client data. All product views are labelled HTML/CSS illustrations, not actual application screenshots. The separate demo remains the route to the actual application.
-
-- `WL-0048`: hydraulic power unit, recorded in Northstar’s equipment bay, with maintenance/certificate context.
-- `BX-007`: survey spares box, received in Northstar’s receiving area but awaiting final placement.
-- `ST-009`: connector-seal stock, two sets at Workshop shelf B, with illustrative low-stock status.
-- `MF-012`: shipment from Shore base to Northstar, with one line still awaiting placement after receipt.
-- The wider overview adds a pre-operation check pending supervisor review and a saved department handover.
-
-The illustrated summary is **not a live dashboard or automatic workflow**. Sample badges do not establish real safety, readiness, completion or approval. The same item and shipment identities are kept across views. Receiving is not conflated with final placement. QR verification is not receiving. Locations are recorded locations, not continuous GPS tracking.
-
-## Security and deployment
-
-Two-step verification and company-email sign-in remain **Planned**, including in the nearby explanation and FAQ. Corporate SSO/provider support remains a separate requirements discussion. No certification, independent security audit, encryption-at-rest standard, guaranteed uptime or regulatory compliance is claimed. See [SECURITY_ROADMAP.md](SECURITY_ROADMAP.md).
-
-Publishing this marketing package does not implement authentication, company isolation or application permissions. Do not use the public demo for real company/operational information.
-
-## Assets and presentation
-
-Original offshore imagery and brand marks are inherited from the supplied package. Previous source notes identify the offshore scene as illustrative, not a real customer vessel. The social image is a locally rendered website preview. No external image/font dependency is introduced.
-
-No invented customer logos, testimonials, ROI percentages or security badges are used. Replace product illustrations only with approved real screenshots and label them accurately. Never expose real operational records while doing so.
-
-This website change does not reorder the separate application-development workstream.
+The website is in English. Sales remains **comercial@mywavelink.com** (one “m”); product support is **support@mywavelink.com**.

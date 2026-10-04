@@ -1,152 +1,107 @@
-/* Wavelink website 2.3.1. Static, dependency-free progressive enhancement.
- * No API calls, analytics, account state or storage. Previews are local illustrations.
- */
 (() => {
   'use strict';
-
-  const header = document.querySelector('.site-header');
-  const navigation = document.querySelector('#site-nav');
-  const menuButton = document.querySelector('.menu-toggle');
-  const mobileViewport = window.matchMedia('(max-width: 959px)');
-
-  if (header && navigation && menuButton) {
-    const closeMenu = (restoreFocus = false) => {
-      navigation.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open navigation');
-      if (restoreFocus && mobileViewport.matches) menuButton.focus();
-    };
-
-    const updateNavigation = () => {
-      closeMenu();
-      menuButton.hidden = !mobileViewport.matches;
-    };
-
-    // Add enhancement only after the controls are found and initialised.
-    header.classList.add('navigation-ready');
-    updateNavigation();
-    if (typeof mobileViewport.addEventListener === 'function') {
-      mobileViewport.addEventListener('change', updateNavigation);
-    } else {
-      // Compatibility fallback for browsers with the older MediaQueryList API.
-      mobileViewport.addListener(updateNavigation);
-    }
-
-    menuButton.addEventListener('click', () => {
-      const open = menuButton.getAttribute('aria-expanded') !== 'true';
-      navigation.classList.toggle('is-open', open);
-      menuButton.setAttribute('aria-expanded', String(open));
-      menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  const tabs = [...document.querySelectorAll('.platform-choice')];
+  const panels = [...document.querySelectorAll('.platform-panel')];
+  const tablist = document.querySelector('.platform-tabs');
+  if (tabs.length && panels.length && tablist) {
+    tablist.setAttribute('role', 'tablist');
+    tablist.setAttribute('aria-label', 'Explore Wavelink capabilities');
+    tabs.forEach(tab => {
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', `panel-${tab.dataset.panel}`);
     });
-
-    navigation.addEventListener('click', event => {
-      const link = event.target.closest('a');
-      if (!link) return;
-      const wasOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      closeMenu();
-      const href = link.getAttribute('href') || '';
-      if (wasOpen && href.startsWith('#')) {
-        const target = document.getElementById(href.slice(1));
-        if (target) {
-          // Move focus into the selected section, not into a now-hidden menu.
-          target.setAttribute('tabindex', '-1');
-          target.focus({ preventScroll: true });
-        }
-      } else if (wasOpen && link.target === '_blank') {
-        menuButton.focus();
-      }
+    panels.forEach(panel => {
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', `tab-${panel.id.replace('panel-', '')}`);
+      panel.tabIndex = 0;
     });
-
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-        closeMenu(true);
-      }
-    });
-    document.addEventListener('click', event => {
-      if (!header.contains(event.target)) closeMenu();
-    });
-    header.addEventListener('focusout', event => {
-      if (!header.contains(event.relatedTarget)) closeMenu();
-    });
-  }
-
-  /** Enable a self-contained, keyboard-operable tab group with manual activation.
-   * Arrow keys/Home/End move focus; Enter/Space select. There is no auto-rotation.
-   */
-  document.querySelectorAll('[data-tabs]').forEach(group => {
-    const tablist = group.querySelector('[role="tablist"]');
-    if (!tablist) return;
-    const tabs = [...tablist.querySelectorAll('[role="tab"]')];
-    const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-    if (!tabs.length || panels.some(panel => !panel || !group.contains(panel))) return;
-
-    const activate = selectedTab => {
-      const selectedIndex = tabs.indexOf(selectedTab);
-      if (selectedIndex < 0) return;
-      tabs.forEach((tab, index) => {
-        const selected = index === selectedIndex;
-        tab.setAttribute('aria-selected', String(selected));
-        tab.tabIndex = selected ? 0 : -1;
-        panels[index].hidden = !selected;
+    const select = (id, focus = false, scroll = false) => {
+      const selected = tabs.find(tab => tab.dataset.panel === id);
+      if (!selected) return;
+      tabs.forEach(tab => {
+        const active = tab === selected;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
       });
+      panels.forEach(panel => { panel.hidden = panel.id !== `panel-${id}`; });
+      if (focus) selected.focus({preventScroll: true});
+      if (scroll) tablist.scrollIntoView({block: 'start'});
     };
-
+    const hashPanel = () => {
+      const id = location.hash.replace(/^#panel-/, '');
+      if (tabs.some(tab => tab.dataset.panel === id)) select(id);
+    };
+    const initial = location.hash.replace(/^#panel-/, '');
+    select(tabs.some(tab => tab.dataset.panel === initial) ? initial : 'equipment');
     tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('click', event => {
+        event.preventDefault();
+        select(tab.dataset.panel);
+      });
       tab.addEventListener('keydown', event => {
         let next;
-        switch (event.key) {
-          case 'ArrowRight': next = (index + 1) % tabs.length; break;
-          case 'ArrowLeft': next = (index - 1 + tabs.length) % tabs.length; break;
-          case 'Home': next = 0; break;
-          case 'End': next = tabs.length - 1; break;
-          default: return; // Native button Enter/Space behaviour activates the tab.
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + tabs.length - 1) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next !== undefined) {
+          event.preventDefault();
+          tabs[next].focus();
         }
+        if (event.key === ' ' || event.key === 'Enter') {
+          event.preventDefault();
+          select(tab.dataset.panel);
+        }
+      });
+    });
+    document.querySelectorAll('[data-show-panel]').forEach(link => {
+      link.addEventListener('click', event => {
         event.preventDefault();
-        tabs.forEach((item, i) => { item.tabIndex = i === next ? 0 : -1; });
-        tabs[next].focus();
+        select(link.dataset.showPanel, true, true);
+        // Use a stable section anchor: the selected tab remains in this page.
+        history.replaceState(null, '', `#panel-${link.dataset.showPanel}`);
       });
     });
-    // Platform overview and module cards open their matching capability view.
-    // Their ordinary #platform links still work without JavaScript.
-    document.querySelectorAll('[data-preview]').forEach(link => {
-      const target = tabs.find(tab => tab.id === `tab-${link.dataset.preview}`);
-      if (!target) return;
-      link.addEventListener('click', () => {
-        activate(target);
-        // Put keyboard focus on the selected control, not a hidden panel.
-        target.focus({ preventScroll: true });
-      });
-    });
-    tablist.hidden = false;
-    activate(tabs.find(tab => tab.getAttribute('aria-selected') === 'true') || tabs[0]);
-  });
-
-  const emailButton = document.querySelector('[data-copy-email]');
-  const copyStatus = document.querySelector('#copy-status');
-  if (emailButton && copyStatus) {
-    emailButton.hidden = false;
-    let clearStatusTimer;
-    emailButton.addEventListener('click', async () => {
-      const email = emailButton.dataset.copyEmail;
-      if (!email) return;
-      clearTimeout(clearStatusTimer);
-      emailButton.disabled = true;
-      try {
-        if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
-        await navigator.clipboard.writeText(email);
-        copyStatus.textContent = 'Email address copied.';
-      } catch {
-        // Local-file previews and denied clipboard permission still have a mailto link.
-        copyStatus.textContent = 'Please select and copy the email address above.';
-      } finally {
-        emailButton.disabled = false;
-      }
-      clearStatusTimer = window.setTimeout(() => { copyStatus.textContent = ''; }, 9000);
-    });
+    window.addEventListener('hashchange', hashPanel);
   }
-
-  document.querySelectorAll('[data-year]').forEach(element => {
-    element.textContent = String(new Date().getFullYear());
+  const menu = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#main-navigation');
+  if (menu && nav) {
+    menu.hidden = false;
+    const closeMenu = (focus = false) => {
+      nav.classList.remove('is-open');
+      menu.setAttribute('aria-expanded', 'false');
+      if (focus) menu.focus();
+    };
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      nav.classList.toggle('is-open', open);
+      menu.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') closeMenu(true);
+    });
+    document.addEventListener('click', event => {
+      if (!nav.contains(event.target) && !menu.contains(event.target)) closeMenu();
+    });
+    const desktop = window.matchMedia('(min-width:741px)');
+    desktop.addEventListener('change', () => closeMenu());
+  }
+  document.querySelectorAll('[data-year]').forEach(el => { el.textContent = String(new Date().getFullYear()); });
+  document.querySelectorAll('[data-copy-email]').forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      const status = document.querySelector('#copy-status');
+      if (!status) return;
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(button.dataset.copyEmail);
+        status.textContent = 'Email address copied.';
+      } catch (_) {
+        status.textContent = 'Select the email address above and copy it manually.';
+      }
+    });
   });
+  document.documentElement.classList.add('enhanced');
 })();

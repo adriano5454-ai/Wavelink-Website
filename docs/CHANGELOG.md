@@ -1,3 +1,16 @@
+# Website 3.0.0 — 4 October 2026
+
+- Replaced the crowded opening with a clear offshore product introduction and simple demo/platform actions.
+- Added seven progressive product categories and a complete 18-area directory.
+- Added current document and Excel worksheet import coverage, Original Files, source revisions and review requirements.
+- Expanded profiles/Team/contribution badges, personal actions, global search and optional company email alerts.
+- Updated company sign-in, authenticator MFA, recovery-code and session wording from the current program evidence.
+- Clarified QR document signing, hosted/local setup, workflow continuity and company evaluation.
+- Refreshed FAQs, privacy, metadata, sitemap, responsive styling, accessibility and local validation tools.
+- Preserved sales address, separate demo link and existing static hosting approach.
+
+---
+
 # Website 2.3.1 — 26 September 2026 UTC
 
 Contact-only update requested by Adriano. All website contact references now use **comercial@mywavelink.com**: walkthrough links and company enquiry links (preserving subject text), the visible contact card, the copy-email control, homepage footer, privacy-page contacts and repository documentation/test expectations.
