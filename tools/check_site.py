@@ -51,11 +51,11 @@ def main():
  for term in ['localStorage','sessionStorage','document.cookie','XMLHttpRequest','fetch(']:
   if term in js:errors.append('Unexpected website data operation: '+term)
  for name in ('index.html','privacy.html','404.html'):
-  if '?v=3.0.0' not in (SITE/name).read_text():errors.append(name+': stale cache version')
+  if '?v=3.0.1' not in (SITE/name).read_text():errors.append(name+': stale cache version')
  if 'prefers-reduced-motion' not in css:errors.append('Missing reduced motion handling')
  if re.search(r'(?:email sign-in|two-step verification).{0,60}planned',home,re.I):errors.append('Stale planned security label')
  # All structured data must parse as exact JSON.
  for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>',home,re.S):json.loads(raw)
- result={'version':'3.0.0','passed':not errors,'checks':checks,'errors':errors}
+ result={'version':'3.0.1','passed':not errors,'checks':checks,'errors':errors}
  print(json.dumps(result,indent=2));return 1 if errors else 0
 if __name__=='__main__':raise SystemExit(main())

@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "website_parent": "ea8ec477d6c4f699e09d34b293c315a2f1a5b5d8",
   "program_reference": "dd8eff975a594e41b10bf5e589577bcf4e954cee",
   "files": [
@@ -20,23 +20,23 @@
     },
     {
       "path": "README.md",
-      "size": 3091,
-      "sha256": "08c315edf8f16a5eb3ff4fc59d15cc6fe6483b1e9d9a3c91748caa51999f4528"
+      "size": 3366,
+      "sha256": "32d5698fbb59da7ac347d85e0f3d0f1563787c642636a91d44a00d3bce871f8f"
     },
     {
       "path": "RESTORE_FULL_WEBSITE.md",
-      "size": 3489,
-      "sha256": "d97cc3fa1fc2e79627699b216a2a934d4fff7cf7587b2c0a585f62060b5b6ac7"
+      "size": 3514,
+      "sha256": "94446cdac18ae9e14e9c42d49cf78c0f9fdb80861079ad8c1f96bfa398cecc4b"
     },
     {
       "path": "UPDATE_GITHUB.md",
       "size": 1064,
-      "sha256": "cee57ece853a85e40c08b14101d3cac4204dbe8c108fb1a430746372fff4662c"
+      "sha256": "d73598879c296e23445ad51b0bfc63ca687fd9856bcd460237ff409860d16e58"
     },
     {
       "path": "docs/CHANGELOG.md",
-      "size": 7546,
-      "sha256": "0123efead1a19e9af5e707830ff501e3fd64f8cfdb8857739203fb6065ff262b"
+      "size": 8131,
+      "sha256": "d51cb94010423132bb36465d0f4f97d09f6738e117c348b3ca60dde8f957535e"
     },
     {
       "path": "docs/CONTENT_NOTES.md",
@@ -55,13 +55,13 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "size": 2493,
-      "sha256": "f742541f5775d6d02ef7cedede0f382d043f7e60d2499a0a9437d48b5c487587"
+      "size": 2972,
+      "sha256": "b18382e84f3068ce58340e928400ca79caf7fd012f7b69ca570ef05280eab251"
     },
     {
       "path": "docs/browser-checks.json",
-      "size": 1319,
-      "sha256": "d19a876fcd2c094a41a845954fabce791947eb94cf56d19cbd2a56427a61bc17"
+      "size": 1527,
+      "sha256": "588dc877888257944e35e6b0726cf183dae3f38c5fcba92b5290e3899cf64620"
     },
     {
       "path": "docs/browser-http-attempt.json",
@@ -69,19 +69,24 @@
       "sha256": "861254fcc68038b419e5efcfdbb1e14b0ea4d8b1e9b0da2b214a53350abfc083"
     },
     {
+      "path": "docs/header-checks.json",
+      "size": 346,
+      "sha256": "6d2c23f8337fa3f42fc40d2ce6ee08afdd1ad2e965d1eb556bef2a65e1f01612"
+    },
+    {
       "path": "docs/http-checks.json",
       "size": 2986,
-      "sha256": "57d25700192717cde67836fbf9eb04e54d93968d7581b1179a9702f62a0fa959"
+      "sha256": "0092062fa8c36154d4c1baaa614944cbb23cdd50bbea8bde9b5d63e5874ff80a"
     },
     {
       "path": "docs/static-checks.json",
       "size": 358,
-      "sha256": "ad287397dcebb60ec03d82956d3855986ec933a6fef5ab791a872e6d2e22963e"
+      "sha256": "b8c61ce998ce2e2cec2ade5df0e3a6fdb30882a703050c96f63accbd52df8e5b"
     },
     {
       "path": "site/404.html",
       "size": 958,
-      "sha256": "047ced295e456b1b1a4a6a6e7888d9230b1957218f38674bfb574259bba9ba5a"
+      "sha256": "9944a12b461952bff566fa5aaa3648b5203b4c1b80439282fcd9dba74178faf6"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -120,13 +125,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 55495,
-      "sha256": "ceaaee635dd55b59c6a564ff3edd08df8d9770412b633b9cdb514ac6eeabd6f0"
+      "size": 56145,
+      "sha256": "dadebd1acbc7492aebca5cebd01d7da72184663e6a48d49b8d5caa7536a2105a"
     },
     {
       "path": "site/privacy.html",
       "size": 5669,
-      "sha256": "cf7ca182cae2980c7d9dea148269689461889835afdf8f489889225334a39628"
+      "sha256": "43eb8a3194cbb469f874b040234f641cbccececa06e27b460ef5768f03b9f94c"
     },
     {
       "path": "site/robots.txt",
@@ -135,8 +140,8 @@
     },
     {
       "path": "site/script.js",
-      "size": 4633,
-      "sha256": "dc8b4b2c4660c3b516a359a485e34521bcd46897d5312b4df51a5e1489e6a2be"
+      "size": 4634,
+      "sha256": "6c71b0556be36750ad52b379df899e2094a1eacedc080da28f1811ee568a901b"
     },
     {
       "path": "site/sitemap.xml",
@@ -145,13 +150,13 @@
     },
     {
       "path": "site/styles.css",
-      "size": 43435,
-      "sha256": "f6225d0390f9b5d379195fae08560ccd97007cc4554ae123385214349e4b1b34"
+      "size": 45602,
+      "sha256": "f6989c12755ad43fa37c4b63381a670279db1fa0164104f1899cc365cd3e3604"
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 8483,
-      "sha256": "9fb08b1b165db288ead308e550f35936f1124f228cebc07ecf455bf67ff4fc4f"
+      "size": 8495,
+      "sha256": "0562c1e9717caa5f91f017fd08eadbf643916a2bd9e4c6425181a635c130bfed"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -161,12 +166,12 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "8f6c54716415bb999c4c13716e8d22b1f15069d162dee871f7494940f30199d6"
+      "sha256": "11047a746669e48976874141d7e599379a6518aa2aeeb530326f30fa5821231b"
     },
     {
       "path": "tools/check_site.py",
       "size": 3822,
-      "sha256": "32682a90f9b2f6e47622582a269b5760bdeea07fabe99de8dcadadf43fa93b88"
+      "sha256": "0f90440d78b8a5724ab9cca5a61a757d0c49d8f81fdad5c8472d65365b6a5fbd"
     },
     {
       "path": "tools/preview.py",
@@ -176,7 +181,6 @@
   ],
   "website_parent_blob_count": 33,
   "package_type": "complete-clean-website-repository",
-  "public_site_unchanged_from": "Wavelink_Website_3.0.0_GitHub.zip",
   "remote_contamination_checked_commit": "6dc2544cd620badd34d3c1f8282495d08e93b224",
   "remote_paths_absent_from_clean_repo": [
     "DELIVERY_CHECKS.json",
@@ -191,5 +195,7 @@
     "docs/WORKSPACE_UI96.md",
     "tests/README.md",
     "tests/test_ui96_build.py"
-  ]
+  ],
+  "public_site_base": "Wavelink_Website_3.0.0_FULL_CLEAN_REPO.zip",
+  "revision_scope": "Header navigation, contact/demo actions and responsive menu; homepage main/footer content unchanged"
 }

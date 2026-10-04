@@ -13,7 +13,7 @@ const site = path.join(root, 'site');
 const out = process.env.QA_OUTPUT || path.join(root, 'test-output');
 fs.mkdirSync(out, {recursive:true});
 const keys = ['equipment','maintenance','operations','safety','people','documents','control'];
-const widths = [320,390,600,740,741,768,900,1024,1280,1440,1920];
+const widths = [320,390,600,740,741,768,900,1000,1001,1024,1280,1440,1920];
 (async () => {
   const browser = await chromium.launch({headless:true,
     ...(process.env.BROWSER_EXECUTABLE ? {executablePath:process.env.BROWSER_EXECUTABLE} : {}),
@@ -46,7 +46,7 @@ const widths = [320,390,600,740,741,768,900,1024,1280,1440,1920];
       assert.equal(await page.locator('h1').count(),1);
       assert.equal(await page.locator('[role="tab"]').count(),7);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
-      assert.equal(await page.locator('.menu-toggle').isVisible(),width<=740);
+      assert.equal(await page.locator('.menu-toggle').isVisible(),width<=1000);
       for(const key of keys){
         await page.locator('#tab-'+key).click();
         assert.equal(await page.locator('#panel-'+key).isVisible(),true);
@@ -75,7 +75,7 @@ const widths = [320,390,600,740,741,768,900,1024,1280,1440,1920];
       for(const faq of await page.locator('.faq-item').all()){
         await faq.locator('summary').click();assert.equal(await faq.locator('p').isVisible(),true);await noOverflow(page,width+'/faq');await faq.locator('summary').click();
       }
-      if(width<=740){
+      if(width<=1000){
         await page.locator('.menu-toggle').click();
         assert.equal(await page.locator('#main-navigation').isVisible(),true);
         await noOverflow(page,width+'/menu');await page.locator('.menu-toggle').press('Escape');
@@ -107,6 +107,6 @@ const widths = [320,390,600,740,741,768,900,1024,1280,1440,1920];
     const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setScriptExecutionDisabled',{value:true});await page.setViewportSize({width:390,height:844});await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.0.0',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.0.1',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,16 @@
+{
+  "version": "3.0.1",
+  "passed": true,
+  "contactAnchor": true,
+  "mobileContactClosesMenu": true,
+  "demoNewTab": true,
+  "demoNoOpener": true,
+  "tabletBreakpointResize": true,
+  "visuals": [
+    "desktop",
+    "hover",
+    "mobile-menu",
+    "enlarged-text"
+  ],
+  "scope": "Local-source route fulfilment; demo stub, no live demo request"
+}

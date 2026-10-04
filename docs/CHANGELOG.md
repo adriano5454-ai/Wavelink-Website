@@ -1,3 +1,12 @@
+# Website 3.0.1 — 4 October 2026
+
+- Strengthened the header navigation with larger click targets, pale teal hover/focus states and an underline.
+- Separated the contact action and added a filled navy demo button with a teal arrow.
+- Moved the compact menu to 1000 pixels, with contact/demo actions side by side on smaller screens.
+- Allowed the desktop header to wrap when text is enlarged.
+- Retained all page sections, feature copy, imagery, demo/contact destinations and the static deployment setup.
+- Updated asset cache tags and repeated local static, HTTP and browser checks.
+
 # Website 3.0.0 — 4 October 2026
 
 - Replaced the crowded opening with a clear offshore product introduction and simple demo/platform actions.

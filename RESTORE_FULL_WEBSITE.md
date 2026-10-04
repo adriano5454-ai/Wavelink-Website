@@ -1,4 +1,4 @@
-# Restore the complete Wavelink website — 3.0.0
+# Restore the complete Wavelink website — 3.0.1
 
 This folder is the **complete updated Wavelink-Website source**, including all public pages, artwork/assets, styles, JavaScript, documentation and review tools. It is suitable for replacing a website checkout contaminated with Wavelink application files. It does not require any earlier patch.
 
@@ -21,9 +21,9 @@ If GitHub Desktop shows the application repository as the remote, or repository 
 
 The remaining repository-root files are website documentation, the Windows preview launcher and `.gitignore`. The package contains no application `deploy`/`vendor` folders, Dockerfile, database, demo fixtures or application installer. Its `.git` history is not included; retain the website checkout’s correct metadata.
 
-Website version remains **3.0.0**, with the previously verified UI95 feature content and responsive design. This recovery package changes the replacement instructions; public site content is unchanged. The application repository and its services are separate.
+Website version is **3.0.1**, with the previously verified UI95 feature content. This revision refines the header navigation and demo/contact actions. The rest of the page retains the 3.0.0 content and layout. The application repository and its services are separate.
 
-## Current GitHub check
+## Earlier recovery GitHub check (3.0.0)
 
 At website main commit `6dc2544cd620badd34d3c1f8282495d08e93b224`, 46 files were present. The following remote paths are absent from this clean website package and are removed by the clean replacement procedure:
 

@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "browser": "153.0.8010.12",
   "mode": "Local-source HTTPS route fulfilment; not live HTTP/deployment",
   "results": [
@@ -41,6 +41,18 @@
     },
     {
       "width": 900,
+      "categories": 7,
+      "capabilities": 18,
+      "passed": true
+    },
+    {
+      "width": 1000,
+      "categories": 7,
+      "capabilities": 18,
+      "passed": true
+    },
+    {
+      "width": 1001,
       "categories": 7,
       "capabilities": 18,
       "passed": true
