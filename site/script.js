@@ -85,7 +85,7 @@
     document.addEventListener('click', event => {
       if (!nav.contains(event.target) && !menu.contains(event.target)) closeMenu();
     });
-    const desktop = window.matchMedia('(min-width:1001px)');
+    const desktop = window.matchMedia('(min-width:1151px)');
     desktop.addEventListener('change', () => closeMenu());
   }
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = String(new Date().getFullYear()); });

@@ -46,16 +46,19 @@ def main():
   if term not in home:errors.append('Missing capability: '+term)
  if home.count('class="platform-choice"')!=7:errors.append('Expected seven explorer categories')
  if home.count('class="capability"')!=18:errors.append('Expected 18 capability areas')
+ if home.count('class="package-status">Planned package')!=4:errors.append('Expected four clearly planned HR packages')
+ for term in ['Crew & Rotations','Timesheets & Approvals','Travel & Expenses','People & Readiness','ILLUSTRATIVE CONCEPT · FICTIONAL DATA','Scope, release dates and commercial terms are to be confirmed.','href="#packages"']:
+  if term not in home:errors.append('Missing planned package boundary/destination: '+term)
  for term in ['comercial@mywavelink.com','support@mywavelink.com','https://demo.mywavelink.com/','https://www.mywavelink.com/']:
   if term not in home:errors.append('Missing destination: '+term)
  for term in ['localStorage','sessionStorage','document.cookie','XMLHttpRequest','fetch(']:
   if term in js:errors.append('Unexpected website data operation: '+term)
  for name in ('index.html','privacy.html','404.html'):
-  if '?v=3.0.1' not in (SITE/name).read_text():errors.append(name+': stale cache version')
+  if '?v=3.1.0' not in (SITE/name).read_text():errors.append(name+': stale cache version')
  if 'prefers-reduced-motion' not in css:errors.append('Missing reduced motion handling')
  if re.search(r'(?:email sign-in|two-step verification).{0,60}planned',home,re.I):errors.append('Stale planned security label')
  # All structured data must parse as exact JSON.
  for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>',home,re.S):json.loads(raw)
- result={'version':'3.0.1','passed':not errors,'checks':checks,'errors':errors}
+ result={'version':'3.1.0','passed':not errors,'checks':checks,'errors':errors}
  print(json.dumps(result,indent=2));return 1 if errors else 0
 if __name__=='__main__':raise SystemExit(main())

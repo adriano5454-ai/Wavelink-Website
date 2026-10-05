@@ -1,5 +1,5 @@
 {
-  "version": "3.0.1",
+  "version": "3.1.0",
   "website_parent": "ea8ec477d6c4f699e09d34b293c315a2f1a5b5d8",
   "program_reference": "dd8eff975a594e41b10bf5e589577bcf4e954cee",
   "files": [
@@ -20,33 +20,38 @@
     },
     {
       "path": "README.md",
-      "size": 3366,
-      "sha256": "32d5698fbb59da7ac347d85e0f3d0f1563787c642636a91d44a00d3bce871f8f"
+      "size": 3512,
+      "sha256": "1f0a26388a3db41b601682f454837b8a147bb06abdf3fe7c1a23efa43098d704"
     },
     {
       "path": "RESTORE_FULL_WEBSITE.md",
-      "size": 3514,
-      "sha256": "94446cdac18ae9e14e9c42d49cf78c0f9fdb80861079ad8c1f96bfa398cecc4b"
+      "size": 3626,
+      "sha256": "9b49e91bb700e47331341dd9b7e798f93dacb027557c70e9672209269c0041aa"
     },
     {
       "path": "UPDATE_GITHUB.md",
       "size": 1064,
-      "sha256": "d73598879c296e23445ad51b0bfc63ca687fd9856bcd460237ff409860d16e58"
+      "sha256": "778daccaff96cdf60623be52291ba40bee528c18f0f35a6e6da9c04db851a88a"
     },
     {
       "path": "docs/CHANGELOG.md",
-      "size": 8131,
-      "sha256": "d51cb94010423132bb36465d0f4f97d09f6738e117c348b3ca60dde8f957535e"
+      "size": 8956,
+      "sha256": "3c7721169ea371457b5a1731a39d58694de3bd57e299d0697fa50a4f0b13a0c4"
     },
     {
       "path": "docs/CONTENT_NOTES.md",
-      "size": 3527,
-      "sha256": "d44a17d7a6446534f04cf77cf9b12dd813b20d40e18c9e31a5d63d803c75c856"
+      "size": 4885,
+      "sha256": "2e9eb464b97082e6d6ee943177b28c196da2eb93abdf986cace7d559e1619f09"
+    },
+    {
+      "path": "docs/HR_PACKAGES_ROADMAP.md",
+      "size": 3488,
+      "sha256": "851739fed38e0e2a76d8db5e61521374bb5067f44659ec4acfe8643d6b947bc2"
     },
     {
       "path": "docs/POSITIONING_CHECKPOINT.md",
-      "size": 1634,
-      "sha256": "71911d1464aab473d15080e9ab1c926a30ff8e347c85bba5fdc8259915cc1865"
+      "size": 2092,
+      "sha256": "94b2207aeb10a69093b912943c07f639949c1df745e7e41e0c2419ee7dd40fcc"
     },
     {
       "path": "docs/SECURITY_ROADMAP.md",
@@ -55,13 +60,13 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "size": 2972,
-      "sha256": "b18382e84f3068ce58340e928400ca79caf7fd012f7b69ca570ef05280eab251"
+      "size": 3854,
+      "sha256": "36f6d9e110b5d04b19d9ffd97adbdebc9363f7f95506a4a36e26af39c6b99b41"
     },
     {
       "path": "docs/browser-checks.json",
-      "size": 1527,
-      "sha256": "588dc877888257944e35e6b0726cf183dae3f38c5fcba92b5290e3899cf64620"
+      "size": 3415,
+      "sha256": "91cc6f25c37f1e376e91f02c40ae708e8e5c2f32de519bb175540b8595adcdbf"
     },
     {
       "path": "docs/browser-http-attempt.json",
@@ -76,17 +81,22 @@
     {
       "path": "docs/http-checks.json",
       "size": 2986,
-      "sha256": "0092062fa8c36154d4c1baaa614944cbb23cdd50bbea8bde9b5d63e5874ff80a"
+      "sha256": "6b584436ec33796052d72cf7d8204e69ed56fcee8d950398c2bc67b149233f16"
+    },
+    {
+      "path": "docs/package-layout-checks.json",
+      "size": 2257,
+      "sha256": "bcba8d843cf88cdef75ac45c233b4b40677483b1fa52dd2459f977b6e5e5776a"
     },
     {
       "path": "docs/static-checks.json",
       "size": 358,
-      "sha256": "b8c61ce998ce2e2cec2ade5df0e3a6fdb30882a703050c96f63accbd52df8e5b"
+      "sha256": "7b7eb03b7c64ec8f0d403e06b41ef53f4eea74858fe4e89fd000a6b043f18c96"
     },
     {
       "path": "site/404.html",
       "size": 958,
-      "sha256": "9944a12b461952bff566fa5aaa3648b5203b4c1b80439282fcd9dba74178faf6"
+      "sha256": "8570ca9beec95f7b220c327e0fc338cfb0643233d260f4e8f90b1c832ee7cc6e"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -125,13 +135,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 56145,
-      "sha256": "dadebd1acbc7492aebca5cebd01d7da72184663e6a48d49b8d5caa7536a2105a"
+      "size": 62385,
+      "sha256": "cada0243d21fb7ef883dc8fca01f589fe8b67d576920a6ad4bdec4ae3a29488b"
     },
     {
       "path": "site/privacy.html",
-      "size": 5669,
-      "sha256": "43eb8a3194cbb469f874b040234f641cbccececa06e27b460ef5768f03b9f94c"
+      "size": 5899,
+      "sha256": "1f91474f85b9ade1ad6d3bd944959427dd65788ed8e63e6b54a825ec665c1db8"
     },
     {
       "path": "site/robots.txt",
@@ -141,7 +151,7 @@
     {
       "path": "site/script.js",
       "size": 4634,
-      "sha256": "6c71b0556be36750ad52b379df899e2094a1eacedc080da28f1811ee568a901b"
+      "sha256": "010b2e3e5c46efac8f07be4d55567b951d3b36771a39c175be07a6764d98c04b"
     },
     {
       "path": "site/sitemap.xml",
@@ -150,13 +160,13 @@
     },
     {
       "path": "site/styles.css",
-      "size": 45602,
-      "sha256": "f6989c12755ad43fa37c4b63381a670279db1fa0164104f1899cc365cd3e3604"
+      "size": 51981,
+      "sha256": "2647c384eb27359d7f018b22516f6721519ee87cdc5ac379aed7bfb0799d7d6c"
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 8495,
-      "sha256": "0562c1e9717caa5f91f017fd08eadbf643916a2bd9e4c6425181a635c130bfed"
+      "size": 10520,
+      "sha256": "d7dafa8eb5abebefdf63ea44285f6fcb635b3e939a30401d42b95bffa2fdf755"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -166,12 +176,12 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "11047a746669e48976874141d7e599379a6518aa2aeeb530326f30fa5821231b"
+      "sha256": "0b7d44e950d828786e3ac93b806560bc476f308b3c8f92041cba7f06349e09b6"
     },
     {
       "path": "tools/check_site.py",
-      "size": 3822,
-      "sha256": "0f90440d78b8a5724ab9cca5a61a757d0c49d8f81fdad5c8472d65365b6a5fbd"
+      "size": 4258,
+      "sha256": "60bb3389b836eeaa06472e956e69c39f49638528d11808671cc1e5bbd9f96d1b"
     },
     {
       "path": "tools/preview.py",
@@ -196,6 +206,13 @@
     "tests/README.md",
     "tests/test_ui96_build.py"
   ],
-  "public_site_base": "Wavelink_Website_3.0.0_FULL_CLEAN_REPO.zip",
-  "revision_scope": "Header navigation, contact/demo actions and responsive menu; homepage main/footer content unchanged"
+  "public_site_base": "Wavelink_Website_3.0.1_FULL_CLEAN_REPO.zip",
+  "revision_scope": "Planned HR packages section, fictional crew rotation concept, navigation, FAQ and roadmap; existing core product sections and brand assets retained",
+  "planned_packages": [
+    "Crew & Rotations",
+    "Timesheets & Approvals",
+    "Travel & Expenses",
+    "People & Readiness"
+  ],
+  "application_hr_features_implemented": false
 }

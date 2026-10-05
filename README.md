@@ -1,10 +1,10 @@
-# Wavelink website 3.0.1
+# Wavelink website 3.1.0
 
 A complete refresh of the Wavelink marketing website, checked against application **UI95**. Equipment and logistics, daily work, safety, people and company control now share a clear product story.
 
 The offshore opening leads to seven interactive product categories and an expandable directory of 18 capability areas. Dedicated sections explain document/worksheet imports, the shore-to-vessel workflow, profiles and contribution badges, personal actions, optional email alerts, company membership, two-step verification and hosted/local deployment.
 
-The 3.0.1 refinement strengthens the header navigation with clearer hover/focus states, a separate contact action and a filled demo button. The compact menu now starts at 1000 pixels so tablet navigation has room. The rest of the page and its feature copy remain unchanged.
+Website 3.1.0 adds a separate planned HR packages section: Crew & Rotations, Timesheets & Approvals, Travel & Expenses, and People & Readiness. Each package is explicitly labelled planned. A fictional rotation concept shows onboard, ashore and upcoming crew. Proposed scope expands through native disclosures; no HR workflow is implemented by this website release. The refined header includes a direct HR packages link.
 
 ## Review or publish
 

@@ -13,7 +13,7 @@ const site = path.join(root, 'site');
 const out = process.env.QA_OUTPUT || path.join(root, 'test-output');
 fs.mkdirSync(out, {recursive:true});
 const keys = ['equipment','maintenance','operations','safety','people','documents','control'];
-const widths = [320,390,600,740,741,768,900,1000,1001,1024,1280,1440,1920];
+const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1200,1280,1440,1920];
 (async () => {
   const browser = await chromium.launch({headless:true,
     ...(process.env.BROWSER_EXECUTABLE ? {executablePath:process.env.BROWSER_EXECUTABLE} : {}),
@@ -46,7 +46,8 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1280,1440,1920];
       assert.equal(await page.locator('h1').count(),1);
       assert.equal(await page.locator('[role="tab"]').count(),7);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
-      assert.equal(await page.locator('.menu-toggle').isVisible(),width<=1000);
+      assert.equal(await page.locator('.menu-toggle').isVisible(),width<=1150);
+      if(width>1150)assert.ok(await page.locator('.site-header').evaluate(e=>e.getBoundingClientRect().height)<=100,'Normal desktop header wrapped at '+width);
       for(const key of keys){
         await page.locator('#tab-'+key).click();
         assert.equal(await page.locator('#panel-'+key).isVisible(),true);
@@ -72,10 +73,22 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1280,1440,1920];
       await page.locator('.capability-directory>summary').click();
       await page.locator('#imports [data-show-panel="documents"]').click();
       assert.equal(await page.locator('#panel-documents').isVisible(),true);
+      assert.equal(await page.locator('#packages .package-status').count(),4);
+      for(const status of await page.locator('#packages .package-status').all())assert.equal(await status.innerText(),'Planned package');
+      assert.match(await page.locator('.concept-label').innerText(),/FICTIONAL DATA/);
+      assert.match(await page.locator('.packages-footer a').getAttribute('href'),/^mailto:comercial@mywavelink\.com\?subject=Wavelink%20HR%20packages$/);
+      for(const detail of await page.locator('.package-details').all()){
+        assert.equal(await detail.getAttribute('open'),null);
+        await detail.locator('summary').focus();await detail.locator('summary').press('Enter');
+        assert.equal(await detail.locator('.package-list').isVisible(),true);
+        await noOverflow(page,width+'/package scope');
+        await detail.locator('summary').press('Enter');
+      }
+      assert.equal(await page.locator('.faq-item').count(),8);
       for(const faq of await page.locator('.faq-item').all()){
         await faq.locator('summary').click();assert.equal(await faq.locator('p').isVisible(),true);await noOverflow(page,width+'/faq');await faq.locator('summary').click();
       }
-      if(width<=1000){
+      if(width<=1150){
         await page.locator('.menu-toggle').click();
         assert.equal(await page.locator('#main-navigation').isVisible(),true);
         await noOverflow(page,width+'/menu');await page.locator('.menu-toggle').press('Escape');
@@ -83,6 +96,10 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1280,1440,1920];
         await page.locator('.menu-toggle').click();await page.locator('#main-navigation a[href="#imports"]').click();
         assert.equal(await page.locator('#main-navigation').isVisible(),false);
       }
+      if(width<=1150)await page.locator('.menu-toggle').click();
+      await page.locator('#main-navigation a[href="#packages"]').click();
+      assert.equal(new URL(page.url()).hash,'#packages');
+      if(width<=1150)assert.equal(await page.locator('#main-navigation').isVisible(),false);
       await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('Denied')}}}));
       await page.locator('.copy-email').click();
       assert.match(await page.locator('#copy-status').innerText(),/manually/);
@@ -92,21 +109,26 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1280,1440,1920];
       for(const name of ['privacy.html','404.html']){
         await page.goto('https://www.mywavelink.com/'+name,{waitUntil:'load'});await noOverflow(page,width+'/'+name);
       }
-      assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:18,passed:true});
+      assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:18,plannedPackages:4,packageDisclosures:3,faqs:8,passed:true});
 
     }
     await page.setViewportSize({width:1440,height:1000});await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
     await page.screenshot({path:path.join(out,'desktop-hero.png')});
     await page.screenshot({path:path.join(out,'desktop-full.png'),fullPage:true});
+    await page.locator('#packages').screenshot({path:path.join(out,'packages-desktop.png')});
     for(const key of keys){await page.locator('#tab-'+key).click();await page.locator('#platform').screenshot({path:path.join(out,'platform-'+key+'.png')});}
     await page.setViewportSize({width:390,height:844});await page.locator('#tab-equipment').click();await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(out,'mobile-hero.png')});await page.screenshot({path:path.join(out,'mobile-full.png'),fullPage:true});
+    await page.locator('#packages').screenshot({path:path.join(out,'packages-mobile.png')});
     await page.goto('https://www.mywavelink.com/#panel-documents',{waitUntil:'load'});assert.equal(await page.locator('#panel-documents').isVisible(),true);
     await page.setViewportSize({width:1280,height:950});await page.evaluate(()=>document.documentElement.style.fontSize='200%');
     for(const key of keys){await page.locator('#tab-'+key).click();await noOverflow(page,'200% text/'+key);}
+    for(const summary of await page.locator('.package-details summary').all())await summary.click();
+    await noOverflow(page,'200% text/package scope');
 
     const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setScriptExecutionDisabled',{value:true});await page.setViewportSize({width:390,height:844});await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
+    await page.locator('.package-details summary').first().click();assert.equal(await page.locator('.package-details .package-list').first().isVisible(),true);await noOverflow(page,'No JavaScript/package scope');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.0.1',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.1.0',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});

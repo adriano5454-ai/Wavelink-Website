@@ -1,3 +1,13 @@
+# Website 3.1.0 — 4 October 2026
+
+- Added a dedicated planned HR packages section, header navigation link and footer link.
+- Presented Crew & Rotations as a featured concept showing onboard, ashore and joining-next personnel with fictional data.
+- Added Timesheets & Approvals, Travel & Expenses, and People & Readiness cards with expandable proposed scope.
+- Added a package enquiry email action and availability FAQ; all four packages are labelled planned.
+- Kept personnel rotations distinct from current daily department handovers and operational shifts.
+- Added a development roadmap for the proposed HR packages; no HR application workflows, pricing, payroll integrations or release dates are claimed.
+- Retained existing platform capabilities, branding, imagery, demo/contact destinations and static hosting setup.
+
 # Website 3.0.1 — 4 October 2026
 
 - Strengthened the header navigation with larger click targets, pale teal hover/focus states and an underline.

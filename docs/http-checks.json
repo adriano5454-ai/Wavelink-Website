@@ -1,5 +1,5 @@
 {
-  "release": "website-3.0.1",
+  "release": "website-3.1.0",
   "passed": true,
   "scope": "local loopback only; byte-for-byte responses",
   "external_network_requests": false,
@@ -8,7 +8,7 @@
       "path": "404.html",
       "status": 200,
       "bytes": 958,
-      "sha256": "9944a12b461952bff566fa5aaa3648b5203b4c1b80439282fcd9dba74178faf6",
+      "sha256": "8570ca9beec95f7b220c327e0fc338cfb0643233d260f4e8f90b1c832ee7cc6e",
       "byte_match": true
     },
     {
@@ -63,15 +63,15 @@
     {
       "path": "index.html",
       "status": 200,
-      "bytes": 56145,
-      "sha256": "dadebd1acbc7492aebca5cebd01d7da72184663e6a48d49b8d5caa7536a2105a",
+      "bytes": 62385,
+      "sha256": "cada0243d21fb7ef883dc8fca01f589fe8b67d576920a6ad4bdec4ae3a29488b",
       "byte_match": true
     },
     {
       "path": "privacy.html",
       "status": 200,
-      "bytes": 5669,
-      "sha256": "43eb8a3194cbb469f874b040234f641cbccececa06e27b460ef5768f03b9f94c",
+      "bytes": 5899,
+      "sha256": "1f91474f85b9ade1ad6d3bd944959427dd65788ed8e63e6b54a825ec665c1db8",
       "byte_match": true
     },
     {
@@ -85,7 +85,7 @@
       "path": "script.js",
       "status": 200,
       "bytes": 4634,
-      "sha256": "6c71b0556be36750ad52b379df899e2094a1eacedc080da28f1811ee568a901b",
+      "sha256": "010b2e3e5c46efac8f07be4d55567b951d3b36771a39c175be07a6764d98c04b",
       "byte_match": true
     },
     {
@@ -98,8 +98,8 @@
     {
       "path": "styles.css",
       "status": 200,
-      "bytes": 45602,
-      "sha256": "f6989c12755ad43fa37c4b63381a670279db1fa0164104f1899cc365cd3e3604",
+      "bytes": 51981,
+      "sha256": "2647c384eb27359d7f018b22516f6721519ee87cdc5ac379aed7bfb0799d7d6c",
       "byte_match": true
     }
   ],

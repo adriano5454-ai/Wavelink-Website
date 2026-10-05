@@ -1,4 +1,4 @@
-# Restore the complete Wavelink website — 3.0.1
+# Restore the complete Wavelink website — 3.1.0
 
 This folder is the **complete updated Wavelink-Website source**, including all public pages, artwork/assets, styles, JavaScript, documentation and review tools. It is suitable for replacing a website checkout contaminated with Wavelink application files. It does not require any earlier patch.
 
@@ -21,7 +21,7 @@ If GitHub Desktop shows the application repository as the remote, or repository 
 
 The remaining repository-root files are website documentation, the Windows preview launcher and `.gitignore`. The package contains no application `deploy`/`vendor` folders, Dockerfile, database, demo fixtures or application installer. Its `.git` history is not included; retain the website checkout’s correct metadata.
 
-Website version is **3.0.1**, with the previously verified UI95 feature content. This revision refines the header navigation and demo/contact actions. The rest of the page retains the 3.0.0 content and layout. The application repository and its services are separate.
+Website version is **3.1.0**, with the previously verified UI95 core feature content. This revision adds planned, optional HR packages and a fictional crew rotation concept, while retaining the refined header and the existing platform sections. HR packages are proposed future scope, not implemented application features. The application repository and its services are separate.
 
 ## Earlier recovery GitHub check (3.0.0)
 

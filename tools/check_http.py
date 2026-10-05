@@ -51,7 +51,7 @@ def main() -> int:
         server.shutdown()
         server.server_close()
         thread.join(timeout=5)
-    report = {'release': 'website-3.0.1', 'passed': not errors,
+    report = {'release': 'website-3.1.0', 'passed': not errors,
               'scope': 'local loopback only; byte-for-byte responses',
               'external_network_requests': False, 'results': results, 'errors': errors}
     if args.json:
