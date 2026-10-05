@@ -1,0 +1,91 @@
+{
+  "version": "3.1.0",
+  "passed": true,
+  "results": [
+    {
+      "width": 320,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 390,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 741,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 900,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1000,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1001,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1024,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1100,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1101,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1150,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": null
+    },
+    {
+      "width": 1151,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": true
+    },
+    {
+      "width": 1200,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": true
+    },
+    {
+      "width": 1280,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": true
+    },
+    {
+      "width": 1440,
+      "expandedPackagesPassed": true,
+      "headingSpacingPassed": true,
+      "normalDesktopHeaderSingleRow": true
+    }
+  ],
+  "scope": "Local-source rendering; screenshot capture hides sticky navigation only"
+}
