@@ -15,7 +15,7 @@
       panel.setAttribute('aria-labelledby', `tab-${panel.id.replace('panel-', '')}`);
       panel.tabIndex = 0;
     });
-    const select = (id, focus = false, scroll = false) => {
+    const select = (id, {focus = false, scroll = false, updateUrl = false} = {}) => {
       const selected = tabs.find(tab => tab.dataset.panel === id);
       if (!selected) return;
       tabs.forEach(tab => {
@@ -26,6 +26,7 @@
       panels.forEach(panel => { panel.hidden = panel.id !== `panel-${id}`; });
       if (focus) selected.focus({preventScroll: true});
       if (scroll) tablist.scrollIntoView({block: 'start'});
+      if (updateUrl) history.replaceState(null, '', `#panel-${id}`);
     };
     const hashPanel = () => {
       const id = location.hash.replace(/^#panel-/, '');
@@ -36,7 +37,7 @@
     tabs.forEach((tab, index) => {
       tab.addEventListener('click', event => {
         event.preventDefault();
-        select(tab.dataset.panel);
+        select(tab.dataset.panel, {updateUrl: true});
       });
       tab.addEventListener('keydown', event => {
         let next;
@@ -50,16 +51,14 @@
         }
         if (event.key === ' ' || event.key === 'Enter') {
           event.preventDefault();
-          select(tab.dataset.panel);
+          select(tab.dataset.panel, {updateUrl: true});
         }
       });
     });
     document.querySelectorAll('[data-show-panel]').forEach(link => {
       link.addEventListener('click', event => {
         event.preventDefault();
-        select(link.dataset.showPanel, true, true);
-        // Use a stable section anchor: the selected tab remains in this page.
-        history.replaceState(null, '', `#panel-${link.dataset.showPanel}`);
+        select(link.dataset.showPanel, {focus: true, scroll: true, updateUrl: true});
       });
     });
     window.addEventListener('hashchange', hashPanel);

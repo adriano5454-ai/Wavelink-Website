@@ -1,7 +1,14 @@
 {
-  "version": "3.1.0",
-  "website_parent": "ea8ec477d6c4f699e09d34b293c315a2f1a5b5d8",
-  "program_reference": "dd8eff975a594e41b10bf5e589577bcf4e954cee",
+  "version": "3.2.0",
+  "website_parent": "8b7cb8bd75a9e96275688574cf57362f0769f426",
+  "application_reference": "UI139 / 1.34.39",
+  "application_source_records": [
+    "README.md (UI139)",
+    "docs/WORKSPACE_UI117.md",
+    "docs/UI129_GUIA.html"
+  ],
+  "revision_scope": "Product category URLs, responsive hero, current HR content and focused validation",
+  "application_hr_features_implemented": true,
   "files": [
     {
       "path": ".gitignore",
@@ -14,24 +21,14 @@
       "sha256": "563ca5a1cd10fa6b7af8c28959cf59dff1ecb85ce3931c76e6c9e88e3f6aaab3"
     },
     {
-      "path": "PREVIEW_WEBSITE.bat",
-      "size": 392,
-      "sha256": "fc3b1449b23f55cfb9455f3d95c4cea81ecfb965c8c42478979b37117349553c"
+      "path": "docs/browser-checks.json",
+      "size": 3415,
+      "sha256": "91cc6f25c37f1e376e91f02c40ae708e8e5c2f32de519bb175540b8595adcdbf"
     },
     {
-      "path": "README.md",
-      "size": 3512,
-      "sha256": "1f0a26388a3db41b601682f454837b8a147bb06abdf3fe7c1a23efa43098d704"
-    },
-    {
-      "path": "RESTORE_FULL_WEBSITE.md",
-      "size": 3626,
-      "sha256": "9b49e91bb700e47331341dd9b7e798f93dacb027557c70e9672209269c0041aa"
-    },
-    {
-      "path": "UPDATE_GITHUB.md",
-      "size": 1064,
-      "sha256": "778daccaff96cdf60623be52291ba40bee528c18f0f35a6e6da9c04db851a88a"
+      "path": "docs/browser-http-attempt.json",
+      "size": 308,
+      "sha256": "861254fcc68038b419e5efcfdbb1e14b0ea4d8b1e9b0da2b214a53350abfc083"
     },
     {
       "path": "docs/CHANGELOG.md",
@@ -44,39 +41,19 @@
       "sha256": "2e9eb464b97082e6d6ee943177b28c196da2eb93abdf986cace7d559e1619f09"
     },
     {
+      "path": "docs/header-checks.json",
+      "size": 346,
+      "sha256": "6d2c23f8337fa3f42fc40d2ce6ee08afdd1ad2e965d1eb556bef2a65e1f01612"
+    },
+    {
       "path": "docs/HR_PACKAGES_ROADMAP.md",
       "size": 3488,
       "sha256": "851739fed38e0e2a76d8db5e61521374bb5067f44659ec4acfe8643d6b947bc2"
     },
     {
-      "path": "docs/POSITIONING_CHECKPOINT.md",
-      "size": 2092,
-      "sha256": "94b2207aeb10a69093b912943c07f639949c1df745e7e41e0c2419ee7dd40fcc"
-    },
-    {
-      "path": "docs/SECURITY_ROADMAP.md",
-      "size": 1868,
-      "sha256": "74e2637c6bb2a3738be2a83ddd36ef7f9d2bcb2f46a81a406f40cf1b281de797"
-    },
-    {
-      "path": "docs/VALIDATION.md",
-      "size": 3854,
-      "sha256": "36f6d9e110b5d04b19d9ffd97adbdebc9363f7f95506a4a36e26af39c6b99b41"
-    },
-    {
-      "path": "docs/browser-checks.json",
-      "size": 3415,
-      "sha256": "91cc6f25c37f1e376e91f02c40ae708e8e5c2f32de519bb175540b8595adcdbf"
-    },
-    {
-      "path": "docs/browser-http-attempt.json",
-      "size": 308,
-      "sha256": "861254fcc68038b419e5efcfdbb1e14b0ea4d8b1e9b0da2b214a53350abfc083"
-    },
-    {
-      "path": "docs/header-checks.json",
-      "size": 346,
-      "sha256": "6d2c23f8337fa3f42fc40d2ce6ee08afdd1ad2e965d1eb556bef2a65e1f01612"
+      "path": "docs/http-checks-3.2.0.json",
+      "size": 3093,
+      "sha256": "7272279339ead89adc82066bad03138060f60f7eecc7deb1eb1381db11e57a8c"
     },
     {
       "path": "docs/http-checks.json",
@@ -89,14 +66,49 @@
       "sha256": "bcba8d843cf88cdef75ac45c233b4b40677483b1fa52dd2459f977b6e5e5776a"
     },
     {
+      "path": "docs/POSITIONING_CHECKPOINT.md",
+      "size": 2092,
+      "sha256": "94b2207aeb10a69093b912943c07f639949c1df745e7e41e0c2419ee7dd40fcc"
+    },
+    {
+      "path": "docs/SECURITY_ROADMAP.md",
+      "size": 1868,
+      "sha256": "74e2637c6bb2a3738be2a83ddd36ef7f9d2bcb2f46a81a406f40cf1b281de797"
+    },
+    {
+      "path": "docs/static-checks-3.2.0.json",
+      "size": 358,
+      "sha256": "a28a1442885433daf4ba745bbedc699ca08b9a54cf8a66820bfbfea8917c7a98"
+    },
+    {
       "path": "docs/static-checks.json",
       "size": 358,
       "sha256": "7b7eb03b7c64ec8f0d403e06b41ef53f4eea74858fe4e89fd000a6b043f18c96"
     },
     {
+      "path": "docs/VALIDATION.md",
+      "size": 3854,
+      "sha256": "36f6d9e110b5d04b19d9ffd97adbdebc9363f7f95506a4a36e26af39c6b99b41"
+    },
+    {
+      "path": "PREVIEW_WEBSITE.bat",
+      "size": 392,
+      "sha256": "fc3b1449b23f55cfb9455f3d95c4cea81ecfb965c8c42478979b37117349553c"
+    },
+    {
+      "path": "README.md",
+      "size": 4487,
+      "sha256": "4f44c972df4c24bea91ddde3567fe469273f4a0f0680ba98c4ab80b52a297bc8"
+    },
+    {
+      "path": "RESTORE_FULL_WEBSITE.md",
+      "size": 3626,
+      "sha256": "9b49e91bb700e47331341dd9b7e798f93dacb027557c70e9672209269c0041aa"
+    },
+    {
       "path": "site/404.html",
       "size": 958,
-      "sha256": "8570ca9beec95f7b220c327e0fc338cfb0643233d260f4e8f90b1c832ee7cc6e"
+      "sha256": "943efb96e944818871e32a7c4ad68db4759e9d016cfad0e1c5f5592fd1c91d9b"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -135,13 +147,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 62385,
-      "sha256": "cada0243d21fb7ef883dc8fca01f589fe8b67d576920a6ad4bdec4ae3a29488b"
+      "size": 62494,
+      "sha256": "05688e1f9378bb9d1f1028988138783b023195673bb792fa41e3aabed5496d32"
     },
     {
       "path": "site/privacy.html",
-      "size": 5899,
-      "sha256": "1f91474f85b9ade1ad6d3bd944959427dd65788ed8e63e6b54a825ec665c1db8"
+      "size": 5997,
+      "sha256": "eba42c594d48aebf7d5dc866731d4b14d4584ccfe9e1890e31df85d49b920aa3"
     },
     {
       "path": "site/robots.txt",
@@ -150,13 +162,13 @@
     },
     {
       "path": "site/script.js",
-      "size": 4634,
-      "sha256": "010b2e3e5c46efac8f07be4d55567b951d3b36771a39c175be07a6764d98c04b"
+      "size": 4646,
+      "sha256": "248fc0e8f7a79dbea8eea995e13977f3d703c1836f273e8da86d641992527e46"
     },
     {
       "path": "site/sitemap.xml",
       "size": 275,
-      "sha256": "7e8809baad8b095a2c66314117651bd075fe2bd54b0337ba36e71762e3001f60"
+      "sha256": "b827bd50ff1ecb96905628eb09460993769e1ea5de8a730a1d2a138c63b5b1c4"
     },
     {
       "path": "site/styles.css",
@@ -165,8 +177,8 @@
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 10520,
-      "sha256": "d7dafa8eb5abebefdf63ea44285f6fcb635b3e939a30401d42b95bffa2fdf755"
+      "size": 10802,
+      "sha256": "282e5cfd274437efa3b148dfdde8288f40eeb01940a2f458c1e1305c230d8d9e"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -176,43 +188,27 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "0b7d44e950d828786e3ac93b806560bc476f308b3c8f92041cba7f06349e09b6"
+      "sha256": "6bead87ec777b93e7382f31255d33fad1ff37a1c363769619afc7ce25aa30b5a"
+    },
+    {
+      "path": "tools/check_navigation.cjs",
+      "size": 3069,
+      "sha256": "d1592befffa86dde836315354e9adef8825cb8db17ce9989875e4f0645284d53"
     },
     {
       "path": "tools/check_site.py",
-      "size": 4258,
-      "sha256": "60bb3389b836eeaa06472e956e69c39f49638528d11808671cc1e5bbd9f96d1b"
+      "size": 4457,
+      "sha256": "fdf528df6be4dbb20ace63d7321b4eb756d856fb4265688fe4f4ca1cd3ec17d8"
     },
     {
       "path": "tools/preview.py",
       "size": 1232,
       "sha256": "2fd301c9bc0ebcb6eb1cc8a6f60a2ad00205354973b74cad4ee79fceb73b6731"
+    },
+    {
+      "path": "UPDATE_GITHUB.md",
+      "size": 1064,
+      "sha256": "778daccaff96cdf60623be52291ba40bee528c18f0f35a6e6da9c04db851a88a"
     }
-  ],
-  "website_parent_blob_count": 33,
-  "package_type": "complete-clean-website-repository",
-  "remote_contamination_checked_commit": "6dc2544cd620badd34d3c1f8282495d08e93b224",
-  "remote_paths_absent_from_clean_repo": [
-    "DELIVERY_CHECKS.json",
-    "DEPLOYMENT_FILES.json",
-    "Dockerfile",
-    "START_HERE.html",
-    "deploy/apply_ui96.py",
-    "docs/CONTINUATION_CHECKPOINT.md",
-    "docs/DEVELOPMENT_TODO.md",
-    "docs/UI96_REVIEW_REPORT.json",
-    "docs/UI96_SOURCE_PROVENANCE.json",
-    "docs/WORKSPACE_UI96.md",
-    "tests/README.md",
-    "tests/test_ui96_build.py"
-  ],
-  "public_site_base": "Wavelink_Website_3.0.1_FULL_CLEAN_REPO.zip",
-  "revision_scope": "Planned HR packages section, fictional crew rotation concept, navigation, FAQ and roadmap; existing core product sections and brand assets retained",
-  "planned_packages": [
-    "Crew & Rotations",
-    "Timesheets & Approvals",
-    "Travel & Expenses",
-    "People & Readiness"
-  ],
-  "application_hr_features_implemented": false
+  ]
 }

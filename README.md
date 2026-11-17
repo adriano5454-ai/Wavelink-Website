@@ -1,4 +1,17 @@
-# Wavelink website 3.1.0
+# Wavelink website 3.2.0
+
+Prepared from website main `8b7cb8bd75a9e96275688574cf57362f0769f426` on 17 November 2026.
+
+- Product category selections update the bookmark URL for mouse and keyboard use and restore after reload.
+- Mobile screens up to 740 pixels use the existing 44 KB hero image.
+- Human resources content reflects UI139, including private documents, crew assignments, travel, weekly project timesheets and expenses. The retained UI117 and UI129 feature records supplied the detailed scope.
+- Website asset URLs use version 3.2.0. The publish directory remains `site`.
+
+Run `python tools/check_site.py`, `python tools/check_http.py` and `node tools/check_navigation.cjs` for source and local HTTP checks. The existing browser harness also checks the responsive image and category URL restoration.
+
+The local update requires publishing through the existing website deployment. Historical release evidence below and in `docs` is dated by its recorded release.
+
+## Previous 3.1.0 baseline
 
 A complete refresh of the Wavelink marketing website, checked against application **UI95**. Equipment and logistics, daily work, safety, people and company control now share a clear product story.
 
