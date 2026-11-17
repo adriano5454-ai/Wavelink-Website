@@ -1,0 +1,121 @@
+{
+  "release": "website-3.3.1",
+  "passed": true,
+  "scope": "local loopback only; byte-for-byte responses",
+  "external_network_requests": false,
+  "results": [
+    {
+      "path": "404.html",
+      "status": 200,
+      "bytes": 1106,
+      "sha256": "6dd4a0d90dd7096bc38d98127c22b4af8c8ff740272379c6e45e0f7354d6641d",
+      "byte_match": true
+    },
+    {
+      "path": "assets/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 6254,
+      "sha256": "a0fda0225c5a1b95fa484088b81a998ed401afdde1cc8ddc5902f89d7d894335",
+      "byte_match": true
+    },
+    {
+      "path": "assets/favicon-32.png",
+      "status": 200,
+      "bytes": 1089,
+      "sha256": "7d869fd5098300e26c76ce01d368e2903971c122d45ab86b30e3d645a7fd7086",
+      "byte_match": true
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200,
+      "bytes": 286,
+      "sha256": "f21fcb776f6c895ce0deb57dba18f4efed55dc561979e37222fa352e5a459524",
+      "byte_match": true
+    },
+    {
+      "path": "assets/fonts/InterVariable.woff2",
+      "status": 200,
+      "bytes": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "byte_match": true
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "status": 200,
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "byte_match": true
+    },
+    {
+      "path": "assets/offshore-operations-small.webp",
+      "status": 200,
+      "bytes": 43958,
+      "sha256": "1471a1cceb1099c0f7816591798a2ba747166882a289e56c339bd2e27e6772e4",
+      "byte_match": true
+    },
+    {
+      "path": "assets/offshore-operations.webp",
+      "status": 200,
+      "bytes": 210368,
+      "sha256": "958120047c90cab6b3742ac9999c4ee114e9accf9e29f03d9555b2f33cafaf7d",
+      "byte_match": true
+    },
+    {
+      "path": "assets/wavelink-mark.svg",
+      "status": 200,
+      "bytes": 524,
+      "sha256": "ae60983cd7bddf101591cc82568ce48f378587ccd8fab1f00f2aae8f0b319dee",
+      "byte_match": true
+    },
+    {
+      "path": "assets/wavelink-social.jpg",
+      "status": 200,
+      "bytes": 128904,
+      "sha256": "0cfbae096f42255f1fa509698c372ef423b8d8534e3f8eba2f20456f869e9879",
+      "byte_match": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 60611,
+      "sha256": "a70b735f12fcdddde019e17b69a35f5c9566eb0001c796eb93da9f3a287481cb",
+      "byte_match": true
+    },
+    {
+      "path": "privacy.html",
+      "status": 200,
+      "bytes": 6333,
+      "sha256": "a457f71107bd6d5930bf043240860804e7c4e59234f9314bbe84efb3b07d46fb",
+      "byte_match": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 72,
+      "sha256": "4eae06fedc1c3d79cb2cefef892dac9fb800d7f4dc98d5d8c3eb5011831a883d",
+      "byte_match": true
+    },
+    {
+      "path": "script.js",
+      "status": 200,
+      "bytes": 4646,
+      "sha256": "248fc0e8f7a79dbea8eea995e13977f3d703c1836f273e8da86d641992527e46",
+      "byte_match": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "bytes": 275,
+      "sha256": "b827bd50ff1ecb96905628eb09460993769e1ea5de8a730a1d2a138c63b5b1c4",
+      "byte_match": true
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 59162,
+      "sha256": "9c01f3803d27a7b0a7117b4ca8d1b3f22d5830cc4367927bd16702b165840f28",
+      "byte_match": true
+    }
+  ],
+  "errors": []
+}
