@@ -1,13 +1,13 @@
 {
-  "version": "3.2.0",
-  "website_parent": "8b7cb8bd75a9e96275688574cf57362f0769f426",
+  "version": "3.3.0",
+  "website_parent": "35ec23e704ead09971875802669b43d0a6ab7969",
   "application_reference": "UI139 / 1.34.39",
   "application_source_records": [
     "README.md (UI139)",
     "docs/WORKSPACE_UI117.md",
     "docs/UI129_GUIA.html"
   ],
-  "revision_scope": "Product category URLs, responsive hero, current HR content and focused validation",
+  "revision_scope": "Shared visual language, clearer product examples, compact hero, responsive records and supporting page layouts",
   "application_hr_features_implemented": true,
   "files": [
     {
@@ -56,6 +56,11 @@
       "sha256": "7272279339ead89adc82066bad03138060f60f7eecc7deb1eb1381db11e57a8c"
     },
     {
+      "path": "docs/http-checks-3.3.0.json",
+      "size": 3405,
+      "sha256": "cd3896820f7027201ae30ad32417290bec1f9ac621281cee9f37cfdaa0270751"
+    },
+    {
       "path": "docs/http-checks.json",
       "size": 2986,
       "sha256": "6b584436ec33796052d72cf7d8204e69ed56fcee8d950398c2bc67b149233f16"
@@ -81,6 +86,11 @@
       "sha256": "a28a1442885433daf4ba745bbedc699ca08b9a54cf8a66820bfbfea8917c7a98"
     },
     {
+      "path": "docs/static-checks-3.3.0.json",
+      "size": 358,
+      "sha256": "263c0b3a625941565eb74f10498832b0de10ba82debfa09a92389c01c81cbeca"
+    },
+    {
       "path": "docs/static-checks.json",
       "size": 358,
       "sha256": "7b7eb03b7c64ec8f0d403e06b41ef53f4eea74858fe4e89fd000a6b043f18c96"
@@ -97,8 +107,8 @@
     },
     {
       "path": "README.md",
-      "size": 4487,
-      "sha256": "4f44c972df4c24bea91ddde3567fe469273f4a0f0680ba98c4ab80b52a297bc8"
+      "size": 4281,
+      "sha256": "e005a3f40166b80e83bb9ff69a179085f7b328d170e26acc82f224aa8f918cfa"
     },
     {
       "path": "RESTORE_FULL_WEBSITE.md",
@@ -107,8 +117,8 @@
     },
     {
       "path": "site/404.html",
-      "size": 958,
-      "sha256": "943efb96e944818871e32a7c4ad68db4759e9d016cfad0e1c5f5592fd1c91d9b"
+      "size": 1106,
+      "sha256": "9bf412bc53dc8631aae847d2d84882fc6ecb21279552f6858094c2d4f008c8f6"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -124,6 +134,16 @@
       "path": "site/assets/favicon.svg",
       "size": 286,
       "sha256": "f21fcb776f6c895ce0deb57dba18f4efed55dc561979e37222fa352e5a459524"
+    },
+    {
+      "path": "site/assets/fonts/InterVariable.woff2",
+      "size": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "path": "site/assets/fonts/OFL.txt",
+      "size": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
     },
     {
       "path": "site/assets/offshore-operations-small.webp",
@@ -147,13 +167,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 62494,
-      "sha256": "05688e1f9378bb9d1f1028988138783b023195673bb792fa41e3aabed5496d32"
+      "size": 60163,
+      "sha256": "d54e93090dbeaa5a157202047317be63075d150852293d434b9222ed3f6231f6"
     },
     {
       "path": "site/privacy.html",
-      "size": 5997,
-      "sha256": "eba42c594d48aebf7d5dc866731d4b14d4584ccfe9e1890e31df85d49b920aa3"
+      "size": 6064,
+      "sha256": "e5ee3ea52655a4deccf6ab947e444ea13fd7bc9aed414168229465546f0efa8f"
     },
     {
       "path": "site/robots.txt",
@@ -172,13 +192,13 @@
     },
     {
       "path": "site/styles.css",
-      "size": 51981,
-      "sha256": "2647c384eb27359d7f018b22516f6721519ee87cdc5ac379aed7bfb0799d7d6c"
+      "size": 59162,
+      "sha256": "9c01f3803d27a7b0a7117b4ca8d1b3f22d5830cc4367927bd16702b165840f28"
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 10802,
-      "sha256": "282e5cfd274437efa3b148dfdde8288f40eeb01940a2f458c1e1305c230d8d9e"
+      "size": 10832,
+      "sha256": "8b6a3d1502dde3f4b0b3c395851f94f92517bac6c2c4299b7d60a9c1976a1112"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -188,7 +208,7 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "6bead87ec777b93e7382f31255d33fad1ff37a1c363769619afc7ce25aa30b5a"
+      "sha256": "f61ab4f02abd44fa638edf838dc59a46536982d6ce05c541f0b6498e387189e6"
     },
     {
       "path": "tools/check_navigation.cjs",
@@ -197,8 +217,8 @@
     },
     {
       "path": "tools/check_site.py",
-      "size": 4457,
-      "sha256": "fdf528df6be4dbb20ace63d7321b4eb756d856fb4265688fe4f4ca1cd3ec17d8"
+      "size": 4441,
+      "sha256": "dc77323646e9d7ce301662af14dd1906d9070f3d08b4032a3a0006ce950bcd51"
     },
     {
       "path": "tools/preview.py",
