@@ -1,11 +1,8 @@
-# Wavelink website 3.3.1
+# Wavelink website 3.3.2
 
-Prepared from website main `8fc0f09e381d8f95935a05774ae2b422da1de992` on 17 November 2026.
+Prepared against website main `399b220c69b91e92efa3913163f6e9efcbd2372e` on 17 November 2026. The publish directory is `site`.
 
-- Privacy and import FAQ copy explain optional inventory column-mapping assistance when configured, explicit confirmation, and the limited headers and sample rows sent to OpenAI.
-- Original files and full workbooks are excluded from the API request. Users review suggestions before applying them and saving an import, and standard local import remains available.
-- The 3.3.0 visual design, product categories and contact actions are retained.
-- The publish directory is `site`.
+The import FAQ and privacy page describe optional OpenAI requests for inventory samples and editable excerpts in application 1.34.44. Availability depends on the installed version and company configuration.
 
 Run `python tools/check_site.py`, `python tools/check_http.py` and `node tools/check_navigation.cjs`. The browser harness covers responsive layouts and interactions. Current review evidence records its tested release.
 
