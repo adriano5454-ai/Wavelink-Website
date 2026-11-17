@@ -1,0 +1,25 @@
+{
+  "version": "3.2.0",
+  "passed": true,
+  "checks": [
+    {
+      "page": "404.html",
+      "h1": 1,
+      "links": 2,
+      "anchors": 0
+    },
+    {
+      "page": "index.html",
+      "h1": 1,
+      "links": 51,
+      "anchors": 46
+    },
+    {
+      "page": "privacy.html",
+      "h1": 1,
+      "links": 9,
+      "anchors": 2
+    }
+  ],
+  "errors": []
+}
