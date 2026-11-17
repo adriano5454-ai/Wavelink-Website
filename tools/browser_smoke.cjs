@@ -44,6 +44,12 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       const runtime=[];page.on('pageerror',e=>runtime.push(e.message));
       await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
       assert.equal(await page.locator('h1').count(),1);
+      const aiLink = page.getByRole('link', {name:'See OpenAI examples', exact:true});
+      const aiBounds = await aiLink.boundingBox();
+      assert.ok(aiBounds && aiBounds.y >= 0 && aiBounds.y + aiBounds.height <= 568, 'OpenAI link below first screen at ' + width);
+      await aiLink.press('Enter');
+      assert.equal(new URL(page.url()).hash,'#ai-assistance');
+      assert.equal(await page.locator('#ai-assistance details').first().locator('p').isVisible(),true);
       assert.equal(await page.locator('[role="tab"]').count(),7);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
       assert.ok((await page.locator('.hero-image img').evaluate(image=>image.currentSrc)).endsWith(width<=740?'offshore-operations-small.webp':'offshore-operations.webp'));
@@ -146,6 +152,6 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
     await page.locator('.package-details summary').first().click();assert.equal(await page.locator('.package-details .package-list').first().isVisible(),true);await noOverflow(page,'No JavaScript/package scope');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.3.3',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.3.4',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
