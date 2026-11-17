@@ -25,7 +25,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       const relative = u.pathname==='/' ? 'index.html' : decodeURIComponent(u.pathname).slice(1);
       const filename = path.resolve(site,relative);
       if(!filename.startsWith(site+path.sep)||!fs.existsSync(filename)||!fs.statSync(filename).isFile())return route.abort();
-      const mime={'.html':'text/html','.js':'application/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg'};
+      const mime={'.html':'text/html','.js':'application/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.woff2':'font/woff2'};
       return route.fulfill({body:fs.readFileSync(filename),contentType:mime[path.extname(filename)]||'application/octet-stream'});
     });
   };
@@ -79,7 +79,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       await page.locator('#imports [data-show-panel="documents"]').click();
       assert.equal(await page.locator('#panel-documents').isVisible(),true);
       assert.equal(await page.locator('#packages .package-card').count(),4);
-      assert.match(await page.locator('.concept-label').innerText(),/FICTIONAL DATA/);
+      assert.match(await page.locator('.concept-label').innerText(),/Fictional crew records/);
       assert.match(await page.locator('.packages-footer a').getAttribute('href'),/^mailto:comercial@mywavelink\.com\?subject=Wavelink%20HR%20workspace$/);
       for(const detail of await page.locator('.package-details').all()){
         assert.equal(await detail.getAttribute('open'),null);
@@ -133,6 +133,6 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
     await page.locator('.package-details summary').first().click();assert.equal(await page.locator('.package-details .package-list').first().isVisible(),true);await noOverflow(page,'No JavaScript/package scope');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.2.0',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.3.0',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
