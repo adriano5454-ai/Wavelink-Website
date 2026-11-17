@@ -1,6 +1,6 @@
 {
-  "version": "3.3.2",
-  "website_parent": "399b220c69b91e92efa3913163f6e9efcbd2372e",
+  "version": "3.3.3",
+  "website_parent": "d60a2163dcf2cadfb61ba49e8f1840825a5703ec",
   "application_reference": "1.34.44 (optional company configuration)",
   "application_source_records": [
     "app/document_assist.py",
@@ -9,7 +9,7 @@
     "app/handover_ai_fields.py",
     "app/static/hr_workspace.js"
   ],
-  "revision_scope": "Product FAQ and English/Portuguese privacy copy for optional draft and excerpt assistance.",
+  "revision_scope": "Homepage navigation and four interactive examples of optional OpenAI assistance for forms, HR, inventory and handovers.",
   "application_hr_features_implemented": true,
   "files": [
     {
@@ -23,54 +23,9 @@
       "sha256": "563ca5a1cd10fa6b7af8c28959cf59dff1ecb85ce3931c76e6c9e88e3f6aaab3"
     },
     {
-      "path": "PREVIEW_WEBSITE.bat",
-      "size": 392,
-      "sha256": "fc3b1449b23f55cfb9455f3d95c4cea81ecfb965c8c42478979b37117349553c"
-    },
-    {
-      "path": "README.md",
-      "size": 4096,
-      "sha256": "0c1c0184b9eb97a7d83747ca568e308324b31af3e24f19b17177fdadeeeedbaa"
-    },
-    {
-      "path": "RESTORE_FULL_WEBSITE.md",
-      "size": 3626,
-      "sha256": "9b49e91bb700e47331341dd9b7e798f93dacb027557c70e9672209269c0041aa"
-    },
-    {
-      "path": "UPDATE_GITHUB.md",
-      "size": 1064,
-      "sha256": "778daccaff96cdf60623be52291ba40bee528c18f0f35a6e6da9c04db851a88a"
-    },
-    {
-      "path": "docs/CHANGELOG.md",
-      "size": 8956,
-      "sha256": "3c7721169ea371457b5a1731a39d58694de3bd57e299d0697fa50a4f0b13a0c4"
-    },
-    {
-      "path": "docs/CONTENT_NOTES.md",
-      "size": 4885,
-      "sha256": "2e9eb464b97082e6d6ee943177b28c196da2eb93abdf986cace7d559e1619f09"
-    },
-    {
-      "path": "docs/HR_PACKAGES_ROADMAP.md",
-      "size": 3488,
-      "sha256": "851739fed38e0e2a76d8db5e61521374bb5067f44659ec4acfe8643d6b947bc2"
-    },
-    {
-      "path": "docs/POSITIONING_CHECKPOINT.md",
-      "size": 2092,
-      "sha256": "94b2207aeb10a69093b912943c07f639949c1df745e7e41e0c2419ee7dd40fcc"
-    },
-    {
-      "path": "docs/SECURITY_ROADMAP.md",
-      "size": 1868,
-      "sha256": "74e2637c6bb2a3738be2a83ddd36ef7f9d2bcb2f46a81a406f40cf1b281de797"
-    },
-    {
-      "path": "docs/VALIDATION.md",
-      "size": 3854,
-      "sha256": "36f6d9e110b5d04b19d9ffd97adbdebc9363f7f95506a4a36e26af39c6b99b41"
+      "path": "docs/browser-checks-3.3.3.json",
+      "size": 3470,
+      "sha256": "a85b991638af1049d425bb5d3932a5c9a7347457b472b7b2daa68a73113c7451"
     },
     {
       "path": "docs/browser-checks.json",
@@ -83,9 +38,24 @@
       "sha256": "861254fcc68038b419e5efcfdbb1e14b0ea4d8b1e9b0da2b214a53350abfc083"
     },
     {
+      "path": "docs/CHANGELOG.md",
+      "size": 8956,
+      "sha256": "3c7721169ea371457b5a1731a39d58694de3bd57e299d0697fa50a4f0b13a0c4"
+    },
+    {
+      "path": "docs/CONTENT_NOTES.md",
+      "size": 4885,
+      "sha256": "2e9eb464b97082e6d6ee943177b28c196da2eb93abdf986cace7d559e1619f09"
+    },
+    {
       "path": "docs/header-checks.json",
       "size": 346,
       "sha256": "6d2c23f8337fa3f42fc40d2ce6ee08afdd1ad2e965d1eb556bef2a65e1f01612"
+    },
+    {
+      "path": "docs/HR_PACKAGES_ROADMAP.md",
+      "size": 3488,
+      "sha256": "851739fed38e0e2a76d8db5e61521374bb5067f44659ec4acfe8643d6b947bc2"
     },
     {
       "path": "docs/http-checks-3.2.0.json",
@@ -108,6 +78,11 @@
       "sha256": "acd22f9b3adf3ebe27b9acc7635a52995201cb6c47a250664e7abeb34a6f6e01"
     },
     {
+      "path": "docs/http-checks-3.3.3.json",
+      "size": 3405,
+      "sha256": "b62f40ede81d0e2f583a42f3e4068d1ea7a0a76fc6ef9062e8da341e544c1cf5"
+    },
+    {
       "path": "docs/http-checks.json",
       "size": 2986,
       "sha256": "6b584436ec33796052d72cf7d8204e69ed56fcee8d950398c2bc67b149233f16"
@@ -116,6 +91,16 @@
       "path": "docs/package-layout-checks.json",
       "size": 2257,
       "sha256": "bcba8d843cf88cdef75ac45c233b4b40677483b1fa52dd2459f977b6e5e5776a"
+    },
+    {
+      "path": "docs/POSITIONING_CHECKPOINT.md",
+      "size": 2092,
+      "sha256": "94b2207aeb10a69093b912943c07f639949c1df745e7e41e0c2419ee7dd40fcc"
+    },
+    {
+      "path": "docs/SECURITY_ROADMAP.md",
+      "size": 1868,
+      "sha256": "74e2637c6bb2a3738be2a83ddd36ef7f9d2bcb2f46a81a406f40cf1b281de797"
     },
     {
       "path": "docs/static-checks-3.2.0.json",
@@ -138,14 +123,39 @@
       "sha256": "2b0676ba74d0971ad884676409f380e1bc0307a5c290c960e417777d79cfcff8"
     },
     {
+      "path": "docs/static-checks-3.3.3.json",
+      "size": 358,
+      "sha256": "fa8d85aad659afe1acf1c4443523b3c4d130c5af52de57ad7541f6fcca98cc53"
+    },
+    {
       "path": "docs/static-checks.json",
       "size": 358,
       "sha256": "7b7eb03b7c64ec8f0d403e06b41ef53f4eea74858fe4e89fd000a6b043f18c96"
     },
     {
+      "path": "docs/VALIDATION.md",
+      "size": 3854,
+      "sha256": "36f6d9e110b5d04b19d9ffd97adbdebc9363f7f95506a4a36e26af39c6b99b41"
+    },
+    {
+      "path": "PREVIEW_WEBSITE.bat",
+      "size": 392,
+      "sha256": "fc3b1449b23f55cfb9455f3d95c4cea81ecfb965c8c42478979b37117349553c"
+    },
+    {
+      "path": "README.md",
+      "size": 4173,
+      "sha256": "1f1f57e5494d7f96bcf67dc8875accdfc6e1701c8b0ead3b5d2d77a148683c0b"
+    },
+    {
+      "path": "RESTORE_FULL_WEBSITE.md",
+      "size": 3626,
+      "sha256": "9b49e91bb700e47331341dd9b7e798f93dacb027557c70e9672209269c0041aa"
+    },
+    {
       "path": "site/404.html",
       "size": 1106,
-      "sha256": "cc80d4a6b44ed5b8908c4bfdc78875549a57fcc14a5322633e08c43999324dc6"
+      "sha256": "257203a886c3fd2797880121acf7429e225def620d15f36d948e697fd1c1af7a"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -194,13 +204,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 60864,
-      "sha256": "043f7d69bdff60e139a395ae9e190ba106af8e3785a6066e662ec48015b169ba"
+      "size": 63313,
+      "sha256": "3d6e1751dcacd09ef2d655353a2d12584077a908f4429f00e007eb6c2e459210"
     },
     {
       "path": "site/privacy.html",
       "size": 7897,
-      "sha256": "64a4b4d9e182a54b7d63c277b76962e49b2e12603cc670d7de853ec5d1cb06f1"
+      "sha256": "feb2736fab3bab485f0a74ddf59104da521cfa0b692a006c6deb278147ab3fc7"
     },
     {
       "path": "site/robots.txt",
@@ -219,13 +229,13 @@
     },
     {
       "path": "site/styles.css",
-      "size": 59162,
-      "sha256": "9c01f3803d27a7b0a7117b4ca8d1b3f22d5830cc4367927bd16702b165840f28"
+      "size": 60315,
+      "sha256": "d931e11f933d62d6226c495372c19dc00d0c1214bb1eeb4bcc7fc6734d1b2b45"
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 10832,
-      "sha256": "cc8a4f822f1740c9d2ea046b97b57871a76f38e1e2bba2aeb7eaea0f21ca8dce"
+      "size": 11600,
+      "sha256": "8c9aaa93931aecdc452b10e5c00b44039b094e0b3d90ab7919eb15a82be87347"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -235,7 +245,7 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "1c206868a11c12f7640e4195c90288f6f2a6c306046905df70ab874919057a3f"
+      "sha256": "73d4ae9dd29d433ce8a3ea96c45f89d31b2acbcc0f1daf67224243891034bb14"
     },
     {
       "path": "tools/check_navigation.cjs",
@@ -244,13 +254,18 @@
     },
     {
       "path": "tools/check_site.py",
-      "size": 4441,
-      "sha256": "29d06c6a17a4a483ba7febc95f55f0183025d8122af3ad715809a78df80de9a9"
+      "size": 5002,
+      "sha256": "1dc18be86d6ccd308dac58e59f865951fda8ecae76c0a4e0b35c7824a7e6f27f"
     },
     {
       "path": "tools/preview.py",
       "size": 1232,
       "sha256": "2fd301c9bc0ebcb6eb1cc8a6f60a2ad00205354973b74cad4ee79fceb73b6731"
+    },
+    {
+      "path": "UPDATE_GITHUB.md",
+      "size": 1064,
+      "sha256": "778daccaff96cdf60623be52291ba40bee528c18f0f35a6e6da9c04db851a88a"
     }
   ]
 }
