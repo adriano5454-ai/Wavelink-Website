@@ -10,13 +10,13 @@
 <link rel="alternate icon" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=3.3.1">
-<script src="script.js?v=3.3.1" defer></script>
+<link rel="stylesheet" href="styles.css?v=3.3.2">
+<script src="script.js?v=3.3.2" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wavelink | Offshore operations, connected">
 <meta property="og:description" content="Wavelink connects offshore equipment, safety and teams. Explore document imports, company setup and HR tools for crew planning, timesheets, personal documents and expenses.">
 <meta property="og:url" content="https://www.mywavelink.com/">
-<meta property="og:image" content="https://www.mywavelink.com/assets/wavelink-social.jpg?v=3.3.1">
+<meta property="og:image" content="https://www.mywavelink.com/assets/wavelink-social.jpg?v=3.3.2">
 <meta property="og:image:alt" content="Wavelink: Every team. Every shift. One Wavelink.">
 <meta name="twitter:card" content="summary_large_image"><title>Wavelink | Offshore operations, connected</title></head>
 
@@ -269,7 +269,9 @@
 <details class="faq-item">
 <summary>Can we import our current Word, PDF and Excel documents?<span aria-hidden="true">+</span></summary>
 <p>Supported files can be extracted into editable proposals for inventory, checklist and routine definitions, toolbox forms or logbook layouts. Visible Excel worksheets and tables are named separately. Choose one, map or edit the contents, then review and confirm a separate draft or list. Extraction does not decipher every layout; scanned files need clear originals and configured OCR. Existing publications, signatures and operational records are not inferred from the source.</p>
-<p>When configured, optional inventory column-mapping assistance can send selected column headers and up to eight sample rows to OpenAI, only after your explicit confirmation. The original file and full workbook are excluded from this API request. Review suggestions before applying them and saving the import. You can continue with standard local import without this assistance. See <a href="privacy.html">privacy and website information</a>.</p></details>
+<p>For inventory tables, you can ask OpenAI to suggest column matches after checking the selected headers and up to eight sample rows.</p>
+<p>With OpenAI configured in Wavelink 1.34.44, you can also edit an excerpt before asking for suggested checklist items, maintenance steps, toolbox prompts or logbook fields. For a new template, describe the form you need and review the proposed draft.</p>
+<p>In HR, read a ticket, certificate or receipt on the company hub, then choose which text to send for field suggestions. Handover authors can use the same review step with shift notes. You choose which suggestions to apply before saving. <a href="privacy.html#openai">See what is sent to OpenAI</a>.</p></details>
 <details class="faq-item">
 <summary>How does QR signing work?<span aria-hidden="true">+</span></summary>
 <p>An authorised organiser can issue a short-lived QR or link to one saved toolbox talk or one exact published handover. Named members sign with their own identity; temporary visitors can participate when explicitly permitted. Saved names, acknowledgement wording, timestamps and optional drawn signatures stay with that revision. Visitor identity is self-declared, and signing does not grant access to the rest of the company workspace. QR signing requires HTTPS and a connection to the service.</p></details>
