@@ -1,6 +1,6 @@
 {
-  "version": "3.3.3",
-  "website_parent": "d60a2163dcf2cadfb61ba49e8f1840825a5703ec",
+  "version": "3.3.4",
+  "website_parent": "16adc560080fc2640fe78501c0730867004ba12d",
   "application_reference": "1.34.44 (optional company configuration)",
   "application_source_records": [
     "app/document_assist.py",
@@ -9,7 +9,7 @@
     "app/handover_ai_fields.py",
     "app/static/hr_workspace.js"
   ],
-  "revision_scope": "Homepage navigation and four interactive examples of optional OpenAI assistance for forms, HR, inventory and handovers.",
+  "revision_scope": "First-screen link to OpenAI examples and explicit OpenAI wording in main navigation and the examples heading.",
   "application_hr_features_implemented": true,
   "files": [
     {
@@ -26,6 +26,11 @@
       "path": "docs/browser-checks-3.3.3.json",
       "size": 3470,
       "sha256": "a85b991638af1049d425bb5d3932a5c9a7347457b472b7b2daa68a73113c7451"
+    },
+    {
+      "path": "docs/browser-checks-3.3.4.json",
+      "size": 3470,
+      "sha256": "b76fb9608e80d740874659964371ce2386deb721d9899876107cd7c1b4b876da"
     },
     {
       "path": "docs/browser-checks.json",
@@ -83,6 +88,11 @@
       "sha256": "b62f40ede81d0e2f583a42f3e4068d1ea7a0a76fc6ef9062e8da341e544c1cf5"
     },
     {
+      "path": "docs/http-checks-3.3.4.json",
+      "size": 3405,
+      "sha256": "7cad82c098abf5ccf51a4a18d894d848bf12de831defa8f44b9612633839322d"
+    },
+    {
       "path": "docs/http-checks.json",
       "size": 2986,
       "sha256": "6b584436ec33796052d72cf7d8204e69ed56fcee8d950398c2bc67b149233f16"
@@ -128,6 +138,11 @@
       "sha256": "fa8d85aad659afe1acf1c4443523b3c4d130c5af52de57ad7541f6fcca98cc53"
     },
     {
+      "path": "docs/static-checks-3.3.4.json",
+      "size": 358,
+      "sha256": "a0341b92412eec96ae5c0558797bf87e4dba3367d2f5def4127aee9fd0956e65"
+    },
+    {
       "path": "docs/static-checks.json",
       "size": 358,
       "sha256": "7b7eb03b7c64ec8f0d403e06b41ef53f4eea74858fe4e89fd000a6b043f18c96"
@@ -144,8 +159,8 @@
     },
     {
       "path": "README.md",
-      "size": 4173,
-      "sha256": "1f1f57e5494d7f96bcf67dc8875accdfc6e1701c8b0ead3b5d2d77a148683c0b"
+      "size": 4170,
+      "sha256": "7c0a4695ce30c3bedd327cfe7b325cb94db9f683a3974238e037a929bb7b5dba"
     },
     {
       "path": "RESTORE_FULL_WEBSITE.md",
@@ -155,7 +170,7 @@
     {
       "path": "site/404.html",
       "size": 1106,
-      "sha256": "257203a886c3fd2797880121acf7429e225def620d15f36d948e697fd1c1af7a"
+      "sha256": "4d22153b42423f088202a02a531b5319d80697081864015cdc33e64fcbff232e"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -204,13 +219,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 63313,
-      "sha256": "3d6e1751dcacd09ef2d655353a2d12584077a908f4429f00e007eb6c2e459210"
+      "size": 63295,
+      "sha256": "acb0dda0c25267402c5535f1d553ad5963e564a9b6d0215acf780c5cf2f0842f"
     },
     {
       "path": "site/privacy.html",
       "size": 7897,
-      "sha256": "feb2736fab3bab485f0a74ddf59104da521cfa0b692a006c6deb278147ab3fc7"
+      "sha256": "d1aed9880f1101bee0ca845daeb217748756099ca78e050dfe0a0707fd799674"
     },
     {
       "path": "site/robots.txt",
@@ -234,8 +249,8 @@
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 11600,
-      "sha256": "8c9aaa93931aecdc452b10e5c00b44039b094e0b3d90ab7919eb15a82be87347"
+      "size": 12071,
+      "sha256": "f31bc952a458e0d4dc5de15ea05e19ca0210cdcd6222d68d83d8b90bbd5d4365"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -245,7 +260,7 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "73d4ae9dd29d433ce8a3ea96c45f89d31b2acbcc0f1daf67224243891034bb14"
+      "sha256": "8bf0e6adade4c1a517de6d8fccba97253bf52feffdb9862593709bf4cc455c77"
     },
     {
       "path": "tools/check_navigation.cjs",
@@ -254,8 +269,8 @@
     },
     {
       "path": "tools/check_site.py",
-      "size": 5002,
-      "sha256": "1dc18be86d6ccd308dac58e59f865951fda8ecae76c0a4e0b35c7824a7e6f27f"
+      "size": 5239,
+      "sha256": "b10106a25e6868345d92631ae502b234fdef7456fad3d0ea93448e8ac2dfe650"
     },
     {
       "path": "tools/preview.py",

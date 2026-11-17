@@ -45,12 +45,15 @@ def main():
  for term in ['Inventory & boxes','Manifests & receiving','Fault reports','HSE / QSHE','QR document signing','Daily & hitch handovers','Optional email alerts','Two-step verification','Original Files','Excel worksheet recognition']:
   if term not in home:errors.append('Missing capability: '+term)
  ai_section=re.search(r'<section[^>]*id="ai-assistance"[^>]*>(.*?)</section>',home,re.S)
+ hero=re.search(r'<section[^>]*class="hero"[^>]*>(.*?)</section>',home,re.S)
+ if not hero or 'href="#ai-assistance">See OpenAI examples</a>' not in hero[1]:
+  errors.append('The opening screen must link directly to the OpenAI examples')
  if not ai_section or 'href="#ai-assistance"' not in home:
   errors.append('Missing AI section or navigation link')
  else:
   area=ai_section[1]
   if area.count('<details name="ai-examples"')!=4:errors.append('Expected four AI examples')
-  for term in ['your company can enable the OpenAI API','choose which suggestions to apply','href="privacy.html#openai"','href="https://demo.mywavelink.com/"']:
+  for term in ['Your company can enable the OpenAI API','choose which suggestions to apply','href="privacy.html#openai"','href="https://demo.mywavelink.com/"']:
    if term not in area:errors.append('Missing AI section content: '+term)
  if home.count('class="platform-choice"')!=7:errors.append('Expected seven explorer categories')
  if home.count('class="capability"')!=18:errors.append('Expected 18 capability areas')
@@ -62,12 +65,12 @@ def main():
  for term in ['localStorage','sessionStorage','document.cookie','XMLHttpRequest','fetch(']:
   if term in js:errors.append('Unexpected website data operation: '+term)
  for name in ('index.html','privacy.html','404.html'):
-  if '?v=3.3.3' not in (SITE/name).read_text(encoding='utf-8'):errors.append(name+': stale cache version')
+  if '?v=3.3.4' not in (SITE/name).read_text(encoding='utf-8'):errors.append(name+': stale cache version')
  if '<source media="(max-width: 740px)" srcset="assets/offshore-operations-small.webp">' not in home:errors.append('Missing responsive hero image')
  if 'prefers-reduced-motion' not in css:errors.append('Missing reduced motion handling')
  if re.search(r'(?:email sign-in|two-step verification).{0,60}planned',home,re.I):errors.append('Stale planned security label')
  # All structured data must parse as exact JSON.
  for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>',home,re.S):json.loads(raw)
- result={'version':'3.3.3','passed':not errors,'checks':checks,'errors':errors}
+ result={'version':'3.3.4','passed':not errors,'checks':checks,'errors':errors}
  print(json.dumps(result,indent=2));return 1 if errors else 0
 if __name__=='__main__':raise SystemExit(main())

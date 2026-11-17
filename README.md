@@ -1,8 +1,8 @@
-# Wavelink website 3.3.3
+# Wavelink website 3.3.4
 
-Prepared against website main `d60a2163dcf2cadfb61ba49e8f1840825a5703ec` on 17 November 2026. The publish directory is `site`.
+Prepared against website main `16adc560080fc2640fe78501c0730867004ba12d` on 17 November 2026. The publish directory is `site`.
 
-The homepage links directly to four examples of optional OpenAI assistance in application 1.34.44. Visitors can explore forms, HR documents, inventory mapping and shift handovers. The privacy link explains which reviewed data is sent and the demo link opens the application overview.
+The opening screen and the main navigation link to four examples of optional OpenAI assistance. Visitors can explore forms, HR documents, inventory mapping and shift handovers. The privacy link explains which reviewed data is sent and the demo link opens the application overview.
 
 Run `python tools/check_site.py`, `python tools/check_http.py` and `node tools/check_navigation.cjs`. The browser harness covers responsive layouts and interactions. Current review evidence records its tested release.
 
