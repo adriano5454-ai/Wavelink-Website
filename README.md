@@ -1,10 +1,10 @@
-# Wavelink website 3.3.0
+# Wavelink website 3.3.1
 
-Prepared from website main `35ec23e704ead09971875802669b43d0a6ab7969` on 17 November 2026.
+Prepared from website main `8fc0f09e381d8f95935a05774ae2b422da1de992` on 17 November 2026.
 
-- Self-hosted Inter typography, shared colours and panel styling across the homepage, privacy and error pages. The font license is included in `site/assets/fonts/OFL.txt`.
-- Clearer product examples, readable records on small screens and a more compact opening.
-- Product category bookmarks, all seven categories, the capability directory, HR disclosures and contact actions remain available.
+- Privacy and import FAQ copy explain optional inventory column-mapping assistance when configured, explicit confirmation, and the limited headers and sample rows sent to OpenAI.
+- Original files and full workbooks are excluded from the API request. Users review suggestions before applying them and saving an import, and standard local import remains available.
+- The 3.3.0 visual design, product categories and contact actions are retained.
 - The publish directory is `site`.
 
 Run `python tools/check_site.py`, `python tools/check_http.py` and `node tools/check_navigation.cjs`. The browser harness covers responsive layouts and interactions. Current review evidence records its tested release.
