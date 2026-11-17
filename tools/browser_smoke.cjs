@@ -88,9 +88,22 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
         await noOverflow(page,width+'/package scope');
         await detail.locator('summary').press('Enter');
       }
+      if(width<=1150)await page.locator('.menu-toggle').click();
+      await page.locator('#main-navigation a[href="#ai-assistance"]').click();
+      assert.equal(new URL(page.url()).hash,'#ai-assistance');
+      const examples=page.locator('#ai-assistance details');
+      assert.equal(await examples.count(),4);
+      assert.equal(await examples.first().locator('p').isVisible(),true);
+      for(const example of (await examples.all()).slice(1)){
+        await example.locator('summary').focus();
+        await example.locator('summary').press('Enter');
+        assert.equal(await example.locator('p').isVisible(),true);
+        assert.equal(await examples.first().locator('p').isVisible(),false);
+        await noOverflow(page,width+'/AI example');
+      }
       assert.equal(await page.locator('.faq-item').count(),8);
       for(const faq of await page.locator('.faq-item').all()){
-        await faq.locator('summary').click();assert.equal(await faq.locator('p').isVisible(),true);await noOverflow(page,width+'/faq');await faq.locator('summary').click();
+        await faq.locator('summary').click();assert.equal(await faq.locator('p').first().isVisible(),true);await noOverflow(page,width+'/faq');await faq.locator('summary').click();
       }
       if(width<=1150){
         await page.locator('.menu-toggle').click();
@@ -133,6 +146,6 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
     await page.locator('.package-details summary').first().click();assert.equal(await page.locator('.package-details .package-list').first().isVisible(),true);await noOverflow(page,'No JavaScript/package scope');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.3.1',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.3.3',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
