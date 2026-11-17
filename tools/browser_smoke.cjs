@@ -46,6 +46,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       assert.equal(await page.locator('h1').count(),1);
       assert.equal(await page.locator('[role="tab"]').count(),7);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
+      assert.ok((await page.locator('.hero-image img').evaluate(image=>image.currentSrc)).endsWith(width<=740?'offshore-operations-small.webp':'offshore-operations.webp'));
       assert.equal(await page.locator('.menu-toggle').isVisible(),width<=1150);
       if(width>1150)assert.ok(await page.locator('.site-header').evaluate(e=>e.getBoundingClientRect().height)<=100,'Normal desktop header wrapped at '+width);
       for(const key of keys){
@@ -53,13 +54,17 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
         assert.equal(await page.locator('#panel-'+key).isVisible(),true);
         assert.equal(await page.locator('[role="tabpanel"]:visible').count(),1);
         assert.equal(await page.locator('#tab-'+key).getAttribute('aria-selected'),'true');
+        assert.equal(new URL(page.url()).hash,'#panel-'+key);
         await noOverflow(page,width+'/'+key);
       }
+      await page.reload({waitUntil:'load'});
+      assert.equal(await page.locator('#panel-control').isVisible(),true);
       await page.locator('#tab-equipment').click();
       await page.locator('#tab-equipment').press('End');
       assert.equal(await page.locator('#tab-control').evaluate(e=>e===document.activeElement),true);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
       await page.locator('#tab-control').press('Enter');
+      assert.equal(new URL(page.url()).hash,'#panel-control');
       assert.equal(await page.locator('#panel-control').isVisible(),true);
       await page.locator('#tab-control').press('Home');
       await page.locator('#tab-equipment').press('Space');
@@ -73,10 +78,9 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       await page.locator('.capability-directory>summary').click();
       await page.locator('#imports [data-show-panel="documents"]').click();
       assert.equal(await page.locator('#panel-documents').isVisible(),true);
-      assert.equal(await page.locator('#packages .package-status').count(),4);
-      for(const status of await page.locator('#packages .package-status').all())assert.equal(await status.innerText(),'Planned package');
+      assert.equal(await page.locator('#packages .package-card').count(),4);
       assert.match(await page.locator('.concept-label').innerText(),/FICTIONAL DATA/);
-      assert.match(await page.locator('.packages-footer a').getAttribute('href'),/^mailto:comercial@mywavelink\.com\?subject=Wavelink%20HR%20packages$/);
+      assert.match(await page.locator('.packages-footer a').getAttribute('href'),/^mailto:comercial@mywavelink\.com\?subject=Wavelink%20HR%20workspace$/);
       for(const detail of await page.locator('.package-details').all()){
         assert.equal(await detail.getAttribute('open'),null);
         await detail.locator('summary').focus();await detail.locator('summary').press('Enter');
@@ -109,7 +113,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       for(const name of ['privacy.html','404.html']){
         await page.goto('https://www.mywavelink.com/'+name,{waitUntil:'load'});await noOverflow(page,width+'/'+name);
       }
-      assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:18,plannedPackages:4,packageDisclosures:3,faqs:8,passed:true});
+      assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:18,implementedHrAreas:4,packageDisclosures:3,faqs:8,passed:true});
 
     }
     await page.setViewportSize({width:1440,height:1000});await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
@@ -129,6 +133,6 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
     await page.locator('.package-details summary').first().click();assert.equal(await page.locator('.package-details .package-list').first().isVisible(),true);await noOverflow(page,'No JavaScript/package scope');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.1.0',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.2.0',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});
