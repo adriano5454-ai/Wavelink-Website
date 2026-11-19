@@ -1,6 +1,6 @@
 # Wavelink static website deployment
 
-The existing marketing site publishes **Wavelink-Website/site** at https://www.mywavelink.com/. The separate application demo remains linked at https://demo.mywavelink.com/.
+The existing marketing site publishes **Wavelink-Website/site** at https://www.mywavelink.com/. The public demo buttons open https://demo.mywavelink.com/__demo/public.
 
 ## Static host settings
 

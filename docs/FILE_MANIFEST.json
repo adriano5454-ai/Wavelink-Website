@@ -1,6 +1,6 @@
 {
-  "version": "3.3.4",
-  "website_parent": "16adc560080fc2640fe78501c0730867004ba12d",
+  "version": "3.3.5",
+  "website_parent": "cd4fe054d4c851486eac74cbb28c1c8ddbf24868",
   "application_reference": "1.34.44 (optional company configuration)",
   "application_source_records": [
     "app/document_assist.py",
@@ -9,7 +9,7 @@
     "app/handover_ai_fields.py",
     "app/static/hr_workspace.js"
   ],
-  "revision_scope": "First-screen link to OpenAI examples and explicit OpenAI wording in main navigation and the examples heading.",
+  "revision_scope": "Open the official guest entry from every public demo link, including returning visitors.",
   "application_hr_features_implemented": true,
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "DEPLOYMENT.md",
-      "size": 1637,
-      "sha256": "563ca5a1cd10fa6b7af8c28959cf59dff1ecb85ce3931c76e6c9e88e3f6aaab3"
+      "size": 1631,
+      "sha256": "0d29524c3d3ffeb625e1de9ff39e1fa587abf4d921b938b8e89c3db019b4d238"
     },
     {
       "path": "docs/browser-checks-3.3.3.json",
@@ -51,6 +51,11 @@
       "path": "docs/CONTENT_NOTES.md",
       "size": 4885,
       "sha256": "2e9eb464b97082e6d6ee943177b28c196da2eb93abdf986cace7d559e1619f09"
+    },
+    {
+      "path": "docs/demo-entry-checks-3.3.5.json",
+      "size": 493,
+      "sha256": "850c3ade3835e4bd8501f51d900c65b72a440f0bb178aca0c13ca3cd3609746b"
     },
     {
       "path": "docs/header-checks.json",
@@ -159,8 +164,8 @@
     },
     {
       "path": "README.md",
-      "size": 4170,
-      "sha256": "7c0a4695ce30c3bedd327cfe7b325cb94db9f683a3974238e037a929bb7b5dba"
+      "size": 4186,
+      "sha256": "84cdcf630876d9678abb18cb898a592203be69eb0589a784358077bf3062b0d9"
     },
     {
       "path": "RESTORE_FULL_WEBSITE.md",
@@ -169,8 +174,8 @@
     },
     {
       "path": "site/404.html",
-      "size": 1106,
-      "sha256": "4d22153b42423f088202a02a531b5319d80697081864015cdc33e64fcbff232e"
+      "size": 1119,
+      "sha256": "6ab6c9aeeb0963ae6913b78daa1c537bb17e8244d9480dc35f7e9963b6caa6d8"
     },
     {
       "path": "site/assets/apple-touch-icon.png",
@@ -219,13 +224,13 @@
     },
     {
       "path": "site/index.html",
-      "size": 63295,
-      "sha256": "acb0dda0c25267402c5535f1d553ad5963e564a9b6d0215acf780c5cf2f0842f"
+      "size": 63373,
+      "sha256": "865e4dbec52431192d201ee94b864dfd20a72dce6efa55a00276ef5b501dc6fa"
     },
     {
       "path": "site/privacy.html",
-      "size": 7897,
-      "sha256": "d1aed9880f1101bee0ca845daeb217748756099ca78e050dfe0a0707fd799674"
+      "size": 7923,
+      "sha256": "439e95dbfd7441a1c98d15ec2e4e0c454fb10d6903aded10842a0da72e3aaff9"
     },
     {
       "path": "site/robots.txt",
@@ -240,7 +245,7 @@
     {
       "path": "site/sitemap.xml",
       "size": 275,
-      "sha256": "b827bd50ff1ecb96905628eb09460993769e1ea5de8a730a1d2a138c63b5b1c4"
+      "sha256": "7af8535fe6455de62fe7145bee55b1f10c8706e5d76f422cba06c318ef449919"
     },
     {
       "path": "site/styles.css",
@@ -249,8 +254,8 @@
     },
     {
       "path": "tools/browser_smoke.cjs",
-      "size": 12071,
-      "sha256": "f31bc952a458e0d4dc5de15ea05e19ca0210cdcd6222d68d83d8b90bbd5d4365"
+      "size": 12488,
+      "sha256": "dc9c09e336254ec0732b00d05f8ba789a4ee47eccb158fad47e3d6739cba46fd"
     },
     {
       "path": "tools/browser_smoke.py",
@@ -260,7 +265,7 @@
     {
       "path": "tools/check_http.py",
       "size": 2598,
-      "sha256": "8bf0e6adade4c1a517de6d8fccba97253bf52feffdb9862593709bf4cc455c77"
+      "sha256": "2928fa303682d199306e8b3595b8d0eeb2dd9e3af414315c02a1ffefa081d8ab"
     },
     {
       "path": "tools/check_navigation.cjs",
@@ -269,8 +274,8 @@
     },
     {
       "path": "tools/check_site.py",
-      "size": 5239,
-      "sha256": "b10106a25e6868345d92631ae502b234fdef7456fad3d0ea93448e8ac2dfe650"
+      "size": 5660,
+      "sha256": "059fecf02c56c1ac064418b501478731de6ccf98c8f668365f76941153e60c17"
     },
     {
       "path": "tools/preview.py",

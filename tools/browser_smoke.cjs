@@ -29,6 +29,11 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       return route.fulfill({body:fs.readFileSync(filename),contentType:mime[path.extname(filename)]||'application/octet-stream'});
     });
   };
+  const checkDemoLinks = async (page, count) => {
+    const links = page.locator('a[href^="https://demo.mywavelink.com/"]');
+    const destinations = await links.evaluateAll(nodes => nodes.map(link => link.href));
+    assert.deepEqual(destinations, Array(count).fill('https://demo.mywavelink.com/__demo/public'));
+  };
   const noOverflow = async (page,label) => {
     const bad=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>{
       const r=e.getBoundingClientRect();const s=getComputedStyle(e);
@@ -44,6 +49,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       const runtime=[];page.on('pageerror',e=>runtime.push(e.message));
       await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
       assert.equal(await page.locator('h1').count(),1);
+      await checkDemoLinks(page,6);
       const aiLink = page.getByRole('link', {name:'See OpenAI examples', exact:true});
       const aiBounds = await aiLink.boundingBox();
       assert.ok(aiBounds && aiBounds.y >= 0 && aiBounds.y + aiBounds.height <= 568, 'OpenAI link below first screen at ' + width);
@@ -131,6 +137,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       assert.equal(await page.evaluate(()=>window.__copied),'comercial@mywavelink.com');
       for(const name of ['privacy.html','404.html']){
         await page.goto('https://www.mywavelink.com/'+name,{waitUntil:'load'});await noOverflow(page,width+'/'+name);
+        await checkDemoLinks(page,name==='privacy.html'?2:1);
       }
       assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:18,implementedHrAreas:4,packageDisclosures:3,faqs:8,passed:true});
 
@@ -152,6 +159,6 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
     assert.equal(await page.locator('.platform-panel:visible').count(),7);assert.equal(await page.locator('#main-navigation').isVisible(),true);await noOverflow(page,'No JavaScript');
     await page.locator('.package-details summary').first().click();assert.equal(await page.locator('.package-details .package-list').first().isVisible(),true);await noOverflow(page,'No JavaScript/package scope');
   } catch(e){errors.push(e.stack);}
-  const report={version:'3.3.4',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
+  const report={version:'3.3.5',browser:browser.version(),mode:'Local-source HTTPS route fulfilment; not live HTTP/deployment',results,errors,passed:errors.length===0};
   fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,widths:results.length,errors},null,2));await browser.close();if(errors.length)process.exit(1);
 })().catch(e=>{console.error(e);process.exit(1)});

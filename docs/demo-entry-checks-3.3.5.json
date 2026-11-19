@@ -1,0 +1,15 @@
+{
+  "release": "website-3.3.5",
+  "website_parent": "cd4fe054d4c851486eac74cbb28c1c8ddbf24868",
+  "mode": "Static source and JavaScript navigation checks in V8",
+  "guest_entry": "https://demo.mywavelink.com/__demo/public",
+  "public_demo_links": {
+    "index.html": 6,
+    "privacy.html": 2,
+    "404.html": 1
+  },
+  "previous_root_regression_detected_on_each_page": true,
+  "unchanged_link_labels_and_other_destinations": true,
+  "checks_passed": 289,
+  "live_guest_session_tested": false
+}

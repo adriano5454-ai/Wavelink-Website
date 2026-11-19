@@ -1,8 +1,8 @@
-# Wavelink website 3.3.4
+# Wavelink website 3.3.5
 
-Prepared against website main `16adc560080fc2640fe78501c0730867004ba12d` on 17 November 2026. The publish directory is `site`.
+Prepared against website main `cd4fe054d4c851486eac74cbb28c1c8ddbf24868` on 19 November 2026. The publish directory is `site`.
 
-The opening screen and the main navigation link to four examples of optional OpenAI assistance. Visitors can explore forms, HR documents, inventory mapping and shift handovers. The privacy link explains which reviewed data is sent and the demo link opens the application overview.
+The opening screen and the main navigation link to four examples of optional OpenAI assistance. Visitors can explore forms, HR documents, inventory mapping and shift handovers. The privacy link explains which reviewed data is sent and each demo link opens the public guest entry point.
 
 Run `python tools/check_site.py`, `python tools/check_http.py` and `node tools/check_navigation.cjs`. The browser harness covers responsive layouts and interactions. Current review evidence records its tested release.
 
@@ -22,7 +22,7 @@ This is the **full clean replacement repository**. Follow [RESTORE_FULL_WEBSITE.
 | Setting | Value |
 | --- | --- |
 | Website | https://www.mywavelink.com/ |
-| Separate demo | https://demo.mywavelink.com/ |
+| Public demo | https://demo.mywavelink.com/__demo/public |
 | Sales | comercial@mywavelink.com |
 | Product support | support@mywavelink.com |
 | Publish directory | site |
