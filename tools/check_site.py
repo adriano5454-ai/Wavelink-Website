@@ -5,6 +5,8 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import json,re,sys
 ROOT=Path(__file__).resolve().parents[1]; SITE=ROOT/'site'
+DEMO_ENTRY='https://demo.mywavelink.com/__demo/public'
+DEMO_LINK_COUNTS={'index.html':6,'privacy.html':2,'404.html':1}
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__();self.ids=[];self.links=[];self.assets=[];self.h1=0;self.text=[];self.scripts=[];self.feed(text)
@@ -23,6 +25,9 @@ def main():
  for name,page in pages.items():
   if len(set(page.ids))!=len(page.ids):errors.append(name+': duplicate IDs')
   if page.h1!=1:errors.append(name+': expected one h1')
+  demo_links=[a for a in page.links if urlsplit(a.get('href','')).hostname=='demo.mywavelink.com']
+  if name in DEMO_LINK_COUNTS and len(demo_links)!=DEMO_LINK_COUNTS[name]:errors.append(name+': missing public demo link')
+  if any(a.get('href')!=DEMO_ENTRY for a in demo_links):errors.append(name+': unexpected public demo destination')
   for a in page.links:
    u=urlsplit(a.get('href',''))
    if u.scheme or u.netloc:
@@ -53,24 +58,24 @@ def main():
  else:
   area=ai_section[1]
   if area.count('<details name="ai-examples"')!=4:errors.append('Expected four AI examples')
-  for term in ['Your company can enable the OpenAI API','choose which suggestions to apply','href="privacy.html#openai"','href="https://demo.mywavelink.com/"']:
+  for term in ['Your company can enable the OpenAI API','choose which suggestions to apply','href="privacy.html#openai"',f'href="{DEMO_ENTRY}"']:
    if term not in area:errors.append('Missing AI section content: '+term)
  if home.count('class="platform-choice"')!=7:errors.append('Expected seven explorer categories')
  if home.count('class="capability"')!=18:errors.append('Expected 18 capability areas')
  if home.count('id="package-')!=4:errors.append('Expected four HR areas')
  for term in ['Crew & Planning','Timesheets & Approvals','Travel & Expenses','Personal Documents','Fictional crew records','Confirm the installed application version, HR permissions and deployment scope with the team.','href="#packages"']:
   if term not in home:errors.append('Missing HR content/destination: '+term)
- for term in ['comercial@mywavelink.com','support@mywavelink.com','https://demo.mywavelink.com/','https://www.mywavelink.com/']:
+ for term in ['comercial@mywavelink.com','support@mywavelink.com',DEMO_ENTRY,'https://www.mywavelink.com/']:
   if term not in home:errors.append('Missing destination: '+term)
  for term in ['localStorage','sessionStorage','document.cookie','XMLHttpRequest','fetch(']:
   if term in js:errors.append('Unexpected website data operation: '+term)
  for name in ('index.html','privacy.html','404.html'):
-  if '?v=3.3.4' not in (SITE/name).read_text(encoding='utf-8'):errors.append(name+': stale cache version')
+  if '?v=3.3.5' not in (SITE/name).read_text(encoding='utf-8'):errors.append(name+': stale cache version')
  if '<source media="(max-width: 740px)" srcset="assets/offshore-operations-small.webp">' not in home:errors.append('Missing responsive hero image')
  if 'prefers-reduced-motion' not in css:errors.append('Missing reduced motion handling')
  if re.search(r'(?:email sign-in|two-step verification).{0,60}planned',home,re.I):errors.append('Stale planned security label')
  # All structured data must parse as exact JSON.
  for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>',home,re.S):json.loads(raw)
- result={'version':'3.3.4','passed':not errors,'checks':checks,'errors':errors}
+ result={'version':'3.3.5','passed':not errors,'checks':checks,'errors':errors}
  print(json.dumps(result,indent=2));return 1 if errors else 0
 if __name__=='__main__':raise SystemExit(main())
