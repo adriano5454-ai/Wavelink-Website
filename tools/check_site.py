@@ -6,7 +6,8 @@ from urllib.parse import urlsplit,unquote
 import json,re,sys
 ROOT=Path(__file__).resolve().parents[1]; SITE=ROOT/'site'
 DEMO_ENTRY='https://demo.mywavelink.com/__demo/public'
-DEMO_LINK_COUNTS={'index.html':6,'privacy.html':2,'404.html':1}
+HOME_DEMO_LINKS={DEMO_ENTRY} | {f'{DEMO_ENTRY}?area={area}' for area in ('inventory', 'hr', 'it')}
+DEMO_LINK_COUNTS={'privacy.html':2,'404.html':1}
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__();self.ids=[];self.links=[];self.assets=[];self.h1=0;self.text=[];self.scripts=[];self.feed(text)
@@ -27,7 +28,9 @@ def main():
   if page.h1!=1:errors.append(name+': expected one h1')
   demo_links=[a for a in page.links if urlsplit(a.get('href','')).hostname=='demo.mywavelink.com']
   if name in DEMO_LINK_COUNTS and len(demo_links)!=DEMO_LINK_COUNTS[name]:errors.append(name+': missing public demo link')
-  if any(a.get('href')!=DEMO_ENTRY for a in demo_links):errors.append(name+': unexpected public demo destination')
+  destinations={a.get('href') for a in demo_links}
+  if name=='index.html' and destinations!=HOME_DEMO_LINKS:errors.append(name+': expected general, inventory, HR and IT demo entry points')
+  if name!='index.html' and destinations-{DEMO_ENTRY}:errors.append(name+': unexpected public demo destination')
   for a in page.links:
    u=urlsplit(a.get('href',''))
    if u.scheme or u.netloc:
@@ -37,7 +40,8 @@ def main():
    target=u.path.lstrip('/') or name
    if target=='/':target='index.html'
    if a.get('href')=='/':target='index.html'
-   if target not in pages:errors.append(name+': missing page '+target)
+   if target not in pages:
+    if u.fragment or not (SITE/target).is_file():errors.append(name+': missing local link target '+target)
    elif u.fragment and unquote(u.fragment) not in pages[target].ids:errors.append(name+': missing anchor '+a['href'])
   for source in page.assets:
    u=urlsplit(source)
@@ -51,9 +55,15 @@ def main():
   if term not in home:errors.append('Missing capability: '+term)
  ai_section=re.search(r'<section[^>]*id="ai-assistance"[^>]*>(.*?)</section>',home,re.S)
  hero=re.search(r'<section[^>]*class="hero"[^>]*>(.*?)</section>',home,re.S)
- if not hero or 'href="#ai-assistance">See OpenAI examples</a>' not in hero[1]:
-  errors.append('The opening screen must link directly to the OpenAI examples')
- if not ai_section or 'href="#ai-assistance"' not in home:
+ hero_links=Page(hero[1]).links if hero else []
+ if not any(a.get('href')==DEMO_ENTRY for a in hero_links):errors.append('Missing live demo action in the hero')
+ if not any(urlsplit(a.get('href','')).scheme=='mailto' and urlsplit(a['href']).path=='comercial@mywavelink.com' for a in hero_links):
+  errors.append('Missing commercial walkthrough action in the hero')
+ workflow=re.search(r'<section\b[^>]*\bid="workflow"',home)
+ if not hero or not workflow or re.search(r'<section\b',home[hero.end():workflow.start()]) or workflow.start()<hero.end():
+  errors.append('The mobilisation workflow must be the first section after the hero')
+ navigation=re.search(r'<nav\b[^>]*\bid="main-navigation"[^>]*>(.*?)</nav>',home,re.S)
+ if not ai_section or not navigation or not any(a.get('href')=='#ai-assistance' for a in Page(navigation[1]).links):
   errors.append('Missing AI section or navigation link')
  else:
   area=ai_section[1]
@@ -61,7 +71,7 @@ def main():
   for term in ['Your company can enable the OpenAI API','choose which suggestions to apply','href="privacy.html#openai"',f'href="{DEMO_ENTRY}"']:
    if term not in area:errors.append('Missing AI section content: '+term)
  if home.count('class="platform-choice"')!=7:errors.append('Expected seven explorer categories')
- if home.count('class="capability"')!=18:errors.append('Expected 18 capability areas')
+ if home.count('class="capability"')!=20:errors.append('Expected 20 capability areas including HR and IT')
  if home.count('id="package-')!=4:errors.append('Expected four HR areas')
  for term in ['Crew & Planning','Timesheets & Approvals','Travel & Expenses','Personal Documents','Fictional crew records','Confirm the installed application version, HR permissions and deployment scope with the team.','href="#packages"']:
   if term not in home:errors.append('Missing HR content/destination: '+term)
