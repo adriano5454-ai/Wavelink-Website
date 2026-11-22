@@ -63,7 +63,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       }
       assert.equal(await hero.getByRole('link',{name:/Explore the live demo/i}).getAttribute('href'),'https://demo.mywavelink.com/__demo/public');
       assert.match(await hero.getByRole('link',{name:/Request a walkthrough/i}).getAttribute('href'),/^mailto:comercial@mywavelink\.com(?:\?|$)/);
-      assert.equal(await page.locator('.hero + #workflow').count(),1);
+      assert.equal(await page.locator('.hero + #platform').count(),1);
       assert.equal(await page.locator('[role="tab"]').count(),7);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
       assert.ok((await page.locator('.hero-image img').evaluate(image=>image.currentSrc)).endsWith(width<=740?'offshore-operations-small.webp':'offshore-operations.webp'));
@@ -130,8 +130,8 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
         assert.equal(await page.locator('#main-navigation').isVisible(),true);
         await noOverflow(page,width+'/menu');await page.locator('.menu-toggle').press('Escape');
         assert.equal(await page.locator('#main-navigation').isVisible(),false);
-        await page.locator('.menu-toggle').click();await page.locator('#main-navigation a[href="#workflow"]').click();
-        assert.equal(new URL(page.url()).hash,'#workflow');
+        await page.locator('.menu-toggle').click();await page.locator('#main-navigation a[href="#platform"]').click();
+        assert.equal(new URL(page.url()).hash,'#platform');
         assert.equal(await page.locator('#main-navigation').isVisible(),false);
       }
       if(width<=1150)await page.locator('.menu-toggle').click();

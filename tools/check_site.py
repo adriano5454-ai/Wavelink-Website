@@ -62,9 +62,13 @@ def main():
  if not (HOME_DEMO_LINKS-{DEMO_ENTRY}) <= {a.get('href') for a in hero_links}:errors.append('Missing direct guest routes in the hero')
  for term in ['S/N → Serial number','Qty → Quantity','Confirm and import']:
   if term not in home:errors.append('Missing worksheet example: '+term)
- workflow=re.search(r'<section\b[^>]*\bid="workflow"',home)
- if not hero or not workflow or re.search(r'<section\b',home[hero.end():workflow.start()]) or workflow.start()<hero.end():
-  errors.append('The mobilisation workflow must be the first section after the hero')
+ platform=re.search(r'<section\b[^>]*\bid="platform"',home)
+ if not hero or not platform or platform.start()<hero.end() or re.search(r'<section\b',home[hero.end():platform.start()]):
+  errors.append('The platform must be the first section after the hero')
+ if 'class="journey-section workflow-story section"' in home or 'Follow a sensor rack from shore to handover' in home:
+  errors.append('The illustrative workflow must not be present')
+ if '<span id="workflow" class="legacy-section-anchor" aria-hidden="true"></span>' not in home:
+  errors.append('Missing legacy workflow bookmark')
  navigation=re.search(r'<nav\b[^>]*\bid="main-navigation"[^>]*>(.*?)</nav>',home,re.S)
  if not ai_section or not navigation or not any(a.get('href')=='#ai-assistance' for a in Page(navigation[1]).links):
   errors.append('Missing AI section or navigation link')
