@@ -51,7 +51,7 @@ def main():
  home=(SITE/'index.html').read_text(encoding='utf-8');css=(SITE/'styles.css').read_text(encoding='utf-8');js=(SITE/'script.js').read_text(encoding='utf-8')
  expected=['Inventory &amp; boxes','Manifests &amp; receiving']
  # Generated text uses literal ampersands; test human text and the stored HTML equivalently.
- for term in ['Inventory & boxes','Manifests & receiving','Fault reports','HSE / QSHE','QR document signing','Daily & hitch handovers','Optional email alerts','Two-step verification','Original Files','Excel worksheet recognition']:
+ for term in ['Inventory & boxes','Manifests & receiving','Fault reports','HSE / QSHE','QR document signing','Daily & hitch handovers','Optional email alerts','Two-step verification','Original Files','Worksheet imports']:
   if term not in home:errors.append('Missing capability: '+term)
  ai_section=re.search(r'<section[^>]*id="ai-assistance"[^>]*>(.*?)</section>',home,re.S)
  hero=re.search(r'<section[^>]*class="hero"[^>]*>(.*?)</section>',home,re.S)
@@ -59,6 +59,9 @@ def main():
  if not any(a.get('href')==DEMO_ENTRY for a in hero_links):errors.append('Missing live demo action in the hero')
  if not any(urlsplit(a.get('href','')).scheme=='mailto' and urlsplit(a['href']).path=='comercial@mywavelink.com' for a in hero_links):
   errors.append('Missing commercial walkthrough action in the hero')
+ if not (HOME_DEMO_LINKS-{DEMO_ENTRY}) <= {a.get('href') for a in hero_links}:errors.append('Missing direct guest routes in the hero')
+ for term in ['S/N → Serial number','Qty → Quantity','Confirm and import']:
+  if term not in home:errors.append('Missing worksheet example: '+term)
  workflow=re.search(r'<section\b[^>]*\bid="workflow"',home)
  if not hero or not workflow or re.search(r'<section\b',home[hero.end():workflow.start()]) or workflow.start()<hero.end():
   errors.append('The mobilisation workflow must be the first section after the hero')
@@ -67,8 +70,8 @@ def main():
   errors.append('Missing AI section or navigation link')
  else:
   area=ai_section[1]
-  if area.count('<details name="ai-examples"')!=4:errors.append('Expected four AI examples')
-  for term in ['Your company can enable the OpenAI API','choose which suggestions to apply','href="privacy.html#openai"',f'href="{DEMO_ENTRY}"']:
+  if area.count('<details name="ai-examples"')!=3:errors.append('Expected three non-import AI examples')
+  for term in ['If enabled by your company, the OpenAI API','You decide what to keep','href="privacy.html#openai"',f'href="{DEMO_ENTRY}"']:
    if term not in area:errors.append('Missing AI section content: '+term)
  if home.count('class="platform-choice"')!=7:errors.append('Expected seven explorer categories')
  if home.count('class="capability"')!=20:errors.append('Expected 20 capability areas including HR and IT')
