@@ -3399,3 +3399,6 @@ summary::-webkit-details-marker {
 .hero-demo-paths p { margin: 0; color: #e3f1f2; font-size: .875rem; }
 .hero-demo-paths nav { display: flex; flex-wrap: wrap; gap: 0 .95rem; }
 .hero-demo-paths a { display: inline-flex; align-items: center; min-block-size: 44px; color: inherit; font-size: .875rem; font-weight: 700; text-decoration: underline; text-underline-offset: .22em; }
+
+/* Preserve the old workflow bookmark at the platform section. */
+.legacy-section-anchor { display: block; scroll-margin-top: 6rem; }
