@@ -3393,3 +3393,9 @@ summary::-webkit-details-marker {
   .role-paths {grid-template-columns:1fr;gap:.7rem}
   .role-path p {margin-bottom:.65rem;max-width:none}
 }
+
+/* Compact guest links beneath the primary hero actions. */
+.hero-demo-paths { margin-block-start: 1rem; }
+.hero-demo-paths p { margin: 0; color: #e3f1f2; font-size: .875rem; }
+.hero-demo-paths nav { display: flex; flex-wrap: wrap; gap: 0 .95rem; }
+.hero-demo-paths a { display: inline-flex; align-items: center; min-block-size: 44px; color: inherit; font-size: .875rem; font-weight: 700; text-decoration: underline; text-underline-offset: .22em; }
