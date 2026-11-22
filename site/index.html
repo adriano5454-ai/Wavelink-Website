@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Explore Wavelink for offshore operations, crew records and handovers, with optional OpenAI assistance for form drafts and inventory imports.">
+<meta name="description" content="Track equipment from shore to vessel, plan crew changes and hand open work to the next shift. Explore Wavelink with a fictional offshore team.">
 <meta name="theme-color" content="#12313e">
 <link rel="canonical" href="https://www.mywavelink.com/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -14,7 +14,7 @@
 <script src="script.js?v=3.3.5" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wavelink | Offshore operations, connected">
-<meta property="og:description" content="Explore Wavelink for offshore operations, crew records and handovers, with optional OpenAI assistance for form drafts and inventory imports.">
+<meta property="og:description" content="Track equipment from shore to vessel, plan crew changes and hand open work to the next shift. Explore Wavelink with a fictional offshore team.">
 <meta property="og:url" content="https://www.mywavelink.com/">
 <meta property="og:image" content="https://www.mywavelink.com/assets/wavelink-social.jpg?v=3.3.5">
 <meta property="og:image:alt" content="Wavelink: Every team. Every shift. One Wavelink.">
@@ -25,10 +25,10 @@
 
 <header class="site-header" id="top"><div class="container header-inner"><a class="brand" href="#top" aria-label="Wavelink home"><img src="assets/wavelink-mark.svg" alt="" width="40" height="40"><span><strong>Wavelink<span>.</span></strong><small>BY AJ OFFSHORE SOLUTIONS</small></span></a><button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" hidden type="button">Menu</button>
 <nav id="main-navigation" aria-label="Main navigation">
-<a class="nav-link" href="#platform">The platform</a>
+<a class="nav-link" href="#workflow">How it works</a>
+<a class="nav-link" href="#platform">Platform</a>
+<a class="nav-link" href="#packages">Crew &amp; HR</a>
 <a class="nav-link" href="#ai-assistance">OpenAI</a>
-<a class="nav-link" href="#imports">Document imports</a>
-<a class="nav-link" href="#packages">Human resources</a>
 <a class="nav-link" href="#company">Company setup</a>
 <a class="button nav-contact" href="#contact"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9H13a8.5 8.5 0 0 1 8 8v.5Z"/><path d="M8 11.5h8"/></svg>Talk to us</a>
 <a class="button nav-demo" href="https://demo.mywavelink.com/__demo/public" target="_blank" rel="noopener noreferrer">Open demo<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
@@ -39,41 +39,57 @@
 
 <section class="hero" aria-labelledby="hero-title"><picture class="hero-image"><source media="(max-width: 740px)" srcset="assets/offshore-operations-small.webp"><img src="assets/offshore-operations.webp" width="1672" height="941" alt="" fetchpriority="high"></picture><div class="container hero-inner"><div class="hero-copy">
 
-<h1 id="hero-title">Offshore work.<br><em>One workspace.</em></h1>
-<p class="hero-lede">Bring equipment, maintenance, crew records and handovers together, from shore preparation to the next shift.</p><div class="hero-actions"><a class="button primary" href="https://demo.mywavelink.com/__demo/public" target="_blank" rel="noopener noreferrer">Explore the demo<span class="sr-only"> (opens in a new tab)</span></a><a class="button hero-secondary" href="#ai-assistance">See OpenAI examples</a></div></div><div class="hero-bottom"><div><span>SHORE TO VESSEL</span><strong>Keep equipment and records connected.</strong></div><div><span>SHIFT TO SHIFT</span><strong>Carry the work and context forward.</strong></div><div><span>YOUR OPERATION</span><strong>Hosted access or a local hub.</strong></div></div></div></section>
+<h1 id="hero-title">Know what’s aboard.<br><em>See what’s due.</em></h1>
+<p class="hero-lede">Track equipment from shore base to vessel, see who joins the crew next, and hand open work to the incoming shift.</p><div class="hero-actions"><a class="button primary" href="https://demo.mywavelink.com/__demo/public" target="_blank" rel="noopener noreferrer">Explore the live demo<span class="sr-only"> (opens in a new tab)</span></a><a class="button hero-secondary" href="mailto:comercial@mywavelink.com?subject=Wavelink%20company%20walkthrough">Request a walkthrough</a></div></div></div></section>
 
-
-<section class="section ai-section" id="ai-assistance" aria-labelledby="ai-title">
-  <div class="container ai-layout">
-    <div class="ai-intro">
-      <h2 id="ai-title">Turn crew notes into drafts with OpenAI</h2>
-      <p>Your company can enable the OpenAI API to help prepare forms and match inventory columns. Review the text or sample rows before sending them, then choose which suggestions to apply before saving.</p>
-      <div class="ai-links">
-        <a class="inline-link" href="https://demo.mywavelink.com/__demo/public" target="_blank" rel="noopener noreferrer">Explore the Wavelink demo<span class="sr-only"> (opens in a new tab)</span></a>
-        <a class="inline-link" href="privacy.html#openai">See what is sent to OpenAI</a>
+<section class="journey-section workflow-story section" id="workflow" aria-labelledby="journey-title">
+  <div class="container">
+    <h2 id="journey-title">Follow a sensor rack from shore to handover</h2>
+    <div class="workflow-story-layout">
+      <div class="workflow-story-copy">
+        <ol class="workflow-story-steps">
+          <li>
+            <h3>Prepare the shipment</h3>
+            <p>Find the rack in inventory, add it to the manifest and record where the vessel team receives it.</p>
+          </li>
+          <li>
+            <h3>Inspect it on board</h3>
+            <p>Choose MV Aurora in Maintenance to see its open inspection. The crew can record each step and attach a photo as evidence.</p>
+          </li>
+          <li>
+            <h3>Hand over the open work</h3>
+            <p>Record what was checked and what still needs attention in the shift handover. The incoming crew can read and acknowledge it.</p>
+          </li>
+        </ol>
+        <a class="inline-link" href="https://demo.mywavelink.com/__demo/public?area=inventory" target="_blank" rel="noopener noreferrer">Find equipment in the demo<span class="sr-only"> (opens in a new tab)</span></a>
       </div>
-    </div>
-    <div class="ai-examples">
-      <details name="ai-examples" open>
-        <summary>Draft a checklist or form <span aria-hidden="true">+</span></summary>
-        <p>Describe a form in the builder, or select an excerpt from an existing procedure. Wavelink can suggest checklist items, maintenance steps, toolbox discussion prompts or logbook fields for you to edit.</p>
-        <blockquote>“Draft a mobilisation checklist for recording equipment labels and checking the packing list.”</blockquote>
-      </details>
-      <details name="ai-examples">
-        <summary>Prepare travel, certificate and expense records <span aria-hidden="true">+</span></summary>
-        <p>Choose text from a ticket, certificate or receipt. A ticket can suggest a route and departure time, a course certificate can suggest its issuer and printed expiry date, and a receipt can suggest the merchant, total and currency.</p>
-      </details>
-      <details name="ai-examples">
-        <summary>Match inventory columns <span aria-hidden="true">+</span></summary>
-        <p>Select a worksheet and inspect its headers and up to eight sample rows. OpenAI can suggest which columns contain serial numbers, part numbers or quantities. Confirm the matches before importing.</p>
-      </details>
-      <details name="ai-examples">
-        <summary>Organise a shift handover <span aria-hidden="true">+</span></summary>
-        <p>Review an excerpt from the outgoing shift’s notes. If the notes say a cable was inspected and a replacement is still due, Wavelink can suggest the inspection under completed work and the replacement under outstanding work.</p>
-      </details>
+      <figure class="workflow-story-figure">
+        <picture>
+          <source media="(max-width: 540px)" srcset="assets/demo-maintenance-mobile.webp" width="359" height="622">
+          <img src="assets/demo-maintenance.webp" width="765" height="477" alt="Maintenance work orders filtered to MV Aurora, showing the open sensor rack inspection." loading="lazy" decoding="async">
+        </picture>
+        <figcaption>
+          <span>MV Aurora’s open inspection in the fictional demo workspace.</span>
+          <a href="assets/demo-maintenance.webp" target="_blank" rel="noopener noreferrer">View larger image<span class="sr-only"> (opens in a new tab)</span></a>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
+
+<section class="role-section section" id="team-demos" aria-labelledby="team-title">
+  <div class="container">
+    <h2 id="team-title">Try the work your team does</h2>
+    <p class="role-intro">Explore a fictional offshore company. Choose where you want to start.</p>
+    <div class="role-paths"><a class="role-path" href="https://demo.mywavelink.com/__demo/public?area=inventory" target="_blank" rel="noopener noreferrer">
+      <h3>Vessel &amp; shore teams</h3><p>Choose a vessel and see which equipment is aboard.</p><span class="role-action">Explore inventory <span aria-hidden="true">→</span><span class="sr-only"> (opens in a new tab)</span></span>
+    </a>
+<a class="role-path" href="https://demo.mywavelink.com/__demo/public?area=hr" target="_blank" rel="noopener noreferrer">
+      <h3>Crew coordinators</h3><p>Find the next crew change and review the joining crew’s travel and documents.</p><span class="role-action">Explore crew planning <span aria-hidden="true">→</span><span class="sr-only"> (opens in a new tab)</span></span>
+    </a>
+<a class="role-path" href="https://demo.mywavelink.com/__demo/public?area=it" target="_blank" rel="noopener noreferrer">
+      <h3>IT &amp; technical support</h3><p>Find an open ticket for a vessel or shore base and see who is handling it.</p><span class="role-action">Explore IT requests <span aria-hidden="true">→</span><span class="sr-only"> (opens in a new tab)</span></span>
+    </a></div></div></section>
 
 <section class="platform-section section" id="platform" aria-labelledby="platform-title"><div class="container"><div class="section-heading"><div>
 
@@ -148,10 +164,10 @@
 <section class="platform-panel" id="panel-documents" aria-labelledby="title-documents"><div class="panel-copy">
 
 <h3 id="title-documents">Files and document imports</h3>
-<p>Turn supported documents into editable proposals for inventory lists, checks, toolbox forms and logbook layouts.</p>
+<p>Bring an existing spreadsheet or procedure into Wavelink. Review inventory lists, checklists, toolbox forms and logbook layouts before saving.</p>
 <ul class="feature-list">
-<li><strong>Document imports</strong><span>Read PDF, Word, Excel, CSV, text and supported scans, then review the proposal.</span></li>
-<li><strong>Excel worksheet recognition</strong><span>Identify visible sheets separately and select the one you want to import.</span></li>
+<li><strong>Optional OpenAI assistance</strong><span>Review the text you want to share, then ask the OpenAI API to suggest checklist items, maintenance steps or toolbox prompts from that passage.</span></li>
+<li><strong>Excel worksheet recognition</strong><span>Select a sheet and review a sample of its rows. OpenAI can suggest which columns hold serial numbers, part numbers or quantities.</span></li>
 <li><strong>Original Files</strong><span>Organise uploaded originals in folders with revision history and usage links.</span></li>
 <li><strong>Source-linked records</strong><span>Link an exact original-file revision to supported checklist and maintenance templates.</span></li></ul></div><div class="product-preview"><div class="preview-chrome"><span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg>Document import review</span></div><div class="record-body"><div class="record-topline"><span>IMPORT A DOCUMENT</span><span class="status amber">Review proposal</span></div>
 <h4>Mobilisation.xlsx</h4>
@@ -172,81 +188,7 @@
 </div>
 <p class="illustration-note">Product examples use fictional records. <a class="inline-link" href="https://demo.mywavelink.com/__demo/public" target="_blank" rel="noopener noreferrer">See the application<span class="sr-only"> (opens in a new tab)</span></a></p>
 <details class="capability-directory">
-<summary>Explore all 18 capability areas<span aria-hidden="true">+</span></summary><div class="capability-grid"><a href="#panel-equipment" data-show-panel="equipment" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg><span><strong>Inventory & assets</strong><small>Equipment, consumables, locations, quantities and movement history.</small></span></a><a href="#panel-equipment" data-show-panel="equipment" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6h-6M12 3v9H3M12 15v6M18 12h3"/></svg><span><strong>Boxes & stock verification</strong><small>Nested contents, QR identification and reviewed stock checks.</small></span></a><a href="#panel-equipment" data-show-panel="equipment" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V6h14v5M9 6V3h6v3M2 12l10-4 10 4-3 7H5l-3-7ZM12 8v10M2 22c2-2 4 2 6 0s4 2 6 0 4 2 8 0"/></svg><span><strong>Manifests & receiving</strong><small>Shipment preparation, transit, receipt and final placement.</small></span></a><a href="#panel-maintenance" data-show-panel="maintenance" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a5 5 0 0 0-6 6l-5 5a2.8 2.8 0 0 0 4 4l5-5a5 5 0 0 0 6-6l-3 3-4-4 3-3Z"/></svg><span><strong>Maintenance</strong><small>Recurring cycles, assigned work orders and completion evidence.</small></span></a><a href="#panel-maintenance" data-show-panel="maintenance" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><span><strong>Certificates</strong><small>Equipment-linked documents, expiry dates and attention items.</small></span></a><a href="#panel-maintenance" data-show-panel="maintenance" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a5 5 0 0 0-6 6l-5 5a2.8 2.8 0 0 0 4 4l5-5a5 5 0 0 0 6-6l-3 3-4-4 3-3Z"/></svg><span><strong>Fault reports</strong><small>Report, assign, progress, request closure and review.</small></span></a><a href="#panel-operations" data-show-panel="operations" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 15h6M9 19h3"/></svg><span><strong>Tasks</strong><small>General operational work, ownership, evidence and review.</small></span></a><a href="#panel-operations" data-show-panel="operations" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 15h6M9 19h3"/></svg><span><strong>Logbooks</strong><small>Configurable fields, multiple tabs and record exports.</small></span></a><a href="#panel-operations" data-show-panel="operations" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V6h14v5M9 6V3h6v3M2 12l10-4 10 4-3 7H5l-3-7ZM12 8v10M2 22c2-2 4 2 6 0s4 2 6 0 4 2 8 0"/></svg><span><strong>Fleet & calendar</strong><small>Vessels, bases, site context and important dates.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Checklists</strong><small>Reusable definitions, sections, stages and review.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><span><strong>Toolbox talks</strong><small>Structured briefings, understanding and multiple signatories.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></svg><span><strong>HSE / QSHE</strong><small>Safety and quality reporting with follow-up and closure review.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6h-6M12 3v9H3M12 15v6M18 12h3"/></svg><span><strong>QR invitations</strong><small>Controlled access to one toolbox talk or published handover.</small></span></a><a href="#panel-people" data-show-panel="people" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><span><strong>Daily & hitch handovers</strong><small>Shifts, saved drafts, revisions and acknowledgements.</small></span></a><a href="#panel-people" data-show-panel="people" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><span><strong>Profiles & Team</strong><small>Member profiles, authorised updates and contribution badges.</small></span></a><a href="#panel-people" data-show-panel="people" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span><strong>Search & My actions</strong><small>Authorised search, personal attention and optional email alerts.</small></span></a><a href="#panel-documents" data-show-panel="documents" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><span><strong>Original Files & imports</strong><small>Folders, exact revisions and reviewed document proposals.</small></span></a><a href="#panel-control" data-show-panel="control" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 15v3"/></svg><span><strong>Administration & data</strong><small>Invitations, permissions, security, backup and transfers.</small></span></a></div></details></div></section>
-
-
-<section class="journey-section section" id="workflow" aria-labelledby="journey-title"><div class="container"><div class="section-heading"><div>
-
-<h2 id="journey-title">From shore preparation to handover</h2></div>
-<p>A mobilisation connects logistics, technicians, vessel crews and supervisors. Wavelink keeps the records around that work together.</p></div>
-<ol class="journey">
-<li><span class="step-number">01</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg>
-<h3>Prepare on shore</h3>
-<p>Organise equipment and boxes. Review supporting maintenance and certificate records.</p><span class="step-modules">Inventory · Certificates</span></li>
-<li><span class="step-number">02</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V6h14v5M9 6V3h6v3M2 12l10-4 10 4-3 7H5l-3-7ZM12 8v10M2 22c2-2 4 2 6 0s4 2 6 0 4 2 8 0"/></svg>
-<h3>Dispatch & receive</h3>
-<p>Create the manifest, follow transit and record receipt and final placement on board.</p><span class="step-modules">Manifests · Receiving</span></li>
-<li><span class="step-number">03</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></svg>
-<h3>Work together</h3>
-<p>Assign the work, complete checks and brief the team. Keep evidence with the right record.</p><span class="step-modules">Tasks · Checks · Toolbox talks</span></li>
-<li><span class="step-number">04</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg>
-<h3>Carry it forward</h3>
-<p>Record the activity, follow open issues and give the next shift a clear handover.</p><span class="step-modules">Logs · Faults · Handovers</span></li></ol></div></section>
-
-
-<section class="import-section section" id="imports" aria-labelledby="import-title"><div class="container import-layout"><div>
-
-<h2 id="import-title">Use the documents your team already has</h2>
-<p class="section-lede">Start from the forms and spreadsheets your team already uses. Wavelink extracts supported documents into proposals you can map, edit and review.</p><div class="format-list" aria-label="Supported document types"><span>PDF</span><span>Word</span><span>Excel</span><span>CSV / TSV</span><span>Text</span><span>Scans & images</span></div>
-<ul class="import-benefits">
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Recognise separate Excel sheets.</strong> Keep equipment, consumables and log layouts distinct.</span></li>
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Review before creating.</strong> Correct fields, quantities and wording, then confirm the intended draft or list.</span></li>
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Keep the source connection.</strong> Record the source filename and selected worksheet; upload the original separately when needed.</span></li></ul><a class="inline-link" href="#panel-documents" data-show-panel="documents">Explore files & imports</a></div><div class="import-example"><div class="import-example-head"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><div><strong>Mobilisation.xlsx</strong><span>Fictional workbook</span></div></div><div class="sheet-stack"><div class="sheet-row selected"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg><div><strong>Survey equipment</strong><small>24 rows · Inventory proposal</small></div><span>1</span></div><div class="sheet-row"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg><div><strong>Deck consumables</strong><small>18 rows · Separate inventory</small></div><span>2</span></div><div class="sheet-row"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 15h6M9 19h3"/></svg><div><strong>Shift log layout</strong><small>12 rows · Logbook definition</small></div><span>3</span></div></div>
-<ol class="import-steps">
-<li><span>01</span>Choose the sheet</li>
-<li><span>02</span>Map & edit</li>
-<li><span>03</span>Review & confirm</li></ol>
-<p>Import one selected sheet at a time. Save a separate draft or list after review.</p></div></div><div class="container">
-<p class="import-note">Extraction depends on document structure and scan quality. OCR must be configured for scanned files. Importing creates reviewed definitions or lists; it does not recreate signatures or publish records automatically.</p></div></section>
-
-
-<section class="team-section section" aria-labelledby="team-title"><div class="container"><div class="section-heading"><div>
-
-<h2 id="team-title">A clear view of your team’s work</h2></div>
-<p>Give each person a useful starting point, with their work, their actions and access appropriate to their role.</p></div><div class="team-grid">
-<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14l-2-3V9a5 5 0 0 0-10 0v5l-2 3ZM10 21h4M12 2v2"/></svg>
-<h3>A personal view of the work</h3>
-<p>Find assignments, saved drafts, reviews, expiry attention and receiving actions through Home and My actions.</p></article>
-<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg>
-<h3>People and contributions in view</h3>
-<p>Member profiles, authorised Team updates and selectable contribution badges make the people behind the work visible.</p></article>
-<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
-<h3>Alerts on your terms</h3>
-<p>Optional company email summaries support selected categories and quiet hours. Email starts off for each user.</p></article></div></div></section>
-
-
-<section class="company-section section" id="company" aria-labelledby="company-title"><div class="container"><div class="section-heading"><div>
-
-<h2 id="company-title">Choose how your team connects</h2></div>
-<p>Plan the deployment around your network, departments, access responsibilities and data requirements.</p></div><div class="company-layout"><div class="access-card">
-
-<h3>Company access and security</h3>
-<ul class="security-list">
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><div><strong>Controlled company membership</strong><span>Invite an exact email with a department, role and reviewed access profile.</span></div></li>
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 15v3"/></svg><div><strong>Authenticator two-step verification</strong><span>Member enrolment, one-time recovery codes and active-session review.</span></div></li>
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><div><strong>Access follows responsibility</strong><span>Module permissions and current scope also govern search and personal actions.</span></div></li>
-<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><div><strong>Data & record continuity</strong><span>Original-file revisions, record history and backup, export and import tools.</span></div></li></ul>
-<p class="card-note">Verified email sign-in is supported within the selected company service. Availability and configuration are confirmed for your deployment.</p></div><div class="deployment-stack">
-<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18a5 5 0 0 1 0-10 6 6 0 0 1 11-2 6 6 0 0 1 1 12H6Z"/></svg><div>
-
-<h3>Hosted workspace</h3>
-<p>Give authorised vessel, shore and management teams browser access to a hosted company service.</p><span class="deployment-note">Requires a connection to the hosted service.</span></div></article>
-<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16V3h16v13M2 16h20l-2 5H4l-2-5Z"/></svg><div>
-
-<h3>Local Windows hub</h3>
-<p>Serve phones, tablets and laptops over the vessel or site network, without internet for that local workspace.</p><span class="deployment-note">Devices must remain connected to the local hub.</span></div></article>
-<p class="setup-note">Hosted and local are separate deployment choices. Discuss connectivity, HTTPS, mail delivery and recovery requirements during setup.</p></div></div></div></section>
-
+<summary>Explore all 20 capability areas<span aria-hidden="true">+</span></summary><div class="capability-grid"><a href="#panel-equipment" data-show-panel="equipment" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg><span><strong>Inventory & assets</strong><small>Equipment, consumables, locations, quantities and movement history.</small></span></a><a href="#panel-equipment" data-show-panel="equipment" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6h-6M12 3v9H3M12 15v6M18 12h3"/></svg><span><strong>Boxes & stock verification</strong><small>Nested contents, QR identification and reviewed stock checks.</small></span></a><a href="#panel-equipment" data-show-panel="equipment" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V6h14v5M9 6V3h6v3M2 12l10-4 10 4-3 7H5l-3-7ZM12 8v10M2 22c2-2 4 2 6 0s4 2 6 0 4 2 8 0"/></svg><span><strong>Manifests & receiving</strong><small>Shipment preparation, transit, receipt and final placement.</small></span></a><a href="#panel-maintenance" data-show-panel="maintenance" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a5 5 0 0 0-6 6l-5 5a2.8 2.8 0 0 0 4 4l5-5a5 5 0 0 0 6-6l-3 3-4-4 3-3Z"/></svg><span><strong>Maintenance</strong><small>Recurring cycles, assigned work orders and completion evidence.</small></span></a><a href="#panel-maintenance" data-show-panel="maintenance" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><span><strong>Certificates</strong><small>Equipment-linked documents, expiry dates and attention items.</small></span></a><a href="#panel-maintenance" data-show-panel="maintenance" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a5 5 0 0 0-6 6l-5 5a2.8 2.8 0 0 0 4 4l5-5a5 5 0 0 0 6-6l-3 3-4-4 3-3Z"/></svg><span><strong>Fault reports</strong><small>Report, assign, progress, request closure and review.</small></span></a><a href="#panel-operations" data-show-panel="operations" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 15h6M9 19h3"/></svg><span><strong>Tasks</strong><small>General operational work, ownership, evidence and review.</small></span></a><a href="#panel-operations" data-show-panel="operations" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 15h6M9 19h3"/></svg><span><strong>Logbooks</strong><small>Configurable fields, multiple tabs and record exports.</small></span></a><a href="#panel-operations" data-show-panel="operations" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V6h14v5M9 6V3h6v3M2 12l10-4 10 4-3 7H5l-3-7ZM12 8v10M2 22c2-2 4 2 6 0s4 2 6 0 4 2 8 0"/></svg><span><strong>Fleet & calendar</strong><small>Vessels, bases, site context and important dates.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Checklists</strong><small>Reusable definitions, sections, stages and review.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><span><strong>Toolbox talks</strong><small>Structured briefings, understanding and multiple signatories.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></svg><span><strong>HSE / QSHE</strong><small>Safety and quality reporting with follow-up and closure review.</small></span></a><a href="#panel-safety" data-show-panel="safety" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6h-6M12 3v9H3M12 15v6M18 12h3"/></svg><span><strong>QR invitations</strong><small>Controlled access to one toolbox talk or published handover.</small></span></a><a href="#panel-people" data-show-panel="people" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><span><strong>Daily & hitch handovers</strong><small>Shifts, saved drafts, revisions and acknowledgements.</small></span></a><a href="#panel-people" data-show-panel="people" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><span><strong>Profiles & Team</strong><small>Member profiles, authorised updates and contribution badges.</small></span></a><a href="#panel-people" data-show-panel="people" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span><strong>Search & My actions</strong><small>Authorised search, personal attention and optional email alerts.</small></span></a><a href="#panel-documents" data-show-panel="documents" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><span><strong>Original Files & imports</strong><small>Folders, exact revisions and reviewed document proposals.</small></span></a><a href="#panel-control" data-show-panel="control" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 15v3"/></svg><span><strong>Administration & data</strong><small>Invitations, permissions, security, backup and transfers.</small></span></a><a href="#packages" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6M18 15a5 5 0 0 1 3 4"/></svg><span><strong>Crew planning &amp; HR</strong><small>Rotations, crew documents, timesheets and expenses.</small></span></a><a href="#team-demos" class="capability"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span><strong>IT requests</strong><small>Tickets by vessel or base, with priority, assignee and status.</small></span></a></div></details></div></section>
 
 <section class="packages-section section" id="packages" aria-labelledby="packages-title"><div class="container">
 <div class="section-heading"><div>
@@ -291,6 +233,74 @@
 <div class="packages-footer"><div><strong>Set up HR for your team.</strong><p>Confirm the installed application version, HR permissions and deployment scope with the team.</p></div><a class="button dark-button" href="mailto:comercial@mywavelink.com?subject=Wavelink%20HR%20workspace">Discuss your HR setup<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
 </div></section>
 
+<section class="import-section section" id="imports" aria-labelledby="import-title"><div class="container import-layout"><div>
+
+<h2 id="import-title">Use the documents your team already has</h2>
+<p class="section-lede">Bring in a familiar procedure or spreadsheet. If your company enables the OpenAI API, it can suggest checklist items from a passage you choose or match spreadsheet columns to inventory fields.</p><div class="format-list" aria-label="Supported document types"><span>PDF</span><span>Word</span><span>Excel</span><span>CSV / TSV</span><span>Text</span><span>Scans & images</span></div>
+<ul class="import-benefits">
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Choose what to share.</strong> Review the passage or worksheet headers and sample rows before sending them to OpenAI.</span></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Check each suggestion.</strong> Compare the proposed fields or checklist items with the source, edit them and choose what to keep.</span></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Keep each sheet separate.</strong> Save the reviewed equipment list on its own and return to the workbook for the next sheet.</span></li></ul><a class="inline-link" href="#panel-documents" data-show-panel="documents">Explore files & imports</a></div><div class="import-example"><div class="import-example-head"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><div><strong>Mobilisation.xlsx</strong><span>Fictional workbook</span></div></div><div class="sheet-stack"><div class="sheet-row selected"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg><div><strong>Survey equipment</strong><small>24 rows · Inventory proposal</small></div><span>1</span></div><div class="sheet-row"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 13v8M7.5 5.5l9 5"/></svg><div><strong>Deck consumables</strong><small>18 rows · Separate inventory</small></div><span>2</span></div><div class="sheet-row"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 15h6M9 19h3"/></svg><div><strong>Shift log layout</strong><small>12 rows · Logbook definition</small></div><span>3</span></div></div>
+<ol class="import-steps">
+<li><span>01</span>Choose the sheet</li>
+<li><span>02</span>Map & edit</li>
+<li><span>03</span>Review & confirm</li></ol>
+<p>On the Survey equipment sheet, OpenAI could match “S/N” to Serial number and “Qty” to Quantity. You confirm the matches before importing.</p></div></div><div class="container">
+<p class="import-note">You can also map columns and edit drafts manually. Scanned pages need clear text and OCR enabled on your company hub.</p></div></section>
+
+<section class="section ai-section" id="ai-assistance" aria-labelledby="ai-title">
+  <div class="container ai-layout">
+    <div class="ai-intro">
+      <h2 id="ai-title">Turn crew notes into drafts with OpenAI</h2>
+      <p>Your company can enable the OpenAI API to help prepare forms and match inventory columns. Review the text or sample rows before sending them, then choose which suggestions to apply before saving.</p>
+      <div class="ai-links">
+        <a class="inline-link" href="https://demo.mywavelink.com/__demo/public" target="_blank" rel="noopener noreferrer">Explore the Wavelink demo<span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="inline-link" href="privacy.html#openai">See what is sent to OpenAI</a>
+      </div>
+    </div>
+    <div class="ai-examples">
+      <details name="ai-examples" open>
+        <summary>Draft a checklist or form <span aria-hidden="true">+</span></summary>
+        <p>Describe a form in the builder, or select an excerpt from an existing procedure. Wavelink can suggest checklist items, maintenance steps, toolbox discussion prompts or logbook fields for you to edit.</p>
+        <blockquote>“Draft a mobilisation checklist for recording equipment labels and checking the packing list.”</blockquote>
+      </details>
+      <details name="ai-examples">
+        <summary>Prepare travel, certificate and expense records <span aria-hidden="true">+</span></summary>
+        <p>Choose text from a ticket, certificate or receipt. A ticket can suggest a route and departure time, a course certificate can suggest its issuer and printed expiry date, and a receipt can suggest the merchant, total and currency.</p>
+      </details>
+      <details name="ai-examples">
+        <summary>Match inventory columns <span aria-hidden="true">+</span></summary>
+        <p>Select a worksheet and inspect its headers and up to eight sample rows. OpenAI can suggest which columns contain serial numbers, part numbers or quantities. Confirm the matches before importing.</p>
+      </details>
+      <details name="ai-examples">
+        <summary>Organise a shift handover <span aria-hidden="true">+</span></summary>
+        <p>Review an excerpt from the outgoing shift’s notes. If the notes say a cable was inspected and a replacement is still due, Wavelink can suggest the inspection under completed work and the replacement under outstanding work.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="company-section section" id="company" aria-labelledby="company-title"><div class="container"><div class="section-heading"><div>
+
+<h2 id="company-title">Choose how your team connects</h2></div>
+<p>Plan the deployment around your network, departments, access responsibilities and data requirements.</p></div><div class="company-layout"><div class="access-card">
+
+<h3>Company access and security</h3>
+<ul class="security-list">
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v2"/></svg><div><strong>Controlled company membership</strong><span>Invite an exact email with a department, role and reviewed access profile.</span></div></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 15v3"/></svg><div><strong>Authenticator two-step verification</strong><span>Member enrolment, one-time recovery codes and active-session review.</span></div></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><div><strong>Access follows responsibility</strong><span>Module permissions and current scope also govern search and personal actions.</span></div></li>
+<li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z"/><path d="M14 2v5h5M8 12h8M8 16h5"/></svg><div><strong>Data & record continuity</strong><span>Original-file revisions, record history and backup, export and import tools.</span></div></li></ul>
+<p class="card-note">Verified email sign-in is supported within the selected company service. Availability and configuration are confirmed for your deployment.</p></div><div class="deployment-stack">
+<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18a5 5 0 0 1 0-10 6 6 0 0 1 11-2 6 6 0 0 1 1 12H6Z"/></svg><div>
+
+<h3>Hosted workspace</h3>
+<p>Give authorised vessel, shore and management teams browser access to a hosted company service.</p><span class="deployment-note">Requires a connection to the hosted service.</span></div></article>
+<article><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16V3h16v13M2 16h20l-2 5H4l-2-5Z"/></svg><div>
+
+<h3>Local Windows hub</h3>
+<p>Serve phones, tablets and laptops over the vessel or site network, without internet for that local workspace.</p><span class="deployment-note">Devices must remain connected to the local hub.</span></div></article>
+<p class="setup-note">Hosted and local are separate deployment choices. Discuss connectivity, HTTPS, mail delivery and recovery requirements during setup.</p></div></div></div></section>
 
 <section class="faq-section section" id="faq" aria-labelledby="faq-title"><div class="container faq-layout"><div>
 
@@ -298,12 +308,12 @@
 <p>Explore the demo, then talk through the workflows and setup your company needs.</p><a class="inline-link" href="#contact">Talk to AJ Offshore Solutions</a></div><div class="faq-list">
 <details class="faq-item">
 <summary>What can Wavelink bring together?<span aria-hidden="true">+</span></summary>
-<p>Inventory, boxes, manifests and receiving; maintenance, certificates and faults; tasks, logs and calendar; checklists, toolbox talks and HSE / QSHE; daily and hitch handovers; profiles, Team, Original Files and company access. The walkthrough can focus on the workflows your operation needs.</p></details>
+<p>Follow equipment and manifests, maintenance, faults, safety checks and handovers by vessel. Crew coordinators can plan rotations and review timesheets and expenses. IT can follow requests from vessels and shore bases.</p></details>
 <details class="faq-item">
 <summary>Can we import our current Word, PDF and Excel documents?<span aria-hidden="true">+</span></summary>
 <p>Supported files can be extracted into editable proposals for inventory, checklist and routine definitions, toolbox forms or logbook layouts. Visible Excel worksheets and tables are named separately. Choose one, map or edit the contents, then review and confirm a separate draft or list. Extraction does not decipher every layout; scanned files need clear originals and configured OCR. Existing publications, signatures and operational records are not inferred from the source.</p>
 <p>For inventory tables, you can ask OpenAI to suggest column matches after checking the selected headers and up to eight sample rows.</p>
-<p>With OpenAI configured in Wavelink 1.34.44, you can also edit an excerpt before asking for suggested checklist items, maintenance steps, toolbox prompts or logbook fields. For a new template, describe the form you need and review the proposed draft.</p>
+<p>With OpenAI configured for your company, you can also edit an excerpt before asking for suggested checklist items, maintenance steps, toolbox prompts or logbook fields. For a new template, describe the form you need and review the proposed draft.</p>
 <p>In HR, read a ticket, certificate or receipt on the company hub, then choose which text to send for field suggestions. Handover authors can use the same review step with shift notes. You choose which suggestions to apply before saving. <a href="privacy.html#openai">See what is sent to OpenAI</a>.</p></details>
 <details class="faq-item">
 <summary>How does QR signing work?<span aria-hidden="true">+</span></summary>
@@ -323,7 +333,6 @@
 <details class="faq-item">
 <summary>How do we discuss deployment and pricing?<span aria-hidden="true">+</span></summary>
 <p>Tell us about your vessels or sites, departments, team size and the records you need to manage. We will walk through the relevant modules and discuss local or hosted setup, access, backup, availability and commercial scope. The public demo uses demonstration data; use fictional information when exploring it.</p></details></div></div></section>
-
 
 <section class="contact-section section" id="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div>
 

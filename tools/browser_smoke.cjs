@@ -32,7 +32,12 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
   const checkDemoLinks = async (page, count) => {
     const links = page.locator('a[href^="https://demo.mywavelink.com/"]');
     const destinations = await links.evaluateAll(nodes => nodes.map(link => link.href));
-    assert.deepEqual(destinations, Array(count).fill('https://demo.mywavelink.com/__demo/public'));
+    const entry = 'https://demo.mywavelink.com/__demo/public';
+    if (count !== undefined) {
+      assert.deepEqual(destinations, Array(count).fill(entry));
+      return;
+    }
+    assert.deepEqual(new Set(destinations), new Set([entry, ...['inventory','hr','it'].map(area => entry + '?area=' + area)]));
   };
   const noOverflow = async (page,label) => {
     const bad=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>{
@@ -49,13 +54,16 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       const runtime=[];page.on('pageerror',e=>runtime.push(e.message));
       await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
       assert.equal(await page.locator('h1').count(),1);
-      await checkDemoLinks(page,6);
-      const aiLink = page.getByRole('link', {name:'See OpenAI examples', exact:true});
-      const aiBounds = await aiLink.boundingBox();
-      assert.ok(aiBounds && aiBounds.y >= 0 && aiBounds.y + aiBounds.height <= 568, 'OpenAI link below first screen at ' + width);
-      await aiLink.press('Enter');
-      assert.equal(new URL(page.url()).hash,'#ai-assistance');
-      assert.equal(await page.locator('#ai-assistance details').first().locator('p').isVisible(),true);
+      await checkDemoLinks(page);
+      const hero = page.locator('.hero');
+      for (const name of [/Explore the live demo/i, /Request a walkthrough/i]) {
+        const action = hero.getByRole('link', {name});
+        const bounds = await action.boundingBox();
+        assert.ok(bounds && bounds.y >= 0 && bounds.y + bounds.height <= 568, 'Hero action below first screen at ' + width + ': ' + name);
+      }
+      assert.equal(await hero.getByRole('link',{name:/Explore the live demo/i}).getAttribute('href'),'https://demo.mywavelink.com/__demo/public');
+      assert.match(await hero.getByRole('link',{name:/Request a walkthrough/i}).getAttribute('href'),/^mailto:comercial@mywavelink\.com(?:\?|$)/);
+      assert.equal(await page.locator('.hero + #workflow').count(),1);
       assert.equal(await page.locator('[role="tab"]').count(),7);
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
       assert.ok((await page.locator('.hero-image img').evaluate(image=>image.currentSrc)).endsWith(width<=740?'offshore-operations-small.webp':'offshore-operations.webp'));
@@ -82,7 +90,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       await page.locator('#tab-equipment').press('Space');
       assert.equal(await page.locator('#panel-equipment').isVisible(),true);
       await page.locator('.capability-directory>summary').click();
-      assert.equal(await page.locator('.capability-grid .capability:visible').count(),18);
+      assert.equal(await page.locator('.capability-grid .capability:visible').count(),20);
       await noOverflow(page,width+'/directory');
       await page.locator('.capability-grid [data-show-panel="safety"]').first().click();
       assert.equal(await page.locator('#panel-safety').isVisible(),true);
@@ -122,7 +130,8 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
         assert.equal(await page.locator('#main-navigation').isVisible(),true);
         await noOverflow(page,width+'/menu');await page.locator('.menu-toggle').press('Escape');
         assert.equal(await page.locator('#main-navigation').isVisible(),false);
-        await page.locator('.menu-toggle').click();await page.locator('#main-navigation a[href="#imports"]').click();
+        await page.locator('.menu-toggle').click();await page.locator('#main-navigation a[href="#workflow"]').click();
+        assert.equal(new URL(page.url()).hash,'#workflow');
         assert.equal(await page.locator('#main-navigation').isVisible(),false);
       }
       if(width<=1150)await page.locator('.menu-toggle').click();
@@ -139,7 +148,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
         await page.goto('https://www.mywavelink.com/'+name,{waitUntil:'load'});await noOverflow(page,width+'/'+name);
         await checkDemoLinks(page,name==='privacy.html'?2:1);
       }
-      assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:18,implementedHrAreas:4,packageDisclosures:3,faqs:8,passed:true});
+      assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:20,implementedHrAreas:4,packageDisclosures:3,faqs:8,passed:true});
 
     }
     await page.setViewportSize({width:1440,height:1000});await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
