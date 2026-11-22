@@ -3345,12 +3345,13 @@ summary::-webkit-details-marker {
   min-width: 0;
   margin: 0;
 }
-.workflow-story-figure img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #b9cecf;
-  border-radius: .6rem;
-}
+.inspection-record { padding: clamp(1rem, 3vw, 2rem); border: 1px solid #b9cecf; border-top: .3rem solid var(--teal-dark); border-radius: .6rem; background: white; color: var(--ink); }
+.inspection-context, .inspection-progress { margin: 0; color: var(--teal-dark); font-weight: 650; }
+.inspection-record h3 { margin: .4rem 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.2; }
+.inspection-record ol { margin: 1rem 0 0; padding-left: 1.5rem; }
+.inspection-record li { padding: .75rem 0; border-top: 1px solid #d3dddd; }
+.inspection-record li p { margin: .25rem 0; }
+.inspection-record small { color: #465e66; }
 .workflow-story-figure figcaption {
   display: flex;
   flex-wrap: wrap;
@@ -3362,11 +3363,7 @@ summary::-webkit-details-marker {
   font-size: .85rem;
   line-height: 1.5;
 }
-.workflow-story-figure figcaption a {
-  color: var(--teal-dark);
-  text-decoration: underline;
-  text-underline-offset: .15em;
-}
+
 @media (max-width: 840px) {
   .workflow-story-layout {
     grid-template-columns: minmax(0, 1fr);
