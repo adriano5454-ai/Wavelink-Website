@@ -8,6 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]; SITE=ROOT/'site'
 DEMO_ENTRY='https://demo.mywavelink.com/__demo/public'
 HOME_DEMO_LINKS={DEMO_ENTRY} | {f'{DEMO_ENTRY}?area={area}' for area in ('inventory', 'hr', 'it')}
 DEMO_LINK_COUNTS={'privacy.html':2,'404.html':1}
+WORKFLOW_DEMOS={'offshore-crew-rotation-software.html':f'{DEMO_ENTRY}?area=hr','offshore-equipment-inventory.html':f'{DEMO_ENTRY}?area=inventory'}
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__();self.ids=[];self.links=[];self.assets=[];self.h1=0;self.text=[];self.scripts=[];self.feed(text)
@@ -30,7 +31,8 @@ def main():
   if name in DEMO_LINK_COUNTS and len(demo_links)!=DEMO_LINK_COUNTS[name]:errors.append(name+': missing public demo link')
   destinations={a.get('href') for a in demo_links}
   if name=='index.html' and destinations!=HOME_DEMO_LINKS:errors.append(name+': expected general, inventory, HR and IT demo entry points')
-  if name!='index.html' and destinations-{DEMO_ENTRY}:errors.append(name+': unexpected public demo destination')
+  if name in WORKFLOW_DEMOS and destinations!={DEMO_ENTRY,WORKFLOW_DEMOS[name]}:errors.append(name+': expected general and workflow demo entry points')
+  elif name not in ('index.html',*WORKFLOW_DEMOS) and destinations-{DEMO_ENTRY}:errors.append(name+': unexpected public demo destination')
   for a in page.links:
    u=urlsplit(a.get('href',''))
    if u.scheme or u.netloc:
