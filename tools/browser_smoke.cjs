@@ -56,6 +56,8 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       assert.equal(await page.locator('h1').count(),1);
       await checkDemoLinks(page);
       const hero = page.locator('.hero');
+      const image = await hero.locator('picture img').evaluate(img => ({src:img.currentSrc, width:img.naturalWidth}));
+      assert.ok(image.width > 0 && image.src.endsWith(width<=740 ? '/assets/offshore-operations-small.webp' : '/assets/offshore-operations.webp'), 'Responsive hero image did not load at '+width);
       for (const name of [/Explore the live demo/i, /Request a walkthrough/i]) {
         const action = hero.getByRole('link', {name});
         const bounds = await action.boundingBox();
@@ -147,6 +149,16 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       for(const name of ['privacy.html','404.html']){
         await page.goto('https://www.mywavelink.com/'+name,{waitUntil:'load'});await noOverflow(page,width+'/'+name);
         await checkDemoLinks(page,name==='privacy.html'?2:1);
+      }
+      for(const [file,area] of [['offshore-equipment-inventory.html','inventory'],['offshore-cargo-manifests.html',null],['offshore-shift-handovers.html',null],['offshore-crew-rotation-software.html','hr']]){
+        await page.goto('https://www.mywavelink.com/',{waitUntil:'load'});
+        await page.locator('footer a[href="'+file+'"]').click();
+        assert.equal(new URL(page.url()).pathname,'/'+file);
+        assert.equal(await page.locator('h1').count(),1);
+        assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),'https://www.mywavelink.com/'+file);
+        const demo = await page.locator('a[href^="https://demo.mywavelink.com/"]').evaluateAll(nodes=>nodes.map(a=>a.href));
+        assert.deepEqual(demo,['https://demo.mywavelink.com/__demo/public',...(area?['https://demo.mywavelink.com/__demo/public?area='+area]:[])]);
+        await noOverflow(page,width+'/'+file);
       }
       assert.deepEqual(runtime,[]);results.push({width,categories:7,capabilities:20,implementedHrAreas:4,packageDisclosures:3,faqs:8,passed:true});
 
