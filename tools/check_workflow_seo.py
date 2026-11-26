@@ -1,7 +1,7 @@
 """Static acceptance checks for the English marketing workflow pages; no network."""
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1] / 'site'
@@ -29,6 +29,23 @@ def main():
     assert len(set(urls)) == len(urls), 'Sitemap contains duplicate URLs'
     assert BASE in urls and all(url.startswith(BASE) for url in urls), 'Unexpected sitemap host'
     assert all((ROOT / (urlparse(url).path.lstrip('/') or 'index.html')).is_file() for url in urls)
+    for filename in (*GUIDES, 'privacy.html'):
+        doc = Document(filename)
+        canonical = BASE + filename
+        # Disk previews ignore the web-only base. Hosted pages use it within their own origin.
+        policies = {attrs.get('content') for attrs in doc.find('meta', **{'http-equiv': 'Content-Security-Policy'})}
+        assert {"base-uri 'self'", 'base-uri http: https:'} <= policies, filename
+        for path in (filename, Path(filename).stem, Path(filename).stem + '/'):
+            page_url = BASE + path
+            bases = doc.find('base')
+            page_base = urljoin(page_url, bases[0]['href']) if bases else page_url
+            for tag, attrs in doc.tags:
+                for field in ('href', 'src'):
+                    target = attrs.get(field)
+                    if tag != 'base' and target:
+                        assert urljoin(page_base, target) == urljoin(canonical, target), (
+                            f'{path}: {target} resolves to a different destination'
+                        )
     seen_titles, seen_descriptions = set(), set()
     for filename in ('index.html', *GUIDES):
         doc = Document(filename)
