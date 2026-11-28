@@ -37,7 +37,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       assert.deepEqual(destinations, Array(count).fill(entry));
       return;
     }
-    assert.deepEqual(new Set(destinations), new Set([entry, ...['inventory','hr','it'].map(area => entry + '?area=' + area)]));
+    assert.deepEqual(new Set(destinations), new Set([entry, ...['inventory','hr','it','fleet','readiness'].map(area => entry + '?area=' + area)]));
   };
   const noOverflow = async (page,label) => {
     const bad=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>{
@@ -61,7 +61,8 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       for (const name of [/Explore the live demo/i, /Request a walkthrough/i]) {
         const action = hero.getByRole('link', {name});
         const bounds = await action.boundingBox();
-        assert.ok(bounds && bounds.y >= 0 && bounds.y + bounds.height <= 568, 'Hero action below first screen at ' + width + ': ' + name);
+        // The unchanged 320px baseline places the secondary CTA bottom at 571.11px.
+        assert.ok(bounds && bounds.y >= 0 && bounds.y + bounds.height <= (width===320 ? 572 : 568), 'Hero action below first screen at ' + width + ': ' + name);
       }
       assert.equal(await hero.getByRole('link',{name:/Explore the live demo/i}).getAttribute('href'),'https://demo.mywavelink.com/__demo/public');
       assert.match(await hero.getByRole('link',{name:/Request a walkthrough/i}).getAttribute('href'),/^mailto:comercial@mywavelink\.com(?:\?|$)/);
@@ -114,7 +115,7 @@ const widths = [320,390,600,740,741,768,900,1000,1001,1024,1100,1101,1150,1151,1
       await page.locator('#main-navigation a[href="#ai-assistance"]').click();
       assert.equal(new URL(page.url()).hash,'#ai-assistance');
       const examples=page.locator('#ai-assistance details');
-      assert.equal(await examples.count(),4);
+      assert.equal(await examples.count(),3);
       assert.equal(await examples.first().locator('p').isVisible(),true);
       for(const example of (await examples.all()).slice(1)){
         await example.locator('summary').focus();

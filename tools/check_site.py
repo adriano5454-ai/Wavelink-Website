@@ -6,7 +6,8 @@ from urllib.parse import urlsplit,unquote
 import json,re,sys
 ROOT=Path(__file__).resolve().parents[1]; SITE=ROOT/'site'
 DEMO_ENTRY='https://demo.mywavelink.com/__demo/public'
-HOME_DEMO_LINKS={DEMO_ENTRY} | {f'{DEMO_ENTRY}?area={area}' for area in ('inventory', 'hr', 'it')}
+HOME_HERO_DEMO_LINKS={DEMO_ENTRY} | {f'{DEMO_ENTRY}?area={area}' for area in ('inventory', 'hr', 'it')}
+HOME_DEMO_LINKS=HOME_HERO_DEMO_LINKS | {f'{DEMO_ENTRY}?area={area}' for area in ('fleet', 'readiness')}
 DEMO_LINK_COUNTS={'privacy.html':2,'404.html':1}
 WORKFLOW_DEMOS={'offshore-crew-rotation-software.html':f'{DEMO_ENTRY}?area=hr','offshore-equipment-inventory.html':f'{DEMO_ENTRY}?area=inventory'}
 class Page(HTMLParser):
@@ -30,7 +31,7 @@ def main():
   demo_links=[a for a in page.links if urlsplit(a.get('href','')).hostname=='demo.mywavelink.com']
   if name in DEMO_LINK_COUNTS and len(demo_links)!=DEMO_LINK_COUNTS[name]:errors.append(name+': missing public demo link')
   destinations={a.get('href') for a in demo_links}
-  if name=='index.html' and destinations!=HOME_DEMO_LINKS:errors.append(name+': expected general, inventory, HR and IT demo entry points')
+  if name=='index.html' and destinations!=HOME_DEMO_LINKS:errors.append(name+': expected general and module-specific demo entry points')
   if name in WORKFLOW_DEMOS and destinations!={DEMO_ENTRY,WORKFLOW_DEMOS[name]}:errors.append(name+': expected general and workflow demo entry points')
   elif name not in ('index.html',*WORKFLOW_DEMOS) and destinations-{DEMO_ENTRY}:errors.append(name+': unexpected public demo destination')
   for a in page.links:
@@ -61,7 +62,7 @@ def main():
  if not any(a.get('href')==DEMO_ENTRY for a in hero_links):errors.append('Missing live demo action in the hero')
  if not any(urlsplit(a.get('href','')).scheme=='mailto' and urlsplit(a['href']).path=='comercial@mywavelink.com' for a in hero_links):
   errors.append('Missing commercial walkthrough action in the hero')
- if not (HOME_DEMO_LINKS-{DEMO_ENTRY}) <= {a.get('href') for a in hero_links}:errors.append('Missing direct guest routes in the hero')
+ if not (HOME_HERO_DEMO_LINKS-{DEMO_ENTRY}) <= {a.get('href') for a in hero_links}:errors.append('Missing direct guest routes in the hero')
  for term in ['S/N → Serial number','Qty → Quantity','Confirm and import']:
   if term not in home:errors.append('Missing worksheet example: '+term)
  platform=re.search(r'<section\b[^>]*\bid="platform"',home)
